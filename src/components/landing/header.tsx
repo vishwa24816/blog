@@ -8,38 +8,63 @@ const Logo = () => (
     width="32"
     height="32"
     viewBox="0 0 100 100"
-    className="h-8 w-8 text-white"
+    className="h-8 w-8"
   >
-    <defs>
-      <radialGradient id="instagram-gradient" cx="0.3" cy="1.2" r="1.5">
-        <stop offset="0.2" stopColor="#fEDA75" />
-        <stop offset="0.4" stopColor="#fa7e1e" />
-        <stop offset="0.6" stopColor="#d62976" />
-        <stop offset="0.9" stopColor="#962fbf" />
-      </radialGradient>
-    </defs>
-    <rect
-      width="100"
-      height="100"
-      rx="30"
-      ry="30"
-      fill="url(#instagram-gradient)"
-    />
-    <rect
-      width="84"
-      height="84"
-      x="8"
-      y="8"
-      rx="22"
-      ry="22"
-      fill="none"
-      stroke="white"
-      strokeWidth="9"
-    />
-    <circle cx="50" cy="50" r="21" fill="none" stroke="white" strokeWidth="9" />
-    <circle cx="78" cy="22" r="5" fill="white" />
+    <g>
+      <path
+        fill="#f5b316"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(18, 50, 50)"
+      />
+      <path
+        fill="#e54325"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(54, 50, 50)"
+      />
+      <path
+        fill="#d71e6a"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(90, 50, 50)"
+      />
+      <path
+        fill="#3e4a9c"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(126, 50, 50)"
+      />
+      <path
+        fill="#26348a"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(162, 50, 50)"
+      />
+      <path
+        fill="#724832"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(198, 50, 50)"
+      />
+      <path
+        fill="#000000"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(234, 50, 50)"
+      />
+      <path
+        fill="#236f3d"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(270, 50, 50)"
+      />
+      <path
+        fill="#329249"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(306, 50, 50)"
+      />
+      <path
+        fill="#f9d41c"
+        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
+        transform="rotate(342, 50, 50)"
+      />
+    </g>
   </svg>
 );
+
 
 export function Header() {
   return (
