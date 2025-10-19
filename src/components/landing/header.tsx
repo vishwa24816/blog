@@ -2,67 +2,16 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const Logo = () => (
-  <svg
-    width="32"
-    height="32"
-    viewBox="0 0 100 100"
+  <Image
+    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F44533ca6-21d9-4c13-919e-f6d332ea4fc4%2FScreenshot_20250505-214836-643_(1)_(1).png/size/w=770?exp=1760969487&sig=BTHYrfBoQPR0x1w2KKZcHkZRpXIcBSLnHmNhVhzQf7Y&id=2916fb47-9c52-80cf-8195-fcb3959ede09&table=block"
+    alt="SIM Logo"
+    width={32}
+    height={32}
     className="h-8 w-8"
-  >
-    <g>
-      <path
-        fill="#f5b316"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(18, 50, 50)"
-      />
-      <path
-        fill="#e54325"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(54, 50, 50)"
-      />
-      <path
-        fill="#d71e6a"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(90, 50, 50)"
-      />
-      <path
-        fill="#3e4a9c"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(126, 50, 50)"
-      />
-      <path
-        fill="#26348a"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(162, 50, 50)"
-      />
-      <path
-        fill="#724832"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(198, 50, 50)"
-      />
-      <path
-        fill="#000000"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(234, 50, 50)"
-      />
-      <path
-        fill="#236f3d"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(270, 50, 50)"
-      />
-      <path
-        fill="#329249"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(306, 50, 50)"
-      />
-      <path
-        fill="#f9d41c"
-        d="M50,0 C63.8,0 75,11.2 75,25 L50,25 Z"
-        transform="rotate(342, 50, 50)"
-      />
-    </g>
-  </svg>
+  />
 );
 
 
