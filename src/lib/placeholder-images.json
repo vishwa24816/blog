@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "landing-hero",
+      "description": "Gold coins on a dark background, representing wealth and investment.",
+      "imageUrl": "https://images.unsplash.com/photo-1517097473408-c0d7983cb95c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwY29pbnN8ZW58MHx8fHwxNzYwODI0NjAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold coins"
+    },
+    {
+      "id": "spongebob",
+      "description": "Spongebob meme about money.",
+      "imageUrl": "https://images.unsplash.com/photo-1586011978320-228b9817faf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzcG9uZ2Vib2IlMjBtZW1lfGVufDB8fHx8MTc2MDg4MTUxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spongebob meme"
+    },
+    {
+      "id": "bears",
+      "description": "Image of a bear and a bull, representing market trends.",
+      "imageUrl": "https://images.unsplash.com/photo-1695526173461-7d1bb1588c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWFyJTIwYnVsbHxlbnwwfHx8fDE3NjA4ODE1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bear bull"
+    },
+    {
+      "id": "memes",
+      "description": "A collage of popular investing memes.",
+      "imageUrl": "https://images.unsplash.com/photo-1612197527762-8cfb55b618d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnZlc3RpbmclMjBtZW1lc3xlbnwwfHx8fDE3NjA4ODE1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "investing memes"
+    },
+    {
+      "id": "logo-color",
+      "description": "SIM App colorful logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1689852501130-e89d9e54aa41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvcmZ1bCUyMGxvZ298ZW58MHx8fHwxNzYwODY0NzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful logo"
+    }
+  ]
 }

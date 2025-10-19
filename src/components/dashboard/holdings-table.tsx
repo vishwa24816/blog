@@ -6,13 +6,7 @@ import {
   TableBody,
   TableCell,
 } from '@/components/ui/table';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import type { Holding } from '@/types';
 
@@ -20,7 +14,7 @@ type HoldingsTableProps = {
   holdings: Holding[];
 };
 
-export default function HoldingsTable({ holdings }: HoldingsTableProps) {
+export function HoldingsTable({ holdings }: HoldingsTableProps) {
   const formatCurrency = (value: number) =>
     new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -29,18 +23,16 @@ export default function HoldingsTable({ holdings }: HoldingsTableProps) {
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle className="font-headline">Current Holdings</CardTitle>
-        <CardDescription>A list of your current investments.</CardDescription>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="p-0">
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Ticker</TableHead>
               <TableHead className="hidden md:table-cell">Name</TableHead>
               <TableHead className="text-right">Shares</TableHead>
-              <TableHead className="text-right hidden sm:table-cell">Avg. Cost</TableHead>
+              <TableHead className="text-right hidden sm:table-cell">
+                Avg. Cost
+              </TableHead>
               <TableHead className="text-right">Price</TableHead>
               <TableHead className="text-right">Value</TableHead>
             </TableRow>
@@ -52,8 +44,12 @@ export default function HoldingsTable({ holdings }: HoldingsTableProps) {
 
               return (
                 <TableRow key={holding.ticker}>
-                  <TableCell className="font-medium">{holding.ticker}</TableCell>
-                  <TableCell className="hidden md:table-cell">{holding.name}</TableCell>
+                  <TableCell className="font-medium">
+                    {holding.ticker}
+                  </TableCell>
+                  <TableCell className="hidden md:table-cell">
+                    {holding.name}
+                  </TableCell>
                   <TableCell className="text-right">{holding.shares}</TableCell>
                   <TableCell className="text-right hidden sm:table-cell">
                     {formatCurrency(holding.avgCost)}
