@@ -15,7 +15,6 @@ const spongebobImage = PlaceHolderImages.find(
 );
 const bearsImage = PlaceHolderImages.find((image) => image.id === 'bears');
 const memesImage = PlaceHolderImages.find((image) => image.id === 'memes');
-const logo = PlaceHolderImages.find((image) => image.id === 'logo-color');
 
 export default function LandingPage() {
   return (
@@ -33,16 +32,8 @@ export default function LandingPage() {
               data-ai-hint={heroImage.imageHint}
             />
           )}
-          {logo && (
-            <Image
-              src={logo.imageUrl}
-              alt={logo.description}
-              width={100}
-              height={100}
-              className="mx-auto mt-[-50px] bg-background p-2 rounded-full"
-            />
-          )}
-          <h1 className="text-4xl md:text-5xl font-bold mt-4">
+          
+          <h1 className="text-4xl md:text-5xl font-bold mt-8">
             SIM - Your AI-Powered Path to Smarter Investing
           </h1>
           <p className="text-lg text-muted-foreground mt-4">
@@ -90,7 +81,7 @@ export default function LandingPage() {
             simulating different market scenarios and analyzing your holdings
             against various risk factors, SIM gives you the foresight to adjust
             your strategy proactively. This isn't about predicting the market;
--           it's about understanding your exposure and making decisions that
+            it's about understanding your exposure and making decisions that
             align with your long-term goals.
           </p>
           <p className="text-lg mt-4 leading-relaxed">

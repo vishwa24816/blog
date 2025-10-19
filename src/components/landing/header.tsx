@@ -1,25 +1,52 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const Logo = () => (
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 100 100"
+    className="h-8 w-8 text-white"
+  >
+    <defs>
+      <radialGradient id="instagram-gradient" cx="0.3" cy="1.2" r="1.5">
+        <stop offset="0.2" stopColor="#fEDA75" />
+        <stop offset="0.4" stopColor="#fa7e1e" />
+        <stop offset="0.6" stopColor="#d62976" />
+        <stop offset="0.9" stopColor="#962fbf" />
+      </radialGradient>
+    </defs>
+    <rect
+      width="100"
+      height="100"
+      rx="30"
+      ry="30"
+      fill="url(#instagram-gradient)"
+    />
+    <rect
+      width="84"
+      height="84"
+      x="8"
+      y="8"
+      rx="22"
+      ry="22"
+      fill="none"
+      stroke="white"
+      strokeWidth="9"
+    />
+    <circle cx="50" cy="50" r="21" fill="none" stroke="white" strokeWidth="9" />
+    <circle cx="78" cy="22" r="5" fill="white" />
+  </svg>
+);
 
 export function Header() {
-  const logo = PlaceHolderImages.find((image) => image.id === 'logo-color');
-
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 md:px-6 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          {logo && (
-            <Image
-              src={logo.imageUrl}
-              alt={logo.description}
-              width={32}
-              height={32}
-            />
-          )}
+          <Logo />
           <span className="text-lg font-bold">SIM</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
