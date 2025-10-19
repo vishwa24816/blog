@@ -125,7 +125,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src="https://picsum.photos/seed/ai-finance/600/400" alt="AI in finance" layout="fill" objectFit="cover" data-ai-hint="AI finance" />
+                <Image src="https://picsum.photos/seed/ai-finance/600/400" alt="AI in finance" fill objectFit="cover" data-ai-hint="AI finance" />
             </div>
           </section>
         </AnimatedSection>
