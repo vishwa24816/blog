@@ -11,6 +11,7 @@ import {
 import { Check, DollarSign, Package, Banknote } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { AnimatedSection } from '@/components/landing/animated-section';
 
 const offerings = [
   {
@@ -87,175 +88,185 @@ export default function BusinessPage() {
     <div className="bg-background text-foreground">
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
-        <section className="text-center">
-          <p className="font-headline text-primary font-semibold">For Business and Investors</p>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
-            AI-Powered Solutions for You
-          </h1>
-          <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-            At SIM (Simulation Exchange), we believe that sophisticated
-            investing should be accessible to everyone. In today's fast-paced
-            financial landscape, traders face a myriad of challenges:
-            fragmented platforms, complex interfaces, and the daunting task of
-            mastering algorithmic strategies. We're here to change that. SIM is
-            an AI-powered, all-in-one trading platform designed to democratize
-            sophisticated investing, making it simple, intuitive, and
-            ultimately, more profitable for our users.
-          </p>
-          <div className="relative w-full h-[400px] my-8">
-            <Image
-              src="https://picsum.photos/seed/business-meeting/1200/400"
-              alt="Professional business meeting"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="mx-auto rounded-lg"
-              data-ai-hint="business meeting"
-              priority
-            />
-          </div>
-        </section>
-
-        <section className="mt-24 md:mt-32">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Market Opportunity & Growth
-            </h2>
+        <AnimatedSection>
+          <section className="text-center">
+            <p className="font-headline text-primary font-semibold">For Business and Investors</p>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
+              AI-Powered Solutions for You
+            </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              We are strategically positioned at the intersection of three high-growth sectors, targeting a massive global market:
+              At SIM (Simulation Exchange), we believe that sophisticated
+              investing should be accessible to everyone. In today's fast-paced
+              financial landscape, traders face a myriad of challenges:
+              fragmented platforms, complex interfaces, and the daunting task of
+              mastering algorithmic strategies. We're here to change that. SIM is
+              an AI-powered, all-in-one trading platform designed to democratize
+              sophisticated investing, making it simple, intuitive, and
+              ultimately, more profitable for our users.
             </p>
-          </div>
-          <div className="space-y-20">
-            {offerings.map((offering, index) => (
-              <div
-                key={offering.title}
-                className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center ${
-                  index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''
-                }`}
-              >
+            <div className="relative w-full h-[400px] my-8">
+              <Image
+                src="https://picsum.photos/seed/business-meeting/1200/400"
+                alt="Professional business meeting"
+                fill
+                style={{ objectFit: 'cover' }}
+                className="mx-auto rounded-lg"
+                data-ai-hint="business meeting"
+                priority
+              />
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Market Opportunity & Growth
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+                We are strategically positioned at the intersection of three high-growth sectors, targeting a massive global market:
+              </p>
+            </div>
+            <div className="space-y-20">
+              {offerings.map((offering, index) => (
                 <div
-                  className={`${index % 2 !== 0 ? 'md:col-start-2' : ''}`}
-                >
-                  <h3 className="text-2xl md:text-3xl font-bold font-headline">
-                    {offering.title}
-                  </h3>
-                  <p className="text-muted-foreground mt-4">
-                    {offering.description}
-                  </p>
-                  <ul className="mt-6 space-y-4">
-                    {offering.features.map((feature) => (
-                      <li key={feature} className="flex items-start">
-                        <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div
-                  className={`relative h-80 rounded-lg overflow-hidden ${
-                    index % 2 !== 0 ? 'md:col-start-1' : ''
+                  key={offering.title}
+                  className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center ${
+                    index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''
                   }`}
                 >
-                  <Image
-                    src={offering.image.src}
-                    alt={offering.image.alt}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    data-ai-hint={offering.image.hint}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-24 md:mt-32">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              And Why Now?
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              There are 2 Major Shifts in this industry supporting the potential of this startup.
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <ul className="space-y-4 text-muted-foreground list-disc list-inside">
-              <li>
-                <strong>The AI Revolution:</strong> AI Revolution is so versatile and so trending that people are now selling a pen saying it is AI Powered.
-              </li>
-              <li>
-                <strong>The Democratization of Finance:</strong> Finance industry democratized today so much that startups are Lending P2P , Buying Stocks are commission free and more.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="mt-24 md:mt-32">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Our Business Model
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              SIM operates on a diversified and scalable revenue model designed for sustainable growth:
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {businessModel.map((item) => (
-              <Card key={item.title} className="bg-card/50 backdrop-blur-sm border-border/50">
-                <CardHeader>
-                  <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
-                    {item.icon}
+                  <div
+                    className={`${index % 2 !== 0 ? 'md:col-start-2' : ''}`}
+                  >
+                    <h3 className="text-2xl md:text-3xl font-bold font-headline">
+                      {offering.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-4">
+                      {offering.description}
+                    </p>
+                    <ul className="mt-6 space-y-4">
+                      {offering.features.map((feature) => (
+                        <li key={feature} className="flex items-start">
+                          <Check className="h-5 w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                          <span className="text-muted-foreground">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <CardTitle>{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <Card className="mt-8 bg-card/50 backdrop-blur-sm border-border/50">
-            <CardContent className="p-6 text-center">
-              <p className="text-muted-foreground max-w-4xl mx-auto">
-                We project a healthy LTV/CAC (Customer Lifetime Value to Customer
-                Acquisition Cost) ratio, leveraging a conservative CAC estimate of
-                ₹1000 for branding purposes, knowing our diversified model and
-                community-first Go-To-Market (GTM) strategy will drive strong
-                returns.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
+                  <div
+                    className={`relative h-80 rounded-lg overflow-hidden ${
+                      index % 2 !== 0 ? 'md:col-start-1' : ''
+                    }`}
+                  >
+                    <Image
+                      src={offering.image.src}
+                      alt={offering.image.alt}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      data-ai-hint={offering.image.hint}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
 
-        <section className="mt-24 md-mt-32 text-center bg-card p-8 rounded-lg">
-          <h2 className="text-3xl font-bold font-headline">Join Us</h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Be part of a community that’s shaping the future of finance.
-            Whether you’re a seasoned trader or just starting out, SIM has the
-            tools you need to succeed.
-          </p>
-          <div className="mt-8 flex gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link
-                href="https://simulationexchange.vercel.app/login"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Join the Waitlist
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link
-                href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Share Your Experience
-              </Link>
-            </Button>
-          </div>
-        </section>
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                And Why Now?
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+                There are 2 Major Shifts in this industry supporting the potential of this startup.
+              </p>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <ul className="space-y-4 text-muted-foreground list-disc list-inside">
+                <li>
+                  <strong>The AI Revolution:</strong> AI Revolution is so versatile and so trending that people are now selling a pen saying it is AI Powered.
+                </li>
+                <li>
+                  <strong>The Democratization of Finance:</strong> Finance industry democratized today so much that startups are Lending P2P , Buying Stocks are commission free and more.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+                Our Business Model
+              </h2>
+              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+                SIM operates on a diversified and scalable revenue model designed for sustainable growth:
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {businessModel.map((item) => (
+                <Card key={item.title} className="bg-card/50 backdrop-blur-sm border-border/50">
+                  <CardHeader>
+                    <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+                      {item.icon}
+                    </div>
+                    <CardTitle>{item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <Card className="mt-8 bg-card/50 backdrop-blur-sm border-border/50">
+              <CardContent className="p-6 text-center">
+                <p className="text-muted-foreground max-w-4xl mx-auto">
+                  We project a healthy LTV/CAC (Customer Lifetime Value to Customer
+                  Acquisition Cost) ratio, leveraging a conservative CAC estimate of
+                  ₹1000 for branding purposes, knowing our diversified model and
+                  community-first Go-To-Market (GTM) strategy will drive strong
+                  returns.
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center bg-card p-8 rounded-lg">
+            <h2 className="text-3xl font-bold font-headline">Join Us</h2>
+            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Be part of a community that’s shaping the future of finance.
+              Whether you’re a seasoned trader or just starting out, SIM has the
+              tools you need to succeed.
+            </p>
+            <div className="mt-8 flex gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Join the Waitlist
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link
+                  href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share Your Experience
+                </Link>
+              </Button>
+            </div>
+          </section>
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Bot, Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
+import { AnimatedSection } from '@/components/landing/animated-section';
 
 const features = [
   {
@@ -68,23 +69,25 @@ export default function ProductPage() {
     <div className="bg-background text-foreground">
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
-        <section>
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
-              Review The Product
-            </h1>
-            <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              Today’s trading landscape is fragmented. SIM unifies your entire
-              trading journey, from stocks and crypto to automated strategies,
-              and community insights, all powered by AI.
-            </p>
-          </div>
-          <div className="mt-12 space-y-8 max-w-4xl mx-auto">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} feature={feature} />
-            ))}
-          </div>
-        </section>
+        <AnimatedSection>
+          <section>
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
+                Review The Product
+              </h1>
+              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+                Today’s trading landscape is fragmented. SIM unifies your entire
+                trading journey, from stocks and crypto to automated strategies,
+                and community insights, all powered by AI.
+              </p>
+            </div>
+            <div className="mt-12 space-y-8 max-w-4xl mx-auto">
+              {features.map((feature, index) => (
+                <FeatureCard key={index} feature={feature} />
+              ))}
+            </div>
+          </section>
+        </AnimatedSection>
       </main>
       <Footer />
     </div>
