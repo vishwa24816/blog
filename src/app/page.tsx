@@ -198,16 +198,18 @@ export default function LandingPage() {
           <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold">
-                The AI Revolution in Finance
+                Why Now is the Perfect Time for SIM
               </h2>
               <p className="text-lg text-muted-foreground mt-4">
-                Recent advancements in conversational AI have made tools like SIMBOT a reality. We're building an intuitive and powerful platform that was previously unimaginable, democratizing finance for a new generation of investors.
+                The world is changing, and so is finance. We're perfectly positioned to thrive thanks to two major shifts:
               </p>
-              <ul className="list-disc list-inside mt-6 space-y-2 text-muted-foreground">
-                <li>Proprietary AI core (SIMBOT)</li>
-                <li>True all-in-one platform</li>
-                <li>No-code algorithmic trading</li>
-                <li>Simulated trading experience</li>
+              <ul className="list-disc list-inside mt-6 space-y-4 text-muted-foreground">
+                <li>
+                  <strong>The AI Revolution:</strong> Recent advancements in conversational AI and natural language processing have made tools like SIMBOT a reality. We can now build a truly intuitive and powerful platform that was previously unimaginable.
+                </li>
+                <li>
+                  <strong>The Democratization of Finance:</strong> A new generation of retail investors is demanding seamless, unified, and intelligent tools to navigate increasingly complex financial markets. Traditional platforms simply aren't meeting this demand, leaving a massive opportunity for innovation.
+                </li>
               </ul>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
