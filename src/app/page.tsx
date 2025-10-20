@@ -197,8 +197,8 @@ export default function LandingPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F973a8bbb-0539-450d-8d00-217dc67dafb4%2Fsell-me-this-pen-its-ai-powered-v0-ty4hkya8v2hd1.webp/size/w=860?exp=1761062024&sig=yBDeW9RS_gfsNlEvHymTS6OAMEls_eLUPvvD54pzhoo&id=23d6fb47-9c52-8032-b38b-df0aefd8af6f&table=block"
-                    alt="AI powered pen meme" 
+                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F7f041e30-9b72-4cf9-a391-45071bb20caa%2Fproblems-problems-everywhere-5b6abe.jpg/size/w=1200?exp=1761061495&sig=2ohlYCyC9yoputMAonKYwO-c6HhkndB-WkwRT0a8F5U&id=2926fb47-9c52-80bf-9758-fc976d11b0b2&table=block"
+                    alt="Problems everywhere meme"
                     width={400}
                     height={320}
                     unoptimized
@@ -325,5 +325,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
