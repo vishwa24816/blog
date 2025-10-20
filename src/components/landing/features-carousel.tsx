@@ -33,21 +33,22 @@ export function FeaturesCarousel({ features }: FeaturesCarouselProps) {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true, stopOnMouseEnter: true })
   );
-  
+
   const carouselRef = React.useRef<any>(null);
 
   const handleInteraction = () => {
     const autoplay = carouselRef.current?.plugins()?.autoplay;
     if (!autoplay) return;
 
-    autoplay.stop();
+    if(autoplay.isPlaying()) autoplay.stop();
     setTimeout(() => {
-      autoplay.play();
+        if (!autoplay.isPlaying()) {
+            autoplay.play();
+        }
     }, 5000);
   };
 
   const handleDoubleClick = (e: React.MouseEvent) => {
-    // We stop propagation to avoid triggering the carousel's own click handlers
     e.stopPropagation();
     const autoplay = carouselRef.current?.plugins()?.autoplay;
     if (!autoplay) return;
