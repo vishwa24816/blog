@@ -81,15 +81,6 @@ const businessModel = [
   },
 ];
 
-const partnerBenefits = [
-  'Innovative Technology',
-  'Rapid Deployment',
-  'Cost-Effectiveness',
-  'Expert Support',
-  'Scalable Solutions',
-  'Enhanced User Engagement',
-];
-
 export default function BusinessPage() {
   return (
     <div className="bg-background text-foreground">
@@ -235,24 +226,6 @@ export default function BusinessPage() {
               And the Best Part? We’re Executing this! Until that, You can check
               the prototype as a Web App and let us know your experience Below :-
             </p>
-          </div>
-        </section>
-
-        <section className="mt-24 md:mt-32">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Why Partner with SIM?
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
-            {partnerBenefits.map((benefit) => (
-              <div
-                key={benefit}
-                className="bg-card p-4 rounded-lg flex items-center justify-center"
-              >
-                <p className="font-semibold">{benefit}</p>
-              </div>
-            ))}
           </div>
         </section>
 
