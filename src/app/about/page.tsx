@@ -18,18 +18,6 @@ const teamMembers = [
     avatarUrl: 'https://picsum.photos/seed/ceo/200/200',
     bio: 'Visionary leader with a passion for democratizing finance through technology.',
   },
-  {
-    name: 'Jane Smith',
-    role: 'Chief Technology Officer',
-    avatarUrl: 'https://picsum.photos/seed/cto/200/200',
-    bio: 'Expert in AI and blockchain, driving the innovation behind the SIM platform.',
-  },
-  {
-    name: 'Alex Johnson',
-    role: 'Head of Product',
-    avatarUrl: 'https://picsum.photos/seed/product/200/200',
-    bio: 'Dedicated to creating a seamless and powerful user experience for our traders.',
-  },
 ];
 
 export default function AboutPage() {
@@ -133,7 +121,7 @@ export default function AboutPage() {
               by a single mission.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 max-w-md mx-auto">
             {teamMembers.map((member) => (
               <Card key={member.name} className="text-center">
                 <CardHeader>
