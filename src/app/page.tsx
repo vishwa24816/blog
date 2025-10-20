@@ -155,7 +155,7 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src="https://picsum.photos/seed/sad-person/600/400" alt="Frustrated person with a phone" fill objectFit="cover" data-ai-hint="sad person mobile" />
+                <Image src="https://picsum.photos/seed/sad-person/600/400" alt="Frustrated person with a phone" fill style={{ objectFit: 'cover' }} data-ai-hint="sad person mobile" />
             </div>
           </section>
         </AnimatedSection>
@@ -266,7 +266,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src="https://picsum.photos/seed/ai-finance/600/400" alt="AI in finance" fill objectFit="cover" data-ai-hint="AI finance" />
+                <Image src="https://picsum.photos/seed/ai-finance/600/400" alt="AI in finance" fill style={{ objectFit: 'cover' }} data-ai-hint="AI finance" />
             </div>
           </section>
         </AnimatedSection>
