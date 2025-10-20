@@ -28,7 +28,7 @@ export function CyclingText({ sentences, className }: CyclingTextProps) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="absolute w-full text-center text-lg md:text-xl font-semibold"
+          className="absolute w-full text-center text-sm md:text-base font-semibold"
         >
           {sentences[index]}
         </motion.p>

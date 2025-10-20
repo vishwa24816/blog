@@ -118,7 +118,7 @@ export default function LandingPage() {
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
               The Future of Intelligent Investing is Here
             </h1>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto">
               SIM is an AI-powered, all-in-one trading platform that makes
               sophisticated investing simple, efficient, and profitable.
             </p>
@@ -137,7 +137,7 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl font-bold">
                 Let's face it
               </h2>
-              <p className="text-lg text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-4">
                 Navigating the world of trading can feel like trying to solve a Rubik's Cube blindfolded. You're juggling multiple apps, wrestling with clunky interfaces, and maybe even feeling left behind by the algorithmic revolution. If this sounds familiar, you're not alone. In fact, a staggering 70% of trading platforms are missing a huge opportunity by not fully leveraging AI and machine learning for a truly intuitive experience.
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold">
               Introducing SIM: The Intelligent Trading Terminal
             </h2>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-4 max-w-3xl mx-auto">
               That's where <strong>SIM (Simulation Exchange)</strong> comes in. We're an <strong>AI-powered, all-in-one trading platform</strong> designed to democratize sophisticated investing for everyone. Our mission is simple: to make trading simple, efficient, and even profitable, without that usual headaches.
             </p>
           </section>
@@ -163,7 +163,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold">
               The Problem We're Solving (And Why It Matters?)
             </h2>
-            <div className="text-lg text-muted-foreground mt-4 space-y-6">
+            <div className="text-sm text-muted-foreground mt-4 space-y-6">
               <p>
                 Tired of bouncing between apps just to manage your stocks, crypto, and strategies? Don’t Know how to trade without risking your own money? Ever thought your crypto wallet from your crypto exchange is managed actually in a decentralised way? Ever felt difficult to use Algo Trading? Have you ever thought your broker or exchange is not just leveraging or optimizing your training experience with AI? You’re not alone.
               </p>
@@ -177,7 +177,7 @@ export default function LandingPage() {
             
             <CyclingText sentences={cyclingSentences} className="mt-8" />
 
-            <p className="text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-8 max-w-3xl mx-auto">
               Just smart, effortless, and powerful trading made for everyone. And now you can trade peacefully like never before because all your problem will be solved.
             </p>
           </section>
@@ -189,7 +189,7 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl font-bold">
                 But How SIM Makes Trading Simple (and Smart)
               </h2>
-              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+              <p className="text-muted-foreground mt-4 max-w-3xl mx-auto text-sm">
                 Today’s trading landscape is fragmented. SIM unifies your entire
                 trading journey, from stocks and crypto to automated
                 strategies, and community insights, all powered by AI.
@@ -211,10 +211,10 @@ export default function LandingPage() {
               <h2 className="text-3xl md:text-4xl font-bold">
                 Why Now is the Perfect Time for SIM
               </h2>
-              <p className="text-lg text-muted-foreground mt-4">
+              <p className="text-sm text-muted-foreground mt-4">
                 The world is changing, and so is finance. We're perfectly positioned to thrive thanks to two major shifts:
               </p>
-              <ul className="list-disc list-inside mt-6 space-y-4 text-muted-foreground">
+              <ul className="list-disc list-inside mt-6 space-y-4 text-muted-foreground text-sm">
                 <li>
                   <strong>The AI Revolution:</strong> Recent advancements in conversational AI and natural language processing have made tools like SIMBOT a reality. We can now build a truly intuitive and powerful platform that was previously unimaginable.
                 </li>
@@ -234,14 +234,14 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold">
               Our Competitive Edge: Unifying AI and Accessibility
             </h2>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-4 max-w-3xl mx-auto">
               While many trading platforms exist, none offer the unified, AI-driven experience that SIM provides. We're not just another trading app; we're building a truly intelligent ecosystem.
             </p>
-            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-4 max-w-3xl mx-auto">
                 Our defensible moat lies in:
             </p>
             <CyclingText sentences={competitiveEdgeSentences} className="mt-8" />
-            <p className="text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-8 max-w-3xl mx-auto">
                 SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
             </p>
           </section>
@@ -252,7 +252,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold">
               Join the Waitlist
             </h2>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto">
               Ready to take the guesswork out of investing? Our private beta is
               launching soon. Sign up to be among the first to experience the future of trading.
             </p>
