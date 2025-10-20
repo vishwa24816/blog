@@ -44,14 +44,13 @@ const offerings = [
     },
   },
   {
-    title: 'Corporate Treasury Solutions',
+    title: 'Share Of Market (SOM)',
     description:
-      'Optimize your corporate treasury strategy with our advanced AI-driven analytics and portfolio management tools. We help businesses manage cash, hedge risks, and generate returns on corporate assets with greater efficiency and insight.',
+      'With a $80.5K revenue potential (0.01% of $805M in algo segment ; With a estimated power users 1,000 users by the year 1 at ₹10K average ( conservative side ) annual trade value × 0.4% fee ( with an estimate of users using our first live product i.e crypto exchange).',
     features: [
-      'AI-powered cash flow forecasting',
-      'Automated risk management strategies',
-      'Multi-asset portfolio optimization',
-      'Secure and compliant transaction environment',
+      'Realistic Year 1 capture of SAM via GTM (community/social).',
+      'Formula: SOM = SAM × Market share target (0.001% conservative for new entrant).',
+      'Cross-reference: Angel One and CoinDCX captured 0.05% SOM in Year 1 (Economic Times 2025).',
     ],
     image: {
       src: 'https://picsum.photos/seed/treasury/800/600',
