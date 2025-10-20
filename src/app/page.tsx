@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Coins, Users } from 'lucide-react';
+import { Bot, Coins, Users, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import { FeaturesCarousel } from '@/components/landing/features-carousel';
 
@@ -38,6 +38,12 @@ const features = [
     title: 'No-Code Algo Builder',
     description:
       "Want to automate your strategies but don't know how to code? Our visual, drag-and-drop builder (think n8n for trading) lets anyone create, backtest, and deploy automated trading strategies without writing a single line of code. This is truly democratizing algorithmic trading and more.",
+  },
+  {
+    icon: <Wallet className="h-10 w-10" />,
+    title: 'Multi Wallet management system',
+    description:
+      'Users can have 2 types of crypto wallets, Custodial ( as per FIU laws ) and Personal ( with user’s public key where users have the flexibility over which wallet to transact.',
   },
 ];
 
