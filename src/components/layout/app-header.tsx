@@ -33,6 +33,7 @@ import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { SidebarTrigger } from '../ui/sidebar';
 import AppSidebar from './app-sidebar';
+import { ThemeSwitcher } from '../theme/theme-switcher';
 
 export default function AppHeader({
   title,
@@ -50,6 +51,7 @@ export default function AppHeader({
           {title}
         </h1>
       </div>
+      <ThemeSwitcher />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" size="icon" className="rounded-full">

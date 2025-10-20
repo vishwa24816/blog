@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { ThemeSwitcher } from '../theme/theme-switcher';
 
 const Logo = () => (
   <Image
@@ -67,7 +68,8 @@ export function Header() {
             Contact
           </Link>
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
+          <ThemeSwitcher />
           <Button variant="outline" size="sm">
             Sign In
           </Button>
