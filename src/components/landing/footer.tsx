@@ -35,7 +35,9 @@ export function Footer() {
             <h3 className="font-semibold">Contact Us</h3>
             <div className="mt-2 space-y-2">
               <Link
-                href="mailto:simulationexchange@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=simulationexchange@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               >
                 simulationexchange@gmail.com
