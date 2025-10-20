@@ -236,6 +236,9 @@ export default function BusinessPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button size="lg">Join the Waitlist</Button>
+            <Button size="lg" variant="outline">
+              Share Your Experience
+            </Button>
           </div>
         </section>
       </main>
