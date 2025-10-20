@@ -58,7 +58,7 @@ export function ThemeSwitcher() {
         }}
       />
       <div 
-        className="absolute bg-card rounded-full"
+        className="absolute bg-background rounded-full"
         style={{
             width: SIZE - THICKNESS * 2,
             height: SIZE - THICKNESS * 2,

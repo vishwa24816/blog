@@ -5,19 +5,27 @@ import { createContext, useContext, useState, useEffect } from 'react';
 type Theme = {
   hue: number;
   setHue: (hue: number) => void;
+  saturation: number;
+  setSaturation: (saturation: number) => void;
+  lightness: number;
+  setLightness: (lightness: number) => void;
 };
 
 const ThemeContext = createContext<Theme | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [hue, setHue] = useState(231); 
+  const [hue, setHue] = useState(231);
+  const [saturation, setSaturation] = useState(48);
+  const [lightness, setLightness] = useState(55);
 
   useEffect(() => {
     document.documentElement.style.setProperty('--primary-hue', hue.toString());
-  }, [hue]);
+    document.documentElement.style.setProperty('--primary-saturation', `${saturation}%`);
+    document.documentElement.style.setProperty('--primary-lightness', `${lightness}%`);
+  }, [hue, saturation, lightness]);
 
   return (
-    <ThemeContext.Provider value={{ hue, setHue }}>
+    <ThemeContext.Provider value={{ hue, setHue, saturation, setSaturation, lightness, setLightness }}>
       {children}
     </ThemeContext.Provider>
   );

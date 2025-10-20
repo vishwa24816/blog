@@ -8,47 +8,71 @@
     --primary-saturation: 48%;
     --primary-lightness: 55%;
 
-    --background: 222.2 84% 4.9%;
+    --background-saturation: 84%;
+    --background-lightness: 4.9%;
+
+    --background: var(--primary-hue) var(--background-saturation) var(--background-lightness);
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 8%;
+    
+    --card: var(--primary-hue) 84% 8%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    
+    --popover: var(--primary-hue) 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+    
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --primary-foreground: var(--primary-hue) calc(var(--primary-saturation) / 2) calc(100% - var(--primary-lightness));
+    
+    --secondary: var(--primary-hue) 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
+
+    --muted: var(--primary-hue) 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 22.5%;
+
+    --accent: var(--primary-hue) 32.6% 22.5%;
     --accent-foreground: 210 40% 98%;
+    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    
+    --border: var(--primary-hue) 32.6% 17.5%;
+    --input: var(--primary-hue) 32.6% 17.5%;
+    
     --ring: var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + 5%);
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background-saturation: 84%;
+    --background-lightness: 4.9%;
+
+    --background: var(--primary-hue) var(--background-saturation) var(--background-lightness);
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 8%;
+
+    --card: var(--primary-hue) 84% 8%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+
+    --popover: var(--primary-hue) 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --primary-foreground: var(--primary-hue) calc(var(--primary-saturation) / 2) calc(100% - var(--primary-lightness));
+    
+    --secondary: var(--primary-hue) 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
+
+    --muted: var(--primary-hue) 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 22.5%;
+
+    --accent: var(--primary-hue) 32.6% 22.5%;
     --accent-foreground: 210 40% 98%;
+    
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    
+    --border: var(--primary-hue) 32.6% 17.5%;
+    --input: var(--primary-hue) 32.6% 17.5%;
+    
     --ring: var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + 5%);
   }
 }
