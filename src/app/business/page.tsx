@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Check } from 'lucide-react';
+import { Check, DollarSign, Package, Banknote } from 'lucide-react';
 import Image from 'next/image';
 
 const offerings = [
@@ -57,6 +57,27 @@ const offerings = [
       alt: 'A corporate executive analyzing financial charts',
       hint: 'corporate finance',
     },
+  },
+];
+
+const businessModel = [
+  {
+    icon: <DollarSign className="h-8 w-8" />,
+    title: 'Crypto Trading Fees',
+    description:
+      'We charge competitive maker/taker fees of 0.4% of traded value on spot and 0.04% of notional value in futures, with a 20% premium for orders executed via SIMBOT, reflecting the added value and convenience. But Don’t worry, 100% of the fees paid can be earned back.',
+  },
+  {
+    icon: <Package className="h-8 w-8" />,
+    title: 'SaaS Subscription',
+    description:
+      'An annual fee of ₹499 + GST for premium features, including access to our powerful No-Code Algo Flow builder, Bactester, and more',
+  },
+  {
+    icon: <Banknote className="h-8 w-8" />,
+    title: 'Future Monetization',
+    description:
+      'In Future, we plan to expand our offerings i.e making crypto cum stocks platform a reality so that we can earn brokerage fees for stocks, Futures & Options (F&O), and mutual funds, further diversifying our revenue streams.',
   },
 ];
 
@@ -175,6 +196,32 @@ export default function BusinessPage() {
                 <strong>The Democratization of Finance:</strong> Finance industry democratized today so much that startups are Lending P2P , Buying Stocks are commission free and more.
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section className="mt-24 md:mt-32">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              Our Business Model
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+              SIM operates on a diversified and scalable revenue model designed for sustainable growth:
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {businessModel.map((item) => (
+              <Card key={item.title} className="bg-card/50 backdrop-blur-sm border-border/50">
+                <CardHeader>
+                  <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+                    {item.icon}
+                  </div>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
