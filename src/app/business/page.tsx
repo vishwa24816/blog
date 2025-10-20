@@ -77,7 +77,7 @@ export default function BusinessPage() {
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <section className="text-center">
-          <p className="font-headline text-primary font-semibold">for business and investors</p>
+          <p className="font-headline text-primary font-semibold">For Business and Investors</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
             AI-Powered Solutions for You
           </h1>
