@@ -152,7 +152,7 @@ export default function LandingPage() {
             <h2 className="text-3xl md:text-4xl font-bold">
               The Problem We're Solving (And Why It Matters?)
             </h2>
-            <div className="max-w-3xl mx-auto text-lg text-muted-foreground mt-4 space-y-6">
+            <div className="text-lg text-muted-foreground mt-4 space-y-6">
               <p>
                 Tired of bouncing between apps just to manage your stocks, crypto, and strategies? Don’t Know how to trade without risking your own money? Ever thought your crypto wallet from your crypto exchange is managed actually in a decentralised way? Ever felt difficult to use Algo Trading? Have you ever thought your broker or exchange is not just leveraging or optimizing your training experience with AI? You’re not alone.
               </p>
@@ -235,3 +235,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
