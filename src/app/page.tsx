@@ -273,7 +273,7 @@ export default function LandingPage() {
 
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-3xl md-text-4xl font-bold">
               Our Competitive Edge: Unifying AI and Accessibility
             </h2>
             <p className="text-muted-foreground mt-4">
@@ -325,3 +325,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
