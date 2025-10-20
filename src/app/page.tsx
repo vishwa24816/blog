@@ -69,6 +69,17 @@ const cyclingSentences = [
   'No more gatekeeping.',
 ];
 
+const competitiveEdgeSentences = [
+    "Our **proprietary AI core (SIMBOT)**.",
+    "Our commitment to being a **true all-in-one platform**.",
+    "The **democratization of algorithmic trading** through our no-code builder.",
+    "Simulated Trading experience for risk free and knowledgeable trading experience",
+    "Community segment with Special tagging for professionals to give best investment advisory.",
+    "Manual Crypto wallet management with Automation facility for transparent and better wallet management.",
+    "A Colour Flexible Platform and more",
+    "Last but not least, Full Entertainment and Flexibility."
+]
+
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
   <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col mx-4 w-[350px] flex-shrink-0">
     <CardHeader>
@@ -221,6 +232,24 @@ export default function LandingPage() {
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
             <h2 className="text-3xl md:text-4xl font-bold">
+              Our Competitive Edge: Unifying AI and Accessibility
+            </h2>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+              While many trading platforms exist, none offer the unified, AI-driven experience that SIM provides. We're not just another trading app; we're building a truly intelligent ecosystem.
+            </p>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+                Our defensible moat lies in:
+            </p>
+            <CyclingText sentences={competitiveEdgeSentences} className="mt-8" />
+            <p className="text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
+                SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
+            </p>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold">
               Join the Waitlist
             </h2>
             <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -237,5 +266,7 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
 
     
