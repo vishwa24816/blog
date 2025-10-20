@@ -20,7 +20,7 @@ const ThemeContext = createContext<Theme | undefined>(undefined);
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeMode>('dark');
   const [hue, setHue] = useState(231);
-  const [saturation, setSaturation] = useState(48);
+  const [saturation, setSaturation] = useState(80);
   const [lightness, setLightness] = useState(55);
 
   useEffect(() => {
