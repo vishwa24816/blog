@@ -3,16 +3,15 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ThemeSwitcher } from '../theme/theme-switcher';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 
 const Logo = () => (
   <Image
@@ -27,6 +26,7 @@ const Logo = () => (
 export function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -50,25 +50,13 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <button className="flex items-center gap-2 focus:outline-none">
-              <Logo />
-              <span className="text-xl font-bold font-headline">SIM</span>
-            </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem asChild>
-              <Link href="#">Features</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="#">About</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="#">Contact</Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-2 focus:outline-none"
+        >
+          <Logo />
+          <span className="text-xl font-bold font-headline">SIM</span>
+        </button>
 
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
@@ -77,6 +65,41 @@ export function Header() {
           </Button>
         </div>
       </div>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden border-t border-border/50"
+          >
+            <nav className="container mx-auto flex flex-col items-start gap-4 px-4 py-4 md:px-6">
+              <Link
+                href="#"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setIsExpanded(false)}
+              >
+                Features
+              </Link>
+              <Link
+                href="#"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setIsExpanded(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="#"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setIsExpanded(false)}
+              >
+                Contact
+              </Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
