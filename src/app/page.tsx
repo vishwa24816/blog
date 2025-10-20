@@ -93,6 +93,17 @@ export default function LandingPage() {
         </AnimatedSection>
 
         <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Introducing SIM: The Intelligent Trading Terminal
+            </h2>
+            <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
+              That's where <strong>SIM (Simulation Exchange)</strong> comes in. We're an <strong>AI-powered, all-in-one trading platform</strong> designed to democratize sophisticated investing for everyone. Our mission is simple: to make trading simple, efficient, and even profitable, without that usual headaches.
+            </p>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
           <section className="mt-24 md:mt-32">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold">
