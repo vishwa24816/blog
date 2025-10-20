@@ -131,7 +131,15 @@ export default function LandingPage() {
               sophisticated investing simple, efficient, and profitable.
             </p>
             <div className="mt-8 flex gap-4 justify-center">
-              <Button size="lg">Sign In</Button>
+              <Button size="lg" asChild>
+                <Link
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign In
+                </Link>
+              </Button>
               <Button size="lg" variant="outline">
                 Learn More
               </Button>
@@ -282,7 +290,15 @@ export default function LandingPage() {
               launching soon. Sign up to be among the first to experience the future of trading.
             </p>
             <div className="mt-8 flex gap-4 justify-center">
-              <Button size="lg">Sign Up Now</Button>
+              <Button size="lg" asChild>
+                <Link
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign Up Now
+                </Link>
+              </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link
                   href="https://forms.gle/NVpMwxqqgXU1ZjRi6"

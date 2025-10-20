@@ -61,8 +61,14 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
-          <Button variant="outline" size="sm">
-            Sign In
+          <Button variant="outline" size="sm" asChild>
+            <Link
+              href="https://simulationexchange.vercel.app/login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sign In
+            </Link>
           </Button>
         </div>
       </div>

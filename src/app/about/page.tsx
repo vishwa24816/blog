@@ -154,7 +154,15 @@ export default function AboutPage() {
             tools you need to succeed.
           </p>
           <div className="mt-8 flex gap-4 justify-center">
-            <Button size="lg">Join the Waitlist</Button>
+            <Button size="lg" asChild>
+              <Link
+                href="https://simulationexchange.vercel.app/login"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the Waitlist
+              </Link>
+            </Button>
             <Button size="lg" variant="outline" asChild>
               <Link
                 href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
