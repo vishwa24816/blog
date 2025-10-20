@@ -13,10 +13,10 @@ import Image from 'next/image';
 
 const teamMembers = [
   {
-    name: 'John Doe',
+    name: 'Vishwa Lingam',
     role: 'Founder & CEO',
     avatarUrl: 'https://picsum.photos/seed/ceo/200/200',
-    bio: 'Visionary leader with a passion for democratizing finance through technology.',
+    bio: 'A Graduate in Electronics & CMA Inter qualified professional with a year of experience in Fintech has overviewed the  entire Fintech space, especially in Product Operations,  management and Equity Research perspective , I understand  how the Finance industry transforming to Fintech Industry  but still lack the leverage of AI and hence I am passionate to furthermore contribute by applying  my knowledge and skills in AI to make the world trade  and invest with the leverage of AI.',
   },
 ];
 
