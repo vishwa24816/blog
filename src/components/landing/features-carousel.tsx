@@ -2,7 +2,7 @@
 'use client';
 
 import * as React from 'react';
-import Autoplay from 'embla-carousel-autoplay';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import {
   Card,
@@ -11,13 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 
 type Feature = {
   icon: React.ReactNode;
@@ -30,66 +23,40 @@ type FeaturesCarouselProps = {
 };
 
 export function FeaturesCarousel({ features }: FeaturesCarouselProps) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true, stopOnMouseEnter: true })
-  );
+  const [index, setIndex] = React.useState(0);
 
-  const carouselRef = React.useRef<any>(null);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % features.length);
+    }, 3000); // Change card every 3 seconds
 
-  const handleInteraction = () => {
-    const autoplay = carouselRef.current?.plugins()?.autoplay;
-    if (!autoplay) return;
-
-    if(autoplay.isPlaying()) autoplay.stop();
-    setTimeout(() => {
-        if (!autoplay.isPlaying()) {
-            autoplay.play();
-        }
-    }, 5000);
-  };
-
-  const handleDoubleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    const autoplay = carouselRef.current?.plugins()?.autoplay;
-    if (!autoplay) return;
-
-    if (autoplay.isPlaying()) {
-        autoplay.stop();
-    }
-  }
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   return (
-    <div className="mt-12" onMouseDown={handleInteraction} onTouchStart={handleInteraction}>
-        <Carousel
-            ref={carouselRef}
-            plugins={[plugin.current]}
-            className="w-full"
-            opts={{
-                loop: true,
-            }}
+    <div className="mt-12 relative h-80 flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+          className="absolute w-full max-w-sm"
         >
-            <CarouselContent>
-            {features.map((feature, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3" onDoubleClick={handleDoubleClick}>
-                    <div className="p-1 h-full">
-                        <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
-                            <CardHeader>
-                                <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
-                                {feature.icon}
-                                </div>
-                                <CardTitle>{feature.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <CardDescription>{feature.description}</CardDescription>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </CarouselItem>
-            ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-        </Carousel>
+          <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
+            <CardHeader>
+              <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+                {features[index].icon}
+              </div>
+              <CardTitle>{features[index].title}</CardTitle>
+            </CardHeader>
+            <CardContent className="flex-grow">
+              <CardDescription>{features[index].description}</CardDescription>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
