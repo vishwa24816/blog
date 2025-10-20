@@ -79,7 +79,7 @@ export default function BusinessPage() {
         <section className="text-center">
           <p className="font-headline text-primary font-semibold">FOR BUSINESS</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
-            AI-Powered Solutions for Your Enterprise
+            AI-Powered Solutions for You
           </h1>
           <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
             Welcome to SIM for Business, where we empower financial
