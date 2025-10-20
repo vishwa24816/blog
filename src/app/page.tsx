@@ -197,8 +197,8 @@ export default function LandingPage() {
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
                 <Image 
-                    src="https://file.notion.so/f/f/7526fb47-9c52-81ef-9df9-00033e87bb4d/e5d8feef-8bb0-413c-8000-714f56b5c48a/spongebob-squarepants.gif?table=block&id=23d6fb47-9c52-8011-804b-c006acd392c4&spaceId=7526fb47-9c52-81ef-9df9-00033e87bb4d&expirationTimestamp=1760997600000&signature=g-gBLU6UHM6RhI0SLAK6J0oKShjD9IfBQdzl909siPs"
-                    alt="Spongebob money gif" 
+                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F7f041e30-9b72-4cf9-a391-45071bb20caa%2Fproblems-problems-everywhere-5b6abe.jpg/size/w=1200?exp=1761061495&sig=2ohlYCyC9yoputMAonKYwO-c6HhkndB-WkwRT0a8F5U&id=2926fb47-9c52-80bf-9758-fc976d11b0b2&table=block"
+                    alt="Problems everywhere meme" 
                     width={400}
                     height={320}
                     unoptimized
