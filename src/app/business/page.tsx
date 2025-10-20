@@ -82,9 +82,14 @@ export default function BusinessPage() {
             AI-Powered Solutions for You
           </h1>
           <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-            Welcome to SIM for Business, where we empower financial
-            institutions, educational organizations, and corporate partners
-            with our cutting-edge, AI-powered trading and investment solutions.
+            At SIM (Simulation Exchange), we believe that sophisticated
+            investing should be accessible to everyone. In today's fast-paced
+            financial landscape, traders face a myriad of challenges:
+            fragmented platforms, complex interfaces, and the daunting task of
+            mastering algorithmic strategies. We're here to change that. SIM is
+            an AI-powered, all-in-one trading platform designed to democratize
+            sophisticated investing, making it simple, intuitive, and
+            ultimately, more profitable for our users.
           </p>
           <div className="relative w-full h-[400px] my-8">
             <Image
