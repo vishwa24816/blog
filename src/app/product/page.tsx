@@ -79,7 +79,7 @@ export default function ProductPage() {
               and community insights, all powered by AI.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 space-y-8 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <FeatureCard key={index} feature={feature} />
             ))}
