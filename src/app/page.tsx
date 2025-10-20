@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Coins, Ellipsis, Users, Wallet } from 'lucide-react';
+import { Bot, Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import { cn } from '@/lib/utils';
 
@@ -46,6 +46,12 @@ const features = [
       'Users can have 2 types of crypto wallets, Custodial ( as per FIU laws ) and Personal ( with user’s public key where users have the flexibility over which wallet to transact.',
   },
   {
+    icon: <ScanSearch className="h-10 w-10" />,
+    title: 'Prompt based Screening and Backtesting',
+    description:
+      'Our AI-powered screener cuts through market noise, analyzing technicals, fundamentals, and social sentiment to help you find actionable opportunities',
+  },
+  {
     icon: <Ellipsis className="h-10 w-10" />,
     title: 'And More',
     description:
@@ -64,17 +70,17 @@ const cyclingSentences = [
 ];
 
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
-    <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col mx-4 w-[350px] flex-shrink-0">
-        <CardHeader>
-        <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
-            {feature.icon}
-        </div>
-        <CardTitle>{feature.title}</CardTitle>
-        </CardHeader>
-        <CardContent>
-        <CardDescription>{feature.description}</CardDescription>
-        </CardContent>
-    </Card>
+  <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col mx-4 w-[350px] flex-shrink-0">
+    <CardHeader>
+      <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+        {feature.icon}
+      </div>
+      <CardTitle>{feature.title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <CardDescription>{feature.description}</CardDescription>
+    </CardContent>
+  </Card>
 );
 
 export default function LandingPage() {
