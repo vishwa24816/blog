@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Coins, Users, Wallet } from 'lucide-react';
+import { Bot, Coins, Ellipsis, Users, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import { cn } from '@/lib/utils';
 
@@ -44,6 +44,12 @@ const features = [
     title: 'Multi Wallet management system',
     description:
       'Users can have 2 types of crypto wallets, Custodial ( as per FIU laws ) and Personal ( with user’s public key where users have the flexibility over which wallet to transact.',
+  },
+  {
+    icon: <Ellipsis className="h-10 w-10" />,
+    title: 'And More',
+    description:
+      'And more solutions which are great, but you don’t need to waste your time reading them. You can experience them from the launch.',
   },
 ];
 
