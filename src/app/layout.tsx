@@ -5,7 +5,7 @@ import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
-import { ThemeProvider } from '@/components/theme/theme-provider';
+import { ThemeProvider, useTheme } from '@/components/theme/theme-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 const spaceGrotesk = Space_Grotesk({
@@ -19,13 +19,11 @@ export const metadata: Metadata = {
     'Simulate investment strategies, track portfolios, and get AI-powered insights.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+function AppBody({ children }: { children: React.ReactNode }) {
+  'use client';
+  const { theme } = useTheme();
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" className={theme} suppressHydrationWarning>
       <body
         className={cn(
           'min-h-screen font-body antialiased',
@@ -33,9 +31,21 @@ export default function RootLayout({
           spaceGrotesk.variable
         )}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        {children}
         <Toaster />
       </body>
     </html>
+  );
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <ThemeProvider>
+      <AppBody>{children}</AppBody>
+    </ThemeProvider>
   );
 }

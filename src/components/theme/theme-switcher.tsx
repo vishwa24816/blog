@@ -4,13 +4,17 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { useTheme } from './theme-provider';
+import { Sun, Moon } from 'lucide-react';
 
 const SIZE = 32;
 const THICKNESS = 3;
 const KNOB_SIZE = 12;
 
+const lightGradient = 'conic-gradient(from 90deg, hsl(0, 100%, 80%), hsl(60, 100%, 80%), hsl(120, 100%, 80%), hsl(180, 100%, 80%), hsl(240, 100%, 80%), hsl(300, 100%, 80%), hsl(0, 100%, 80%))';
+const darkGradient = 'conic-gradient(from 90deg, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(0, 100%, 50%))';
+
 export function ThemeSwitcher() {
-  const { hue, setHue } = useTheme();
+  const { hue, setHue, theme, setTheme } = useTheme();
   const [angle, setAngle] = React.useState((hue / 360) * 360 - 90);
   const switcherRef = React.useRef<HTMLDivElement>(null);
 
@@ -43,6 +47,10 @@ export function ThemeSwitcher() {
     window.addEventListener('touchend', onEnd);
   };
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
     <div
       ref={switcherRef}
@@ -54,18 +62,26 @@ export function ThemeSwitcher() {
       <motion.div
         className="w-full h-full rounded-full"
         style={{
-          background: 'conic-gradient(from 90deg, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(0, 100%, 50%))',
+          background: theme === 'dark' ? darkGradient : lightGradient,
         }}
       />
-      <div 
-        className="absolute bg-background rounded-full"
+      <button 
+        onClick={toggleTheme}
+        className="absolute bg-background rounded-full flex items-center justify-center"
         style={{
             width: SIZE - THICKNESS * 2,
             height: SIZE - THICKNESS * 2,
         }}
-      />
+        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      >
+        {theme === 'dark' ? (
+            <Sun className="h-4 w-4 text-foreground" />
+        ) : (
+            <Moon className="h-4 w-4 text-foreground" />
+        )}
+      </button>
       <motion.div
-        className="absolute flex items-center justify-center"
+        className="absolute flex items-center justify-center pointer-events-none"
         style={{
           width: KNOB_SIZE,
           height: KNOB_SIZE,
