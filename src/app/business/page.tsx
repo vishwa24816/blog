@@ -29,19 +29,18 @@ const offerings = [
     },
   },
   {
-    title: 'Educational Partnerships',
+    title: 'Serviceable Available Market (SAM)',
     description:
-      'Bring real-world trading and investment education to the classroom. We partner with universities, colleges, and training institutions to provide students with a safe, simulated trading environment, equipped with professional-grade tools.',
+      "The combined market of retail stocks and crypto traders i.e 220M+ users with Indian retail investors i.e 110M+ Demat accounts, and the projected $805M algorithmic trading market as per Data.",
     features: [
-      'Risk-free simulated trading accounts',
-      'Access to real-time market data and analysis',
-      'Curriculum support and guest lectures',
-      'Student performance tracking and analytics',
+      "India-specific retail algo/AI trading subset (SIM's core differentiator).",
+      'Algo market: $1.15B (2025 est.; interpolated from IMARC $562M 2024 + 9.5% CAGR).',
+      'Retail penetration: 70% (SEBI; 70% platforms lack AI)',
     ],
     image: {
       src: 'https://picsum.photos/seed/education/800/600',
-      alt: 'Students in a modern classroom learning about finance',
-      hint: 'finance classroom',
+      alt: 'A graph showing market share and growth',
+      hint: 'market share graph',
     },
   },
   {
