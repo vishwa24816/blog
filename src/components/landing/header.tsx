@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -90,7 +91,7 @@ export function Header() {
                 About
               </Link>
               <Link
-                href="#"
+                href="/business"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
