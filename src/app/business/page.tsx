@@ -223,20 +223,19 @@ export default function BusinessPage() {
               </Card>
             ))}
           </div>
-        </section>
-
-        <section className="mt-24 md:mt-32 text-center space-y-4">
-          <p className="text-muted-foreground max-w-4xl mx-auto">
-            We project a healthy LTV/CAC (Customer Lifetime Value to Customer
-            Acquisition Cost) ratio, leveraging a conservative CAC estimate of
-            ₹1000 for branding purposes, knowing our diversified model and
-            community-first Go-To-Market (GTM) strategy will drive strong
-            returns.
-          </p>
-          <p className="text-muted-foreground max-w-4xl mx-auto">
-            And the Best Part? We’re Executing this! Until that, You can check
-            the prototype as a Web App and let us know your experience Below :-
-          </p>
+          <div className="mt-8 text-center space-y-4">
+            <p className="text-muted-foreground max-w-4xl mx-auto">
+              We project a healthy LTV/CAC (Customer Lifetime Value to Customer
+              Acquisition Cost) ratio, leveraging a conservative CAC estimate of
+              ₹1000 for branding purposes, knowing our diversified model and
+              community-first Go-To-Market (GTM) strategy will drive strong
+              returns.
+            </p>
+            <p className="text-muted-foreground max-w-4xl mx-auto">
+              And the Best Part? We’re Executing this! Until that, You can check
+              the prototype as a Web App and let us know your experience Below :-
+            </p>
+          </div>
         </section>
 
         <section className="mt-24 md:mt-32">
