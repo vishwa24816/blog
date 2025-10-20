@@ -107,11 +107,10 @@ export default function BusinessPage() {
         <section className="mt-24 md:mt-32">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-              Our B2B Offerings
+              Market Opportunity & Growth
             </h2>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              We provide a suite of versatile solutions designed to meet the
-              unique needs of our business clients.
+              We are strategically positioned at the intersection of three high-growth sectors, targeting a massive global market:
             </p>
           </div>
           <div className="space-y-20">
