@@ -1,8 +1,8 @@
-
 'use client';
 
 import * as React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import Autoplay from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
 
 import {
   Card,
@@ -11,6 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
 
 type Feature = {
   icon: React.ReactNode;
@@ -23,40 +28,40 @@ type FeaturesCarouselProps = {
 };
 
 export function FeaturesCarousel({ features }: FeaturesCarouselProps) {
-  const [index, setIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % features.length);
-    }, 3000); // Change card every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [features.length]);
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
 
   return (
-    <div className="mt-12 relative h-80 flex items-center justify-center">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.5 }}
-          className="absolute w-full max-w-sm"
-        >
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
-            <CardHeader>
-              <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
-                {features[index].icon}
-              </div>
-              <CardTitle>{features[index].title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <CardDescription>{features[index].description}</CardDescription>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </AnimatePresence>
-    </div>
+    <Carousel
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+      plugins={[plugin.current]}
+      className="w-full mt-12"
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+    >
+      <CarouselContent>
+        {features.map((feature, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <div className="p-1 h-full">
+              <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
+                <CardHeader>
+                  <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+                    {feature.icon}
+                  </div>
+                  <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 }
