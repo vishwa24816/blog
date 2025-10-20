@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Bot, Coins, Users } from 'lucide-react';
+import { CyclingText } from '@/components/landing/cycling-text';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -37,6 +38,16 @@ const features = [
     description:
       'Create, backtest, and deploy automated trading strategies with our intuitive drag-and-drop builder. No coding required.',
   },
+];
+
+const cyclingSentences = [
+  'A massive opportunity to unify the chaos.',
+  'We built SIM — the first truly intelligent, all-in-one AI based trading platform',
+  'That brings stocks, crypto, no-code algorithmic trading, and a vibrant investor community',
+  'Together in one seamless experience.',
+  'No more app-hopping.',
+  'No more guesswork.',
+  'No more gatekeeping.',
 ];
 
 export default function LandingPage() {
@@ -102,6 +113,31 @@ export default function LandingPage() {
             </p>
           </section>
         </AnimatedSection>
+        
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              The Problem We're Solving (And Why It Matters?)
+            </h2>
+            <div className="max-w-3xl mx-auto text-lg text-muted-foreground mt-4 space-y-6">
+              <p>
+                Tired of bouncing between apps just to manage your stocks, crypto, and strategies? Don’t Know how to trade without risking your own money? Ever thought your crypto wallet from your crypto exchange is managed actually in a decentralised way? Ever felt difficult to use Algo Trading? Have you ever thought your broker or exchange is not just leveraging or optimizing your training experience with AI? You’re not alone.
+              </p>
+              <p>
+                Today’s trading landscape is broken with fragmented tools, scattered data, and advanced features like algorithmic trading locked behind walls of code and complexity. It’s messy. It’s inefficient. And it’s costing everyday investors real opportunities.
+              </p>
+              <p className="font-semibold text-foreground">
+                At <strong>SIM (Simulation Exchange)</strong>, we saw what others didn’t:
+              </p>
+            </div>
+            
+            <CyclingText sentences={cyclingSentences} className="mt-8" />
+
+            <p className="text-lg text-muted-foreground mt-8 max-w-3xl mx-auto">
+              Just smart, effortless, and powerful trading made for everyone. And now you can trade peacefully like never before because all your problem will be solved.
+            </p>
+          </section>
+        </AnimatedSection>
 
         <AnimatedSection>
           <section className="mt-24 md:mt-32">
@@ -112,7 +148,7 @@ export default function LandingPage() {
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
                 Today’s trading landscape is fragmented. SIM unifies your entire
                 trading journey, from stocks and crypto to automated
-                strategies and community insights, all powered by AI.
+                strategies, and community insights, all powered by AI.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
