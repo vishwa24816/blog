@@ -140,9 +140,6 @@ export default function LandingPage() {
                   Sign In
                 </Link>
               </Button>
-              <Button size="lg" variant="outline">
-                Learn More
-              </Button>
             </div>
           </section>
         </AnimatedSection>
