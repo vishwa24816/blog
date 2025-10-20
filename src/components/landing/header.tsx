@@ -76,14 +76,14 @@ export function Header() {
           >
             <nav className="container mx-auto flex flex-col items-start gap-4 px-4 py-4 md:px-6">
               <Link
-                href="#"
+                href="/"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
                 Home
               </Link>
               <Link
-                href="#"
+                href="/about"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
