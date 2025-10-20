@@ -36,7 +36,7 @@ const features = [
     icon: <Coins className="h-10 w-10" />,
     title: 'No-Code Algo Builder',
     description:
-      'Create, backtest, and deploy automated trading strategies with our intuitive drag-and-drop builder. No coding required.',
+      "Want to automate your strategies but don't know how to code? Our visual, drag-and-drop builder (think n8n for trading) lets anyone create, backtest, and deploy automated trading strategies without writing a single line of code. This is truly democratizing algorithmic trading and more.",
   },
 ];
 
