@@ -7,6 +7,12 @@ import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ThemeSwitcher } from '../theme/theme-switcher';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Logo = () => (
   <Image
@@ -44,30 +50,26 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <Logo />
-          <span className="text-xl font-bold font-headline">SIM</span>
-        </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Features
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            About
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Contact
-          </Link>
-        </nav>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button className="flex items-center gap-2 focus:outline-none">
+              <Logo />
+              <span className="text-xl font-bold font-headline">SIM</span>
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem asChild>
+              <Link href="#">Features</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="#">About</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="#">Contact</Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
           <Button variant="outline" size="sm">
