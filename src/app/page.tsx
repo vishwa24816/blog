@@ -172,7 +172,7 @@ export default function LandingPage() {
                 strategies, and community insights, all powered by AI.
               </p>
             </div>
-            <div className="relative mt-12 w-full overflow-hidden">
+            <div className="relative mt-12 w-full overflow-hidden h-[420px]">
                 <div className="flex animate-marquee hover:[animation-play-state:paused]">
                     {[...features, ...features].map((feature, index) => (
                         <FeatureCard key={index} feature={feature} />
