@@ -24,7 +24,7 @@ const features = [
     icon: <Bot className="h-10 w-10" />,
     title: 'Prompt Trading with SIMBOT',
     description:
-      'Execute trades with simple language commands. Our Agentic AI makes complex strategies accessible to everyone.',
+      'Imagine executing trades with simple language or voice commands, even on your favorite messaging apps. SIMBOT, our "Agentic AI for trading," eliminates manual entry errors and makes complex strategies accessible to everyone. It\'s like having a seasoned trader in your pocket!. Also SIMBOT will soon be available in call flow which makes sure you trade in a call.',
   },
   {
     icon: <Users className="h-10 w-10" />,
