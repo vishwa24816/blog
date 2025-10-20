@@ -65,7 +65,7 @@ const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
         </div>
         <CardTitle>{feature.title}</CardTitle>
         </CardHeader>
-        <CardContent className="flex-grow">
+        <CardContent>
         <CardDescription>{feature.description}</CardDescription>
         </CardContent>
     </Card>
