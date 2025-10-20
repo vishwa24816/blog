@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/card';
 import { Bot, Coins, Users, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
-import { FeaturesCarousel } from '@/components/landing/features-carousel';
+import { cn } from '@/lib/utils';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -56,6 +56,20 @@ const cyclingSentences = [
   'No more guesswork.',
   'No more gatekeeping.',
 ];
+
+const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
+    <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col mx-4 w-[350px] flex-shrink-0">
+        <CardHeader>
+        <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+            {feature.icon}
+        </div>
+        <CardTitle>{feature.title}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow">
+        <CardDescription>{feature.description}</CardDescription>
+        </CardContent>
+    </Card>
+);
 
 export default function LandingPage() {
   return (
@@ -158,7 +172,13 @@ export default function LandingPage() {
                 strategies, and community insights, all powered by AI.
               </p>
             </div>
-            <FeaturesCarousel features={features} />
+            <div className="relative mt-12 w-full overflow-hidden">
+                <div className="flex animate-marquee hover:[animation-play-state:paused]">
+                    {[...features, ...features].map((feature, index) => (
+                        <FeatureCard key={index} feature={feature} />
+                    ))}
+                </div>
+            </div>
           </section>
         </AnimatedSection>
         

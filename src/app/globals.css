@@ -11,7 +11,7 @@
     --popover: var(--primary-hue) 15% 95%;
     --popover-foreground: 240 10% 3.9%;
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 240 5% 95%;
+    --primary-foreground: 240 5% 10%;
     --secondary: var(--primary-hue) 10% 90%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: var(--primary-hue) 10% 90%;
@@ -38,7 +38,7 @@
     --popover: var(--primary-hue) 10% 10%;
     --popover-foreground: 0 0% 98%;
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 240 5% 10%;
+    --primary-foreground: 0 0% 95%;
     --secondary: var(--primary-hue) 10% 20%;
     --secondary-foreground: 0 0% 98%;
     --muted: var(--primary-hue) 10% 20%;
@@ -59,5 +59,20 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
   }
 }
