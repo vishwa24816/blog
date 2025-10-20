@@ -121,7 +121,7 @@ export default function AboutPage() {
               by a single mission.
             </p>
           </div>
-          <div className="grid grid-cols-1 max-w-md mx-auto">
+          <div className="max-w-4xl mx-auto">
             {teamMembers.map((member) => (
               <Card key={member.name} className="text-center">
                 <CardHeader>
