@@ -102,7 +102,7 @@ export function Header() {
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
-                Contact
+                Product
               </Link>
             </nav>
           </motion.div>
