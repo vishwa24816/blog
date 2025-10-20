@@ -104,7 +104,7 @@ export function Header() {
                 Business
               </Link>
               <Link
-                href="#"
+                href="/product"
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
