@@ -78,7 +78,7 @@ export default function ProductPage() {
         <section>
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
-              Our Products
+              Review The Product
             </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
               Today’s trading landscape is fragmented. SIM unifies your entire
