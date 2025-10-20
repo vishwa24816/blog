@@ -1,3 +1,4 @@
+
 import { Footer } from '@/components/landing/footer';
 import { Header } from '@/components/landing/header';
 import { AnimatedSection } from '@/components/landing/animated-section';
@@ -79,7 +80,7 @@ export default function LandingPage() {
           <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold">
-                The Problem
+                Pixture this
               </h2>
               <p className="text-lg text-muted-foreground mt-4">
                 Let's face it: navigating the world of trading can feel like trying to solve a Rubik's Cube blindfolded. You're juggling multiple apps, wrestling with clunky interfaces, and maybe even feeling left behind by the algorithmic revolution. If this sounds familiar, you're not alone. In fact, a staggering 70% of trading platforms are missing a huge opportunity by not fully leveraging AI and machine learning for a truly intuitive experience.
