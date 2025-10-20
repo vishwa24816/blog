@@ -15,18 +15,18 @@ export function Footer() {
             <h3 className="font-semibold">Quick Links</h3>
             <ul className="mt-2 space-y-2">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                <Link href="/about" className="text-muted-foreground hover:text-foreground">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Blog
+                <Link href="/product" className="text-muted-foreground hover:text-foreground">
+                  Product
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  Contact
+                <Link href="/business" className="text-muted-foreground hover:text-foreground">
+                  Business
                 </Link>
               </li>
             </ul>
@@ -35,16 +35,10 @@ export function Footer() {
             <h3 className="font-semibold">Contact Us</h3>
             <div className="mt-2 space-y-2">
               <Link
-                href="mailto:info@sim.com"
+                href="mailto:simulationexchange@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               >
-                info@sim.com
-              </Link>
-              <Link
-                href="mailto:press@sim.com"
-                className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
-              >
-                press@sim.com
+                simulationexchange@gmail.com
               </Link>
             </div>
           </div>
