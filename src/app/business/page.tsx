@@ -77,7 +77,7 @@ export default function BusinessPage() {
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <section className="text-center">
-          <p className="font-headline text-primary font-semibold">FOR BUSINESS</p>
+          <p className="font-headline text-primary font-semibold">for business and investors</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
             AI-Powered Solutions for You
           </h1>
@@ -178,7 +178,7 @@ export default function BusinessPage() {
           </div>
         </section>
 
-        <section className="mt-24 md:mt-32 text-center bg-card p-8 rounded-lg">
+        <section className="mt-24 md-mt-32 text-center bg-card p-8 rounded-lg">
           <h2 className="text-3xl font-bold font-headline">Get in Touch</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Interested in learning more about how SIM can transform your
