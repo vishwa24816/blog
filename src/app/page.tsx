@@ -22,6 +22,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Link from 'next/link';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -282,6 +283,15 @@ export default function LandingPage() {
             </p>
             <div className="mt-8 flex gap-4 justify-center">
               <Button size="lg">Sign Up Now</Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link
+                  href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share Your Experience
+                </Link>
+              </Button>
             </div>
           </section>
         </AnimatedSection>
@@ -290,12 +300,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
-
-    
-
-    
-
-    
-    
