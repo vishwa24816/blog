@@ -73,7 +73,6 @@ export function Header() {
           <Button variant="outline" size="sm">
             Sign In
           </Button>
-          <Button size="sm">Get Started</Button>
         </div>
       </div>
     </motion.header>
