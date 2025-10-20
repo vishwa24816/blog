@@ -30,7 +30,7 @@ const features = [
     icon: <Users className="h-10 w-10" />,
     title: 'Community & Professional Insights',
     description:
-      'Connect with a community of traders and get insights from SEBI registered professionals with special verification tags.',
+      'Nowadays, Scammers are more famous than SEBI registered Professionals creating identity, authenticity and trust issues. To Solve this, we have made a community segment where users can take trades, discuss, etc where SEBI Registered professionals get special tag for more importance.',
   },
   {
     icon: <Coins className="h-10 w-10" />,
