@@ -160,6 +160,27 @@ export default function BusinessPage() {
         <section className="mt-24 md:mt-32">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              And Why Now?
+            </h2>
+            <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
+              There are 2 Major Shifts in this industry supporting the potential of this startup.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <ul className="space-y-4 text-muted-foreground list-disc list-inside">
+              <li>
+                <strong>The AI Revolution:</strong> AI Revolution is so versatile and so trending that people are now selling a pen saying it is AI Powered.
+              </li>
+              <li>
+                <strong>The Democratization of Finance:</strong> Finance industry democratized today so much that startups are Lending P2P , Buying Stocks are commission free and more.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="mt-24 md:mt-32">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">
               Why Partner with SIM?
             </h2>
           </div>
