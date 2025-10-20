@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/card';
 import { Bot, Coins, Users } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
+import { FeaturesCarousel } from '@/components/landing/features-carousel';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -151,24 +152,7 @@ export default function LandingPage() {
                 strategies, and community insights, all powered by AI.
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              {features.map((feature, index) => (
-                <Card
-                  key={index}
-                  className="bg-card/50 backdrop-blur-sm border-border/50"
-                >
-                  <CardHeader>
-                    <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
-                      {feature.icon}
-                    </div>
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{feature.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <FeaturesCarousel features={features} />
           </section>
         </AnimatedSection>
         
