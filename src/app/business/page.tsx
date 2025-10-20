@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card';
 import { Check, DollarSign, Package, Banknote } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const offerings = [
   {
@@ -236,8 +237,14 @@ export default function BusinessPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button size="lg">Join the Waitlist</Button>
-            <Button size="lg" variant="outline">
-              Share Your Experience
+            <Button size="lg" variant="outline" asChild>
+              <Link
+                href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Share Your Experience
+              </Link>
             </Button>
           </div>
         </section>
