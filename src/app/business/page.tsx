@@ -228,14 +228,14 @@ export default function BusinessPage() {
         </section>
 
         <section className="mt-24 md-mt-32 text-center bg-card p-8 rounded-lg">
-          <h2 className="text-3xl font-bold font-headline">Get in Touch</h2>
+          <h2 className="text-3xl font-bold font-headline">Join Us</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Interested in learning more about how SIM can transform your
-            business? Contact our business development team to schedule a demo
-            and discuss your specific needs.
+            Be part of a community that’s shaping the future of finance.
+            Whether you’re a seasoned trader or just starting out, SIM has the
+            tools you need to succeed.
           </p>
           <div className="mt-8 flex gap-4 justify-center">
-            <Button size="lg">Contact Sales</Button>
+            <Button size="lg">Join the Waitlist</Button>
           </div>
         </section>
       </main>
