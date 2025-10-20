@@ -13,14 +13,14 @@ import Image from 'next/image';
 
 const offerings = [
   {
-    title: 'White-Label Trading Platform',
+    title: 'Total Adressable Market (TAM)',
     description:
-      'Launch your own branded trading service without the cost and complexity of building from scratch. Our white-label solution is a fully customizable, turnkey platform that integrates seamlessly with your existing brand and infrastructure.',
+      'The total value of retail-accessible investment assets in India (stocks + crypto), as SIM targets Indian users.',
     features: [
-      'Fully customizable branding and UI',
-      'Multi-asset support (stocks, crypto, etc.)',
-      'AI-powered analytics and tools (SIMBOT)',
-      'Secure, scalable, and reliable infrastructure',
+      'Indian stocks cap: $5.32T (Statista, 2025). Retail share: ~25% (SEBI data via Reuters, 2025; retail drives 25-30% of equity volume).',
+      'India crypto trading volume: ~$300B annualized (Chainalysis 2025 Index; India is no. 1 in adoption, i.e ~13% of APAC $2.36T).',
+      'Retail share: 80% (high retail dominance in India crypto per CoinSwitch Q2 2025).',
+      'Refined Value: $1.78T (conservative: $1.33T stocks retail + $0.45T crypto retail equivalent).',
     ],
     image: {
       src: 'https://picsum.photos/seed/platform/800/600',
