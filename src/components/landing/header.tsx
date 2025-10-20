@@ -80,7 +80,7 @@ export function Header() {
                 className="text-muted-foreground transition-colors hover:text-foreground"
                 onClick={() => setIsExpanded(false)}
               >
-                Features
+                Home
               </Link>
               <Link
                 href="#"
@@ -88,6 +88,13 @@ export function Header() {
                 onClick={() => setIsExpanded(false)}
               >
                 About
+              </Link>
+              <Link
+                href="#"
+                className="text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setIsExpanded(false)}
+              >
+                Business
               </Link>
               <Link
                 href="#"
