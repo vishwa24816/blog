@@ -24,6 +24,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [lightness, setLightness] = useState(55);
 
   useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleThemeChange = () => {
+      setTheme(prefersDark.matches ? 'dark' : 'light');
+    };
+
+    handleThemeChange(); // Set initial theme
+    prefersDark.addEventListener('change', handleThemeChange);
+
+    return () => {
+      prefersDark.removeEventListener('change', handleThemeChange);
+    };
+  }, []);
+
+  useEffect(() => {
     document.documentElement.style.setProperty('--primary-hue', hue.toString());
     document.documentElement.style.setProperty('--primary-saturation', `${saturation}%`);
     document.documentElement.style.setProperty('--primary-lightness', `${lightness}%`);
