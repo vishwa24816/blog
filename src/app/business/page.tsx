@@ -106,12 +106,12 @@ export default function BusinessPage() {
             </p>
             <div className="relative w-full h-auto my-8">
               <Image
-                src="https://picsum.photos/seed/business-meeting/1200/400"
-                alt="Professional business meeting"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800"
+                alt="Modern office building"
                 width={1200}
                 height={400}
                 className="mx-auto rounded-lg w-full h-auto object-cover"
-                data-ai-hint="business meeting"
+                data-ai-hint="office building"
                 priority
               />
             </div>
