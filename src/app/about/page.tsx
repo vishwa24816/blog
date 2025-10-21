@@ -40,12 +40,12 @@ export default function AboutPage() {
             </p>
             <div className="relative w-full h-auto my-8">
               <Image
-                src="https://picsum.photos/seed/teamwork/1200/400"
-                alt="Team working together"
+                src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800"
+                alt="Person writing a business plan"
                 width={1200}
                 height={400}
                 className="mx-auto rounded-lg w-full h-auto object-cover"
-                data-ai-hint="teamwork collaboration"
+                data-ai-hint="business plan"
                 priority
               />
             </div>
