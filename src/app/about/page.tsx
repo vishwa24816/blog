@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: 'Vishwa Lingam',
     role: 'Founder & CEO',
-    avatarUrl: 'https://picsum.photos/seed/ceo/200/200',
+    avatarUrl: 'https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F9f02b5e6-c709-42b5-8cd4-945a1c1301f2%2FScreenshot_20230803-102015-077.jpg/size/w=1420?exp=1761125188&sig=nypQ-ktvqTjNwCcrU_jC8MTVCuivg24D6F2yicKFrSs&id=2936fb47-9c52-80f5-8652-ceff4b04fe69&table=block',
     bio: 'CMA Inter qualified professional with a year of experience in Fintech has overviewed the  entire Fintech space, especially in Product Operations,  management and Equity Research perspective , I understand  how the Finance industry transforming to Fintech Industry  but still lack the leverage of AI and hence I am passionate to furthermore contribute by applying  my knowledge and skills in AI to make the world trade  and invest with the leverage of AI.',
   },
 ];
@@ -38,13 +38,13 @@ export default function AboutPage() {
               SIM is an AI-powered, all-in-one trading platform designed to
               democratize sophisticated investing for everyone.
             </p>
-            <div className="relative w-full h-[400px] my-8">
+            <div className="relative w-full h-auto my-8">
               <Image
                 src="https://picsum.photos/seed/teamwork/1200/400"
                 alt="Team working together"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="mx-auto rounded-lg"
+                width={1200}
+                height={400}
+                className="mx-auto rounded-lg w-full h-auto object-cover"
                 data-ai-hint="teamwork collaboration"
                 priority
               />
