@@ -155,7 +155,7 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src="https://file.notion.so/f/s/f919a3b7-1c64-4e2a-9694-dfc3b53a0670/Untitled.png?id=23d6fb47-9c52-8032-b38b-df0aefd8af6f&table=block&spaceId=7526fb47-9c52-81ef-9df9-00033e87bb4d&expirationTimestamp=1761063600000&signature=c_8yE3wYl8M3-bNqB_Q172zK_7iL-b6t-hQ-93jN69k" alt="Frustrated person with a phone" fill style={{ objectFit: 'cover' }} data-ai-hint="man thinking tablet" />
+                <Image src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2Ff8dfe57a-f1d3-4b08-b9b8-886f028e1584%2Fpicard-thinking-meme-7.jpg/size/w=1210?exp=1761124528&sig=uiKygF3E6OkmGQBRCu2IwlG19TGIcOUjFhELQAvrpko&id=2936fb47-9c52-8095-9418-db6bbb0486f6&table=block" alt="Frustrated person with a phone" fill style={{ objectFit: 'cover' }} data-ai-hint="man thinking tablet" unoptimized />
             </div>
           </section>
         </AnimatedSection>
