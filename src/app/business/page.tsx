@@ -157,15 +157,16 @@ export default function BusinessPage() {
                     </ul>
                   </div>
                   <div
-                    className={`relative h-80 rounded-lg overflow-hidden ${
+                    className={`relative rounded-lg overflow-hidden ${
                       index % 2 !== 0 ? 'md:col-start-1' : ''
                     }`}
                   >
                     <Image
                       src={offering.image.src}
                       alt={offering.image.alt}
-                      fill
-                      style={{ objectFit: 'cover' }}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover"
                       data-ai-hint={offering.image.hint}
                     />
                   </div>

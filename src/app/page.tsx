@@ -154,14 +154,14 @@ export default function LandingPage() {
                 Navigating the world of trading can feel like trying to solve a Rubik's Cube blindfolded. You're juggling multiple apps, wrestling with clunky interfaces, and maybe even feeling left behind by the algorithmic revolution. If this sounds familiar, you're not alone. In fact, a staggering 70% of trading platforms are missing a huge opportunity by not fully leveraging AI and machine learning for a truly intuitive experience.
               </p>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden">
+            <div className="relative rounded-lg overflow-hidden">
                 <Image 
                     src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2Ff8dfe57a-f1d3-4b08-b9b8-886f028e1584%2Fpicard-thinking-meme-7.jpg/size/w=1210?exp=1761124528&sig=uiKygF3E6OkmGQBRCu2IwlG19TGIcOUjFhELQAvrpko&id=2936fb47-9c52-8095-9418-db6bbb0486f6&table=block" 
                     alt="Frustrated person with a phone" 
                     width={500}
                     height={320}
                     unoptimized
-                    className="mx-auto rounded-lg"
+                    className="mx-auto rounded-lg w-full h-auto object-cover"
                     data-ai-hint="man thinking tablet"
                 />
             </div>
@@ -203,14 +203,14 @@ export default function LandingPage() {
                 Just smart, effortless, and powerful trading made for everyone. And now you can trade peacefully like never before because all your problem will be solved.
               </p>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden">
+            <div className="relative rounded-lg overflow-hidden">
                 <Image 
                     src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F7f041e30-9b72-4cf9-a391-45071bb20caa%2Fproblems-problems-everywhere-5b6abe.jpg/size/w=1200?exp=1761061495&sig=2ohlYCyC9yoputMAonKYwO-c6HhkndB-WkwRT0a8F5U&id=2926fb47-9c52-80bf-9758-fc976d11b0b2&table=block"
                     alt="Problems everywhere meme"
                     width={400}
                     height={320}
                     unoptimized
-                    className="mx-auto" 
+                    className="mx-auto w-full h-auto object-cover" 
                 />
             </div>
           </section>
@@ -273,8 +273,8 @@ export default function LandingPage() {
                 </li>
               </ul>
             </div>
-            <div className="relative h-80 rounded-lg overflow-hidden">
-                <Image src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F973a8bbb-0539-450d-8d00-217dc67dafb4%2Fsell-me-this-pen-its-ai-powered-v0-ty4hkya8v2hd1.webp/size/w=860?exp=1761062024&sig=yBDeW9RS_gfsNlEvHymTS6OAMEls_eLUPvvD54pzhoo&id=23d6fb47-9c52-8032-b38b-df0aefd8af6f&table=block" alt="AI in finance" fill style={{ objectFit: 'cover' }} data-ai-hint="AI finance" />
+            <div className="relative rounded-lg overflow-hidden">
+                <Image src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F973a8bbb-0539-450d-8d00-217dc67dafb4%2Fsell-me-this-pen-its-ai-powered-v0-ty4hkya8v2hd1.webp/size/w=860?exp=1761062024&sig=yBDeW9RS_gfsNlEvHymTS6OAMEls_eLUPvvD54pzhoo&id=23d6fb47-9c52-8032-b38b-df0aefd8af6f&table=block" alt="AI in finance" width={860} height={484} className="w-full h-auto object-cover" data-ai-hint="AI finance" />
             </div>
           </section>
         </AnimatedSection>
