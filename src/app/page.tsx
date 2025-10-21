@@ -280,20 +280,33 @@ export default function LandingPage() {
         </AnimatedSection>
 
         <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md-text-4xl font-bold">
-              Our Competitive Edge: Unifying AI and Accessibility
-            </h2>
-            <p className="text-muted-foreground mt-4">
-              While many trading platforms exist, none offer the unified, AI-driven experience that SIM provides. We're not just another trading app; we're building a truly intelligent ecosystem.
-            </p>
-            <p className="text-muted-foreground mt-4">
-                Our defensible moat lies in:
-            </p>
-            <CyclingText sentences={competitiveEdgeSentences} className="mt-8" />
-            <p className="text-muted-foreground mt-8">
-                SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
-            </p>
+          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
+            <div className="text-left">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Our Competitive Edge: Unifying AI and Accessibility
+              </h2>
+              <p className="text-muted-foreground mt-4">
+                While many trading platforms exist, none offer the unified, AI-driven experience that SIM provides. We're not just another trading app; we're building a truly intelligent ecosystem.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                  Our defensible moat lies in:
+              </p>
+              <CyclingText sentences={competitiveEdgeSentences} className="mt-8 !text-left !w-auto" />
+              <p className="text-muted-foreground mt-8">
+                  SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden">
+              <Image 
+                src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F64b4ec54-5aa4-4a77-bd1a-83e98c2ebd0a%2F864c72d0-5aa7-4024-97c9-b6defb27f5e7.png/size/w=960?exp=1761125334&sig=Pqinoprt-dnvV_miFuLYCi2-_D1lMTgioLFWX7X_JH4&id=23d6fb47-9c52-80d7-9bfb-f64b35ea22c6&table=block"
+                alt="Competitive edge diagram"
+                width={960}
+                height={540}
+                unoptimized
+                className="w-full h-auto object-cover"
+                data-ai-hint="competitive advantage"
+              />
+            </div>
           </section>
         </AnimatedSection>
 
