@@ -95,7 +95,7 @@ const storyImages = [
     hint: 'frustrated trader'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
+    src: 'https://lh3.googleusercontent.com/d/1AjcnFRfWD0kNO7Ind2UleKQAzGOh-9Gw',
     alt: 'A simplified, unified trading dashboard on a laptop.',
     hint: 'clean dashboard'
   },
