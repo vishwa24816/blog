@@ -162,7 +162,12 @@ const secondStoryImages = [
     alt: 'A simplified, unified trading dashboard on a laptop.',
     hint: 'clean dashboard',
   },
-  ...storyImages.slice(2)
+  {
+    src: 'https://lh3.googleusercontent.com/d/1oHT-nE8vTCKlWLJoUeIk2zlxYrNPCq5u',
+    alt: 'A person easily using a no-code algo builder.',
+    hint: 'visual programming',
+  },
+  ...storyImages.slice(3)
 ]
 
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
