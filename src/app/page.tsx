@@ -157,7 +157,12 @@ const secondStoryImages = [
     alt: 'A frustrated trader looking at multiple screens.',
     hint: 'frustrated trader',
   },
-  ...storyImages.slice(1)
+  {
+    src: 'https://lh3.googleusercontent.com/d/1P6y6L1GsJb5sfW9HaNvVEP0DuUQPJa15',
+    alt: 'A simplified, unified trading dashboard on a laptop.',
+    hint: 'clean dashboard',
+  },
+  ...storyImages.slice(2)
 ]
 
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
