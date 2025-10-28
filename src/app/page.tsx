@@ -151,6 +151,15 @@ const storyImages = [
   },
 ];
 
+const secondStoryImages = [
+    {
+    src: 'https://lh3.googleusercontent.com/d/1XUubsdyY0ezLJjLTjpcZmNa7bAd3HKPw',
+    alt: 'A frustrated trader looking at multiple screens.',
+    hint: 'frustrated trader',
+  },
+  ...storyImages.slice(1)
+]
+
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
   <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
     <CardHeader>
@@ -257,7 +266,7 @@ export default function LandingPage() {
               className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
             >
               <CarouselContent>
-                {storyImages.map((image, index) => (
+                {secondStoryImages.map((image, index) => (
                   <CarouselItem key={index}>
                     <div className="relative w-full aspect-video">
                       <Image
