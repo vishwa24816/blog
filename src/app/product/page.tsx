@@ -8,22 +8,10 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
+import { Coins, Ellipsis, ScanSearch, Wallet } from 'lucide-react';
 import { AnimatedSection } from '@/components/landing/animated-section';
 
 const features = [
-  {
-    icon: <Bot className="h-10 w-10" />,
-    title: 'Prompt Trading with SIMBOT',
-    description:
-      'Imagine executing trades with simple language or voice commands, even on your favorite messaging apps. SIMBOT, our "Agentic AI for trading," eliminates manual entry errors and makes complex strategies accessible to everyone. It\'s like having a seasoned trader in your pocket!. Also SIMBOT will soon be available in call flow which makes sure you trade in a call.',
-  },
-  {
-    icon: <Users className="h-10 w-10" />,
-    title: 'Community & Professional Insights',
-    description:
-      'Nowadays, Scammers are more famous than SEBI registered Professionals creating identity, authenticity and trust issues. To Solve this, we have made a community segment where users can take trades, discuss, etc where SEBI Registered professionals get special tag for more importance.',
-  },
   {
     icon: <Coins className="h-10 w-10" />,
     title: 'No-Code Algo Builder',
