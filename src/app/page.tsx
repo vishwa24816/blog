@@ -125,6 +125,11 @@ const storyImages = [
     hint: 'data analysis',
   },
   {
+    src: 'https://lh3.googleusercontent.com/d/1DrV6gx-GBwxdvw2KPqdJhy8CFhxr5DGe',
+    alt: 'A person looking at a screen with lots of data.',
+    hint: 'data analysis',
+  },
+  {
     src: 'https://lh3.googleusercontent.com/d/1Sf7GFUTzy_p5e09i46eYdDfwORFa4cmo',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis',
@@ -211,9 +216,9 @@ export default function LandingPage() {
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Once upon a time, there was a Gen Z scrolling social media just like how you are doing usually and found this.
+              Scrolling is boring, but wait , listen to this story.
               <br />
-              Scrolling is boring, but wait , listen to this story
+              Once upon a time, there was a Gen Z scrolling social media just like how you are doing usually and found this
             </h2>
             <Carousel
               opts={{
