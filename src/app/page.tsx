@@ -115,7 +115,12 @@ const storyImages = [
     hint: 'investor community'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf/view?usp=sharing',
+    src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf',
+    alt: 'A person looking at a screen with lots of data.',
+    hint: 'data analysis'
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis'
   }
