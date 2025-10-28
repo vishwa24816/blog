@@ -113,6 +113,11 @@ const storyImages = [
     hint: 'data analysis',
   },
   {
+    src: 'https://lh3.googleusercontent.com/d/1Hgi6hUP60Hdn6LI8hdGggVyJKOP2YVmG',
+    alt: 'A person looking at a screen with lots of data.',
+    hint: 'data analysis',
+  },
+  {
     src: 'https://lh3.googleusercontent.com/d/1Sf7GFUTzy_p5e09i46eYdDfwORFa4cmo',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis',
