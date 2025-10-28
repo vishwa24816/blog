@@ -88,6 +88,11 @@ const storyImages = [
     hint: 'clean dashboard',
   },
   {
+    src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
+    alt: 'new image',
+    hint: 'new image hint',
+  },
+  {
     src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
     alt: 'A person easily using a no-code algo builder.',
     hint: 'visual programming',
