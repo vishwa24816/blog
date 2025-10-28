@@ -100,7 +100,7 @@ const storyImages = [
     hint: 'clean dashboard'
   },
   {
-    src: 'https://picsum.photos/seed/story3/800/600',
+    src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
     alt: 'A person easily using a no-code algo builder.',
     hint: 'visual programming'
   },
