@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Bot, Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
+import { Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import { cn } from '@/lib/utils';
 import {
