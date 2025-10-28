@@ -125,6 +125,11 @@ const storyImages = [
     hint: 'data analysis',
   },
   {
+    src: 'https://lh3.googleusercontent.com/d/1DrV6gx-GBwxdvw2KPqdJhy8CFhxr5DGe',
+    alt: 'A person looking at a screen with lots of data.',
+    hint: 'data analysis',
+  },
+  {
     src: 'https://lh3.googleusercontent.com/d/1Sf7GFUTzy_p5e09i46eYdDfwORFa4cmo',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis',
@@ -318,43 +323,6 @@ export default function LandingPage() {
         </AnimatedSection>
         
         <AnimatedSection>
-          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div className="text-left">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                The Problem We're Solving (And Why It Matters?)
-              </h2>
-              <div className="text-muted-foreground mt-4 space-y-6">
-                <p>
-                  Tired of bouncing between apps just to manage your stocks, crypto, and strategies? Don’t Know how to trade without risking your own money? Ever thought your crypto wallet from your crypto exchange is managed actually in a decentralised way? Ever felt difficult to use Algo Trading? Have you ever thought your broker or exchange is not just leveraging or optimizing your training experience with AI? You’re not alone.
-                </p>
-                <p>
-                  Today’s trading landscape is broken with fragmented tools, scattered data, and advanced features like algorithmic trading locked behind walls of code and complexity. It’s messy. It’s inefficient. And it’s costing everyday investors real opportunities.
-                </p>
-                <p className="font-semibold text-foreground">
-                  At <strong>SIM (Simulation Exchange)</strong>, we saw what others didn’t:
-                </p>
-              </div>
-              
-              <CyclingText sentences={cyclingSentences} className="mt-8 !text-left !w-auto" />
-
-              <p className="text-muted-foreground mt-8">
-                Just smart, effortless, and powerful trading made for everyone. And now you can trade peacefully like never before because all your problem will be solved.
-              </p>
-            </div>
-            <div className="relative rounded-lg overflow-hidden">
-                <Image 
-                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F7f041e30-9b72-4cf9-a391-45071bb20caa%2Fproblems-problems-everywhere-5b6abe.jpg/size/w=1200?exp=1761061495&sig=2ohlYCyC9yoputMAonKYwO-c6HhkndB-WkwRT0a8F5U&id=2926fb47-9c52-80bf-9758-fc976d11b0b2&table=block"
-                    alt="Problems everywhere meme"
-                    width={400}
-                    height={320}
-                    unoptimized
-                    className="mx-auto w-full h-auto object-cover" 
-                />
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
           <section className="mt-24 md:mt-32">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold">
@@ -484,5 +452,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
