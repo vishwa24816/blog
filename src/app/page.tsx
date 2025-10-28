@@ -92,63 +92,63 @@ const storyImages = [
   {
     src: 'https://lh3.googleusercontent.com/d/1RDjiavEQiUOzn9INIejVqnqq2TGJgxJ6',
     alt: 'A frustrated trader looking at multiple screens.',
-    hint: 'frustrated trader'
+    hint: 'frustrated trader',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1AjcnFRfWD0kNO7Ind2UleKQAzGOh-9Gw',
     alt: 'A simplified, unified trading dashboard on a laptop.',
-    hint: 'clean dashboard'
+    hint: 'clean dashboard',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
     alt: 'A person easily using a no-code algo builder.',
-    hint: 'visual programming'
+    hint: 'visual programming',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
     alt: 'A happy and confident investor checking their portfolio.',
-    hint: 'confident investor'
+    hint: 'confident investor',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1HLi03bYCOFVBZWbG7N_1D_CUdzUyp93r',
     alt: 'A vibrant community of investors discussing trades.',
-    hint: 'investor community'
+    hint: 'investor community',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf',
     alt: 'A person looking at a screen with lots of data.',
-    hint: 'data analysis'
+    hint: 'data analysis',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1DrV6gx-GBwxdvw2KPqdJhy8CFhxr5DGe',
     alt: 'A person looking at a screen with lots of data.',
-    hint: 'data analysis'
+    hint: 'data analysis',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1Sf7GFUTzy_p5e09i46eYdDfwORFa4cmo',
     alt: 'A person looking at a screen with lots of data.',
-    hint: 'data analysis'
+    hint: 'data analysis',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1fVpGTKhqEcvR7OcuTmqdB0N7IVVMWUmB',
     alt: 'A diagram showing the various features of the SIM platform.',
-    hint: 'features diagram'
+    hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1gnSi8BmgimjhU683OWzIhYmfKbDdNTfs',
     alt: 'A diagram showing the various features of the SIM platform.',
-    hint: 'features diagram'
+    hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/11c-sLIFDo3UF4c3LJTWYw4Lilv-sq5OY',
     alt: 'A diagram showing the various features of the SIM platform.',
-    hint: 'features diagram'
+    hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1XKDde3qXnijPXkblUc_XULJU5hGJOrOn',
     alt: 'A diagram showing the various features of the SIM platform.',
     hint: 'features diagram'
-  }
+  },
 ];
 
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
@@ -211,6 +211,8 @@ export default function LandingPage() {
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Once upon a time, there was a Gen Z scrolling social media just like how you are doing usually and found this.
+              <br />
               Scrolling is boring, but wait , listen to this story
             </h2>
             <Carousel
