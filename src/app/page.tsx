@@ -98,11 +98,6 @@ const storyImages = [
     hint: 'visual programming',
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1H1c68oHHzIRq_pPGXY9TkCNrkNv-jIat',
-    alt: 'A happy and confident investor checking their portfolio.',
-    hint: 'confident investor',
-  },
-  {
     src: 'https://lh3.googleusercontent.com/d/1HLi03bYCOFVBZWbG7N_1D_CUdzUyp93r',
     alt: 'A vibrant community of investors discussing trades.',
     hint: 'investor community',
