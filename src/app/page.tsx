@@ -105,14 +105,19 @@ const storyImages = [
     hint: 'visual programming'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
+    src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
     alt: 'A happy and confident investor checking their portfolio.',
     hint: 'confident investor'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d1HLi03bYCOFVBZWbG7N_1D_CUdzUyp93r',
+    src: 'https://lh3.googleusercontent.com/d/1HLi03bYCOFVBZWbG7N_1D_CUdzUyp93r',
     alt: 'A vibrant community of investors discussing trades.',
     hint: 'investor community'
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf/view?usp=sharing',
+    alt: 'A person looking at a screen with lots of data.',
+    hint: 'data analysis'
   }
 ];
 
