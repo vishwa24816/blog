@@ -105,7 +105,7 @@ const storyImages = [
     hint: 'visual programming',
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
+    src: 'https://lh3.googleusercontent.com/d/1H1c68oHHzIRq_pPGXY9TkCNrkNv-jIat',
     alt: 'A happy and confident investor checking their portfolio.',
     hint: 'confident investor',
   },
