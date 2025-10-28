@@ -90,7 +90,7 @@ const competitiveEdgeSentences = [
 
 const storyImages = [
   {
-    src: 'https://picsum.photos/seed/story1/800/600',
+    src: 'https://lh3.googleusercontent.com/d/1RDjiavEQiUOzn9INIejVqnqq2TGJgxJ6',
     alt: 'A frustrated trader looking at multiple screens.',
     hint: 'frustrated trader'
   },
@@ -206,6 +206,7 @@ export default function LandingPage() {
                         fill
                         className="rounded-lg object-cover"
                         data-ai-hint={image.hint}
+                        unoptimized={image.src.includes('googleusercontent')}
                       />
                     </div>
                   </CarouselItem>
@@ -395,3 +396,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
