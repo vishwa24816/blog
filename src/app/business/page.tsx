@@ -178,38 +178,6 @@ export default function BusinessPage() {
         </AnimatedSection>
 
         <AnimatedSection>
-          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                And Why Now?
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                There are 2 Major Shifts in this industry supporting the potential of this startup.
-              </p>
-              <ul className="mt-6 space-y-4 text-muted-foreground list-disc list-inside">
-                <li>
-                  <strong>The AI Revolution:</strong> AI Revolution is so versatile and so trending that people are now selling a pen saying it is AI Powered.
-                </li>
-                <li>
-                  <strong>The Democratization of Finance:</strong> Finance industry democratized today so much that startups are Lending P2P , Buying Stocks are commission free and more.
-                </li>
-              </ul>
-            </div>
-            <div className="relative rounded-lg overflow-hidden">
-                <Image 
-                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2Fe5fba668-849a-4fef-8f3b-f18a3505b816%2F6f7fccc7-576f-4d3a-a94b-d59a7f8c0842.png/size/w=740?exp=1761125936&sig=-bnbQ_Dj2b-6hqYv3Xipn1mRo3gAI4oWwhsm_Izag_k&id=23d6fb47-9c52-80a0-98df-f8f2ab96b31d&table=block"
-                    alt="AI and Finance trends"
-                    width={740}
-                    height={416}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    data-ai-hint="AI finance trend"
-                />
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
           <section className="mt-24 md:mt-32">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold font-headline">
