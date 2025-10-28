@@ -25,7 +25,7 @@ const offerings = [
       'Refined Value: $1.78T (conservative: $1.33T stocks retail + $0.45T crypto retail equivalent).',
     ],
     image: {
-      src: 'https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F8b43d470-2987-445c-b8fd-966aadd3ce2e%2Fchart.png/size/w=1400?exp=1761126115&sig=YQpot8I9HQdi4kxqckr8fzJf50e-8sIpoGRU6MBOIVM&id=2936fb47-9c52-80e4-8f8f-e59348f39822&table=block',
+      src: 'https://lh3.googleusercontent.com/d/1sytevmd8kw48XQao4dvbdI8Ai8hHjcQh',
       alt: 'Customizable trading platform dashboard',
       hint: 'customizable dashboard',
     },
