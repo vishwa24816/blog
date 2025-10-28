@@ -145,16 +145,11 @@ export default function LandingPage() {
         </AnimatedSection>
         
         <AnimatedSection>
-          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Let's face it
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                Navigating the world of trading can feel like trying to solve a Rubik's Cube blindfolded. You're juggling multiple apps, wrestling with clunky interfaces, and maybe even feeling left behind by the algorithmic revolution. If this sounds familiar, you're not alone. In fact, a staggering 70% of trading platforms are missing a huge opportunity by not fully leveraging AI and machine learning for a truly intuitive experience.
-              </p>
-            </div>
-            <div className="relative rounded-lg overflow-hidden">
+          <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Scrolling is boring, but wait , listen to this story
+            </h2>
+            <div className="relative rounded-lg overflow-hidden mt-8 max-w-lg mx-auto">
                 <Image 
                     src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2Ff8dfe57a-f1d3-4b08-b9b8-886f028e1584%2Fpicard-thinking-meme-7.jpg/size/w=1210?exp=1761124528&sig=uiKygF3E6OkmGQBRCu2IwlG19TGIcOUjFhELQAvrpko&id=2936fb47-9c52-8095-9418-db6bbb0486f6&table=block" 
                     alt="Frustrated person with a phone" 
