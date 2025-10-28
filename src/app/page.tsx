@@ -182,8 +182,8 @@ export default function LandingPage() {
             >
               <CarouselContent>
                 {storyImages.map((image, index) => (
-                  <CarouselItem key={index} className="p-4">
-                    <div className="relative w-full h-auto aspect-video">
+                  <CarouselItem key={index}>
+                    <div className="relative w-full aspect-video">
                       <Image
                         src={image.src}
                         alt={image.alt}
