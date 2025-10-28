@@ -100,12 +100,12 @@ const storyImages = [
     hint: 'clean dashboard'
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1tJ-1u32vtQXecbEth12T1YywIZuXC_9B',
+    src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
     alt: 'A person easily using a no-code algo builder.',
     hint: 'visual programming'
   },
   {
-    src: 'https://picsum.photos/seed/story4/800/600',
+    src: 'https://lh3.googleusercontent.com/d/1CBc6XF134NCQ0INI0PBSogSbqi4wDKXa',
     alt: 'A happy and confident investor checking their portfolio.',
     hint: 'confident investor'
   }
