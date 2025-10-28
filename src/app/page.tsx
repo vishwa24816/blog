@@ -88,6 +88,29 @@ const competitiveEdgeSentences = [
     "Last but not least, Full Entertainment and Flexibility."
 ]
 
+const storyImages = [
+  {
+    src: 'https://picsum.photos/seed/story1/800/600',
+    alt: 'A frustrated trader looking at multiple screens.',
+    hint: 'frustrated trader'
+  },
+  {
+    src: 'https://picsum.photos/seed/story2/800/600',
+    alt: 'A simplified, unified trading dashboard on a laptop.',
+    hint: 'clean dashboard'
+  },
+  {
+    src: 'https://picsum.photos/seed/story3/800/600',
+    alt: 'A person easily using a no-code algo builder.',
+    hint: 'visual programming'
+  },
+  {
+    src: 'https://picsum.photos/seed/story4/800/600',
+    alt: 'A happy and confident investor checking their portfolio.',
+    hint: 'confident investor'
+  }
+];
+
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
   <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
     <CardHeader>
@@ -110,11 +133,12 @@ export default function LandingPage() {
         <AnimatedSection>
           <section className="text-center">
             {heroImage && (
-              <div className="relative w-full h-[400px] mb-8">
+              <div className="relative w-full h-auto mb-8">
                 <Image
                   src={heroImage.imageUrl}
                   alt={heroImage.description}
-                  fill
+                  width={1200}
+                  height={675}
                   style={{ objectFit: 'cover' }}
                   className="mx-auto rounded-lg"
                   data-ai-hint={heroImage.imageHint}
@@ -160,6 +184,36 @@ export default function LandingPage() {
                     data-ai-hint="man thinking tablet"
                 />
             </div>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center">
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+            >
+              <CarouselContent>
+                {storyImages.map((image, index) => (
+                  <CarouselItem key={index} className="p-4">
+                    <div className="relative w-full h-auto aspect-video">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="rounded-lg object-cover"
+                        data-ai-hint={image.hint}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
           </section>
         </AnimatedSection>
 
