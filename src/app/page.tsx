@@ -170,6 +170,9 @@ export default function LandingPage() {
         
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Scrolling is boring, but wait , listen to this story
+            </h2>
             <Carousel
               opts={{
                 align: 'start',
