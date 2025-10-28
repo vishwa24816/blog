@@ -138,6 +138,11 @@ const storyImages = [
     src: 'https://lh3.googleusercontent.com/d/1fVpGTKhqEcvR7OcuTmqdB0N7IVVMWUmB',
     alt: 'A diagram showing the various features of the SIM platform.',
     hint: 'features diagram'
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/d/1gnSi8BmgimjhU683OWzIhYmfKbDdNTfs',
+    alt: 'A diagram showing the various features of the SIM platform.',
+    hint: 'features diagram'
   }
 ];
 
