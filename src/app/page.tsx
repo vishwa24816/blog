@@ -363,7 +363,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="relative rounded-lg overflow-hidden">
-                <Image src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F973a8bbb-0539-450d-8d00-217dc67dafb4%2Fsell-me-this-pen-its-ai-powered-v0-ty4hkya8v2hd1.webp/size/w=860?exp=1761062024&sig=yBDeW9RS_gfsNlEvHymTS6OAMEls_eLUPvvD54pzhoo&id=23d6fb47-9c52-8032-b38b-df0aefd8af6f&table=block" alt="AI in finance" width={860} height={484} className="w-full h-auto object-cover" data-ai-hint="AI finance" />
+                <Image src="https://lh3.googleusercontent.com/d/1jw5TmqKRiNRfcVNM-lOxKXzC6YYYvN30" alt="AI in finance" width={860} height={484} className="w-full h-auto object-cover" data-ai-hint="AI finance" />
             </div>
           </section>
         </AnimatedSection>
@@ -435,5 +435,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
