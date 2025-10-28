@@ -152,7 +152,7 @@ const storyImages = [
 ];
 
 const secondStoryImages = [
-    {
+  {
     src: 'https://lh3.googleusercontent.com/d/1XUubsdyY0ezLJjLTjpcZmNa7bAd3HKPw',
     alt: 'A frustrated trader looking at multiple screens.',
     hint: 'frustrated trader',
@@ -167,8 +167,17 @@ const secondStoryImages = [
     alt: 'A person easily using a no-code algo builder.',
     hint: 'visual programming',
   },
-  ...storyImages.slice(3)
-]
+  {
+    src: 'https://lh3.googleusercontent.com/d/1H1c68oHHzIRq_pPGXY9TkCNrkNv-jIat',
+    alt: 'A happy and confident investor checking their portfolio.',
+    hint: 'confident investor',
+  },
+  {
+    src: 'https://lh3.googleusercontent.com/d/1XKDde3qXnijPXkblUc_XULJU5hGJOrOn',
+    alt: 'A diagram showing the various features of the SIM platform.',
+    hint: 'features diagram'
+  }
+];
 
 const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
   <Card className="bg-card/50 backdrop-blur-sm border-border/50 h-full flex flex-col">
@@ -475,3 +484,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
