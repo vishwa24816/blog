@@ -125,11 +125,6 @@ const storyImages = [
     hint: 'data analysis',
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1DrV6gx-GBwxdvw2KPqdJhy8CFhxr5DGe',
-    alt: 'A person looking at a screen with lots of data.',
-    hint: 'data analysis',
-  },
-  {
     src: 'https://lh3.googleusercontent.com/d/1Sf7GFUTzy_p5e09i46eYdDfwORFa4cmo',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis',
@@ -219,6 +214,40 @@ export default function LandingPage() {
               Scrolling is boring, but wait , listen to this story.
               <br />
               Once upon a time, there was a Gen Z scrolling social media just like how you are doing usually and found this
+            </h2>
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+              }}
+              className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+            >
+              <CarouselContent>
+                {storyImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative w-full aspect-video">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="rounded-lg object-contain"
+                        data-ai-hint={image.hint}
+                        unoptimized={image.src.includes('googleusercontent')}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </section>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <section className="mt-24 md:mt-32 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Want to know one more thing? Another story for you
             </h2>
             <Carousel
               opts={{
