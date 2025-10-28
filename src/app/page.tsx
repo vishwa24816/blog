@@ -170,25 +170,6 @@ export default function LandingPage() {
         
         <AnimatedSection>
           <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Scrolling is boring, but wait , listen to this story
-            </h2>
-            <div className="relative rounded-lg overflow-hidden mt-8 max-w-lg mx-auto">
-                <Image 
-                    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2Ff8dfe57a-f1d3-4b08-b9b8-886f028e1584%2Fpicard-thinking-meme-7.jpg/size/w=1210?exp=1761124528&sig=uiKygF3E6OkmGQBRCu2IwlG19TGIcOUjFhELQAvrpko&id=2936fb47-9c52-8095-9418-db6bbb0486f6&table=block" 
-                    alt="Frustrated person with a phone" 
-                    width={500}
-                    height={320}
-                    unoptimized
-                    className="mx-auto rounded-lg w-full h-auto object-cover"
-                    data-ai-hint="man thinking tablet"
-                />
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
             <Carousel
               opts={{
                 align: 'start',
@@ -396,5 +377,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
