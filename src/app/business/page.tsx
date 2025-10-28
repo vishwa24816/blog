@@ -55,7 +55,7 @@ const offerings = [
       'Cross-reference: Angel One and CoinDCX captured 0.05% SOM in Year 1 (Economic Times 2025).',
     ],
     image: {
-      src: 'https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F6f2c8004-1043-4fd5-a5f8-ebf0ab0fef6e%2Fchart_(1).png/size/w=1400?exp=1761126445&sig=COoPA5IH2ttqCC3jzSTDdZtvlUeASRkum6CbbwpG7w0&id=2936fb47-9c52-8075-9e65-f55a393fc563&table=block',
+      src: 'https://lh3.googleusercontent.com/d/1_t0FeIrWDwPblr-usn37hcr1porUovDo',
       alt: 'A corporate executive analyzing financial charts',
       hint: 'corporate finance',
     },
