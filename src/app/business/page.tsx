@@ -40,7 +40,7 @@ const offerings = [
       'Retail penetration: 70% (SEBI; 70% platforms lack AI)',
     ],
     image: {
-      src: 'https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F79bbf52c-7132-4b1f-9130-4fe562f9ce95%2Faltindex-india-crypto-market-growth.webp/size/w=1420?exp=1761126407&sig=Hg1p_0Q8QaWRVQ6v_KHjOlX7K3Ik8-TmUsr8eAkhIUU&id=2936fb47-9c52-8053-b3b8-f8d945f1978e&table=block',
+      src: 'https://lh3.googleusercontent.com/d/1M6C9-OdGDCNDnxVjzRmtQw9uFNrRq5MB',
       alt: 'A graph showing market share and growth',
       hint: 'market share graph',
     },
@@ -166,7 +166,7 @@ export default function BusinessPage() {
                       alt={offering.image.alt}
                       width={800}
                       height={600}
-                      unoptimized={offering.image.src.includes('notionusercontent')}
+                      unoptimized={offering.image.src.includes('googleusercontent') || offering.image.src.includes('notionusercontent')}
                       className="w-full h-auto object-cover"
                       data-ai-hint={offering.image.hint}
                     />
