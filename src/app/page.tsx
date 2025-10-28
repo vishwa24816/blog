@@ -188,7 +188,7 @@ export default function LandingPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        className="rounded-lg object-cover"
+                        className="rounded-lg object-contain"
                         data-ai-hint={image.hint}
                         unoptimized={image.src.includes('googleusercontent')}
                       />
