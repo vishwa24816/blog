@@ -19,7 +19,6 @@ const offerings = [
     description:
       'The total value of retail-accessible investment assets in India (stocks + crypto), as SIM targets Indian users.',
     features: [
-      'Indian stocks cap: $5.32T (Statista, 2025). Retail share: ~25% (SEBI data via Reuters, 2025; retail drives 25-30% of equity volume).',
       'India crypto trading volume: ~$300B annualized (Chainalysis 2025 Index; India is no. 1 in adoption, i.e ~13% of APAC $2.36T).',
       'Retail share: 80% (high retail dominance in India crypto per CoinSwitch Q2 2025).',
       'Refined Value: $1.78T (conservative: $1.33T stocks retail + $0.45T crypto retail equivalent).',
