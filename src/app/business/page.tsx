@@ -21,7 +21,7 @@ const offerings = [
     features: [
       'India crypto trading volume: ~$300B annualized (Chainalysis 2025 Index; India is no. 1 in adoption, i.e ~13% of APAC $2.36T).',
       'Retail share: 80% (high retail dominance in India crypto per CoinSwitch Q2 2025).',
-      'Refined Value: $1.78T (conservative: $1.33T stocks retail + $0.45T crypto retail equivalent).',
+      'Refined Value: $0.45T crypto retail equivalent',
     ],
     image: {
       src: 'https://lh3.googleusercontent.com/d/1sytevmd8kw48XQao4dvbdI8Ai8hHjcQh',
