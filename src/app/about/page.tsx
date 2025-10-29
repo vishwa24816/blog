@@ -35,8 +35,7 @@ export default function AboutPage() {
               future of intelligent investing.
             </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              SIM is an AI-powered, all-in-one trading platform designed to
-              democratize sophisticated investing for everyone.
+              SIM is an AI-powered crypto trading platform designed to democratize sophisticated investing for everyone.
             </p>
             <div className="relative w-full h-auto my-8">
               <Image
