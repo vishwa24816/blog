@@ -17,7 +17,7 @@ const offerings = [
   {
     title: 'Total Adressable Market (TAM)',
     description:
-      'The total value of retail-accessible investment assets in India (stocks + crypto), as SIM targets Indian users.',
+      'The total value of retail-accessible crypto investment assets in India, as SIM targets Indian users.',
     features: [
       'India crypto trading volume: ~$300B annualized (Chainalysis 2025 Index; India is no. 1 in adoption, i.e ~13% of APAC $2.36T).',
       'Retail share: 80% (high retail dominance in India crypto per CoinSwitch Q2 2025).',
@@ -179,7 +179,7 @@ export default function BusinessPage() {
         <AnimatedSection>
           <section className="mt-24 md:mt-32">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">
+              <h2 className="text-3xl md-text-4xl font-bold font-headline">
                 Our Business Model
               </h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
