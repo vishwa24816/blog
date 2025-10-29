@@ -32,7 +32,7 @@ const offerings = [
   {
     title: 'Serviceable Available Market (SAM)',
     description:
-      "The combined market of retail stocks and crypto traders i.e 220M+ users with Indian retail investors i.e 110M+ Demat accounts, and the projected $805M algorithmic trading market as per Data.",
+      "The combined market of retail stocks and crypto traders i.e 100M+ users and the projected $2.6B algorithmic trading market as per Data from Graphlinq and following.",
     features: [
       "India-specific retail algo/AI trading subset (SIM's core differentiator).",
       'Algo market: $1.15B (2025 est.; interpolated from IMARC $562M 2024 + 9.5% CAGR).',
