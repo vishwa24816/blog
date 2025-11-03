@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Coins, Ellipsis, ScanSearch, Users, Wallet } from 'lucide-react';
+import { Coins, Ellipsis, ScanSearch, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import { cn } from '@/lib/utils';
 import {
@@ -218,9 +218,7 @@ export default function LandingPage() {
             <div className="mt-8 flex gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
-                  href="https://simulationexchange.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/login"
                 >
                   Sign In
                 </Link>
@@ -424,9 +422,7 @@ export default function LandingPage() {
             <div className="mt-8 flex gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
-                  href="https://simulationexchange.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/login"
                 >
                   Sign Up Now
                 </Link>

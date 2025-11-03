@@ -64,9 +64,7 @@ export function Header() {
           <ThemeSwitcher />
           <Button variant="outline" size="sm" asChild>
             <Link
-              href="https://simulationexchange.vercel.app/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/login"
             >
               Sign In
             </Link>
