@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { useAuth, useFirestore } from '@/firebase';
 import Link from 'next/link';
@@ -32,10 +33,26 @@ import Confetti from 'react-confetti';
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isCongratsDialogOpen, setIsCongratsDialogOpen] = useState(false);
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const auth = useAuth();
   const firestore = useFirestore();
   const { toast } = useToast();
   const router = useRouter();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    
+    if (typeof window !== 'undefined') {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   const showSuccessDialog = () => {
     setIsCongratsDialogOpen(true);
@@ -104,6 +121,13 @@ export default function LoginPage() {
 
   return (
     <>
+      {isCongratsDialogOpen && (
+        <Confetti
+          width={windowSize.width}
+          height={windowSize.height}
+          recycle={true}
+        />
+      )}
       <div className="flex flex-col min-h-screen bg-background">
         <Header />
         <main className="flex-grow flex items-center justify-center">
@@ -168,12 +192,11 @@ export default function LoginPage() {
 
       <Dialog open={isCongratsDialogOpen} onOpenChange={setIsCongratsDialogOpen}>
         <DialogContent className="sm:max-w-md text-center">
-          {isCongratsDialogOpen && <Confetti recycle={true} />}
           <DialogHeader className="space-y-4">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50">
               <PartyPopper className="h-6 w-6 text-green-600 dark:text-green-400" />
             </div>
-            <DialogTitle className="text-2xl font-bold">
+            <DialogTitle className="text-2xl font-bold text-center">
               Congratulations!
             </DialogTitle>
             <DialogDescription className="text-base text-muted-foreground">
@@ -187,7 +210,7 @@ export default function LoginPage() {
               from us to enjoy more because you could be one of the 10 lucky winners!
             </p>
           </div>
-          <Button onClick={() => setIsCongratsDialogOpen(false)}>Close</Button>
+          <Button onClick={() => router.push('/dashboard')}>Go to Dashboard</Button>
         </DialogContent>
       </Dialog>
     </>
