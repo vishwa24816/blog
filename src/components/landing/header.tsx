@@ -16,7 +16,7 @@ import { ThemeSwitcher } from '../theme/theme-switcher';
 
 const Logo = () => (
   <Image
-    src="https://img.notionusercontent.com/s3/prod-files-secure%2F7526fb47-9c52-81ef-9df9-00033e87bb4d%2F44533ca6-21d9-4c13-919e-f6d332ea4fc4%2FScreenshot_20250505-214836-643_(1)_(1).png/size/w=680?exp=1761138172&sig=wPS2GRCYIH8_FAfQYSY7c35Xx8Xm0QWoqIqSlAmiC6w&id=2916fb47-9c52-80cf-8195-fcb3959ede09&table=block"
+    src="https://lh3.googleusercontent.com/d/1XPv_QuEnRv-jys8kkLjAfs3VXn7n_SpK"
     alt="SIM Logo"
     width={32}
     height={32}
