@@ -70,7 +70,7 @@ export function Header() {
                 Sign In
               </Link>
             </Button>
-            <div className="absolute top-full left-0 mt-2 px-3 py-1.5 bg-primary text-primary-foreground text-xs font-semibold rounded-md shadow-lg whitespace-nowrap z-10">
+            <div className="absolute top-full left-0 mt-2 px-3 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-md shadow-lg whitespace-nowrap z-10">
               Sign In for the Lucky Draw
             </div>
           </div>
