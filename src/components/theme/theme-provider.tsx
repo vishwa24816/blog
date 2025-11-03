@@ -1,3 +1,4 @@
+
 'use client';
 
 import { createContext, useContext, useState, useEffect } from 'react';
@@ -19,8 +20,8 @@ const ThemeContext = createContext<Theme | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeMode>('dark');
-  const [hue, setHue] = useState(231);
-  const [saturation, setSaturation] = useState(80);
+  const [hue, setHue] = useState(45);
+  const [saturation, setSaturation] = useState(90);
   const [lightness, setLightness] = useState(55);
 
   useEffect(() => {
