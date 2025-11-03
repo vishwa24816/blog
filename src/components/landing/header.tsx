@@ -62,13 +62,18 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
-          <Button variant="outline" size="sm" asChild>
-            <Link
-              href="/login"
-            >
-              Sign In
-            </Link>
-          </Button>
+          <div className="relative">
+            <Button variant="outline" size="sm" asChild>
+              <Link
+                href="/login"
+              >
+                Sign In
+              </Link>
+            </Button>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-primary text-primary-foreground text-[10px] font-semibold rounded-md shadow-lg whitespace-nowrap z-10">
+              Sign In for the Lucky Draw
+            </div>
+          </div>
         </div>
       </div>
       <AnimatePresence>
