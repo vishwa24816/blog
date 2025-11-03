@@ -1,0 +1,301 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the SIM Blog application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "User's first name."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "User's last name."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp indicating when the user account was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "firstName",
+        "lastName",
+        "createdAt"
+      ]
+    },
+    "Portfolio": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Portfolio",
+      "type": "object",
+      "description": "Represents a simulated investment portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the portfolio."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N Portfolio)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the portfolio."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the portfolio's investment strategy."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp indicating when the portfolio was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "name",
+        "description",
+        "createdAt"
+      ]
+    },
+    "Transaction": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Transaction",
+      "type": "object",
+      "description": "Represents a single transaction within a portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the transaction."
+        },
+        "portfolioId": {
+          "type": "string",
+          "description": "Reference to Portfolio. (Relationship: Portfolio 1:N Transaction)"
+        },
+        "assetSymbol": {
+          "type": "string",
+          "description": "Symbol of the asset traded (e.g., AAPL, GOOGL)."
+        },
+        "transactionType": {
+          "type": "string",
+          "description": "Type of transaction (e.g., buy, sell)."
+        },
+        "quantity": {
+          "type": "number",
+          "description": "Number of shares or units transacted."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price per share or unit at which the transaction occurred."
+        },
+        "transactionDate": {
+          "type": "string",
+          "description": "Date and time of the transaction.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "portfolioId",
+        "assetSymbol",
+        "transactionType",
+        "quantity",
+        "price",
+        "transactionDate"
+      ]
+    },
+    "MarketData": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "MarketData",
+      "type": "object",
+      "description": "Represents real-time market data for an asset.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the market data entry."
+        },
+        "assetSymbol": {
+          "type": "string",
+          "description": "Symbol of the asset (e.g., AAPL, GOOGL)."
+        },
+        "currentPrice": {
+          "type": "number",
+          "description": "Current market price of the asset."
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "Timestamp indicating when the market data was recorded.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "assetSymbol",
+        "currentPrice",
+        "timestamp"
+      ]
+    },
+    "RiskAssessment": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "RiskAssessment",
+      "type": "object",
+      "description": "Represents the risk assessment of a user's portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the risk assessment."
+        },
+        "portfolioId": {
+          "type": "string",
+          "description": "Reference to Portfolio. (Relationship: Portfolio 1:1 RiskAssessment)"
+        },
+        "riskScore": {
+          "type": "number",
+          "description": "Overall risk score of the portfolio."
+        },
+        "assessmentDate": {
+          "type": "string",
+          "description": "Date when the risk assessment was performed.",
+          "format": "date-time"
+        },
+        "insights": {
+          "type": "string",
+          "description": "Insights and recommendations generated by the AI-powered risk assessment tool."
+        }
+      },
+      "required": [
+        "id",
+        "portfolioId",
+        "riskScore",
+        "assessmentDate",
+        "insights"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profile information. Root path for all user-owned data.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/portfolios/{portfolioId}",
+        "definition": {
+          "entityName": "Portfolio",
+          "schema": {
+            "$ref": "#/backend/entities/Portfolio"
+          },
+          "description": "Stores portfolios owned by a specific user.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "portfolioId",
+              "description": "The unique identifier of the portfolio."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/portfolios/{portfolioId}/transactions/{transactionId}",
+        "definition": {
+          "entityName": "Transaction",
+          "schema": {
+            "$ref": "#/backend/entities/Transaction"
+          },
+          "description": "Stores transaction records for a specific portfolio.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "portfolioId",
+              "description": "The unique identifier of the portfolio."
+            },
+            {
+              "name": "transactionId",
+              "description": "The unique identifier of the transaction."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userId}/portfolios/{portfolioId}/riskAssessments/{riskAssessmentId}",
+        "definition": {
+          "entityName": "RiskAssessment",
+          "schema": {
+            "$ref": "#/backend/entities/RiskAssessment"
+          },
+          "description": "Stores risk assessment reports for a specific portfolio.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            },
+            {
+              "name": "portfolioId",
+              "description": "The unique identifier of the portfolio."
+            },
+            {
+              "name": "riskAssessmentId",
+              "description": "The unique identifier of the risk assessment."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/marketData/{marketDataId}",
+        "definition": {
+          "entityName": "MarketData",
+          "schema": {
+            "$ref": "#/backend/entities/MarketData"
+          },
+          "description": "Stores real-time market data for various assets.",
+          "params": [
+            {
+              "name": "marketDataId",
+              "description": "The unique identifier of the market data entry."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to support the SIM Blog application's core features: Investment Simulation, Risk Assessment, Portfolio Tracking, Market News Integration, and an AI Analyst Tool.  The design prioritizes Authorization Independence and QAPs (Rules are not Filters). This is achieved through path-based ownership and structural segregation. User-owned data (Portfolios, Transactions, RiskAssessments) is nested under the `/users/{userId}` collection.  This structure eliminates the need for `get()` calls in security rules, enabling atomic operations (transactions/batches).  For QAPs, data segregation is used.  All documents within a collection share the same security posture.  This ensures efficient and secure list operations, as filtering occurs on the client-side after authorization is confirmed."
+  }
+}

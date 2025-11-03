@@ -1,0 +1,179 @@
+/**
+ * @fileoverview Firestore Security Rules for SIM Blog application.
+ *
+ * Core Philosophy:
+ * This ruleset enforces a strict user-ownership model for user-specific data (portfolios, transactions, risk assessments).
+ * Market data is publicly readable.
+ *
+ * Data Structure:
+ * - /users/{userId}: Stores user profile information. All user-owned data is nested under this path.
+ * - /users/{userId}/portfolios/{portfolioId}: Stores portfolios owned by a specific user.
+ * - /users/{userId}/portfolios/{portfolioId}/transactions/{transactionId}: Stores transaction records for a specific portfolio.
+ * - /users/{userId}/portfolios/{portfolioId}/riskAssessments/{riskAssessmentId}: Stores risk assessment reports for a specific portfolio.
+ * - /marketData/{marketDataId}: Stores real-time market data for various assets (publicly readable).
+ *
+ * Key Security Decisions:
+ * - Users can only access their own data.
+ * - Portfolio, Transaction and RiskAssessment data is secured via path-based ownership.
+ * - Market data is publicly readable but not writable.
+ * - Data validation is relaxed in this prototyping phase, except for ownership checks on `create` and immutability of user IDs on `update`.
+ * - List operations are secured to prevent unauthorized data access.
+ *
+ * Denormalization for Authorization:
+ * - The `userId` is included in the Portfolio document to avoid `get()` calls for ownership checks.
+ * - The `portfolioId` is included in the Transaction and RiskAssessment documents to avoid `get()` calls.
+ *
+ * Structural Segregation:
+ * - User-specific data is stored under the `/users/{userId}` collection to ensure clear ownership and prevent accidental public exposure.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Enforces user-level access control for user profiles.
+     * @path /users/{userId}
+     * @allow (create) User with ID 'user123' can create their own profile.
+     *   - request.auth.uid: 'user123'
+     *   - request.resource.data.id: 'user123'
+     * @allow (get, update, delete) User with ID 'user123' can read, update, and delete their own profile.
+     *   - request.auth.uid: 'user123'
+     *   - resource.data.id: 'user123'
+     * @deny (create) User with ID 'user123' cannot create a profile for another user.
+     *   - request.auth.uid: 'user123'
+     *   - request.resource.data.id: 'user456'
+     * @deny (update, delete) User with ID 'user123' cannot update or delete another user's profile.
+     *   - request.auth.uid: 'user123'
+     *   - resource.data.id: 'user456'
+     * @principle Enforces document ownership for writes. Validates relational integrity on create and update.
+     */
+    match /users/{userId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+
+      allow get: if isOwner(userId);
+      allow list: if false; // Disable listing of all users for privacy.
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Enforces user-level access control for portfolios.
+     * @path /users/{userId}/portfolios/{portfolioId}
+     * @allow (create) User with ID 'user123' can create a portfolio under their user ID.
+     *   - request.auth.uid: 'user123'
+     *   - request.resource.data.userId: 'user123'
+     * @allow (get, update, delete) User with ID 'user123' can read, update, and delete their own portfolios.
+     *   - request.auth.uid: 'user123'
+     *   - resource.data.userId: 'user123'
+     * @deny (create) User with ID 'user123' cannot create a portfolio under another user's ID.
+     *   - request.auth.uid: 'user123'
+     *   - request.resource.data.userId: 'user456'
+     * @deny (update, delete) User with ID 'user123' cannot update or delete another user's portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - resource.data.userId: 'user456'
+     * @principle Enforces document ownership for writes. Validates relational integrity on create and update.
+     */
+    match /users/{userId}/portfolios/{portfolioId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && request.resource.data.userId == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.userId == resource.data.userId;
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Enforces user-level access control for transactions within a portfolio.
+     * @path /users/{userId}/portfolios/{portfolioId}/transactions/{transactionId}
+     * @allow (create) User with ID 'user123' can create a transaction within their portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user123/portfolios/portfolioXYZ).data.userId == 'user123'
+     * @allow (get, update, delete) User with ID 'user123' can read, update, and delete transactions within their own portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user123/portfolios/portfolioXYZ).data.userId == 'user123'
+     * @deny (create) User with ID 'user123' cannot create a transaction within another user's portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user456/portfolios/portfolioXYZ).data.userId == 'user456'
+     * @deny (update, delete) User with ID 'user123' cannot update or delete transactions in another user's portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user456/portfolios/portfolioXYZ).data.userId == 'user456'
+     * @principle Enforces document ownership for writes. Relies on path-based authorization.
+     */
+    match /users/{userId}/portfolios/{portfolioId}/transactions/{transactionId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow update: if isExistingOwner(userId);
+        allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Enforces user-level access control for risk assessments within a portfolio.
+     * @path /users/{userId}/portfolios/{portfolioId}/riskAssessments/{riskAssessmentId}
+     * @allow (create) User with ID 'user123' can create a risk assessment within their portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user123/portfolios/portfolioXYZ).data.userId == 'user123'
+     * @allow (get, update, delete) User with ID 'user123' can read, update, and delete risk assessments within their own portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user123/portfolios/portfolioXYZ).data.userId == 'user123'
+     * @deny (create) User with ID 'user123' cannot create a risk assessment within another user's portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user456/portfolios/portfolioXYZ).data.userId == 'user456'
+     * @deny (update, delete) User with ID 'user123' cannot update or delete risk assessments in another user's portfolio.
+     *   - request.auth.uid: 'user123'
+     *   - get(/databases/$(database)/documents/users/user456/portfolios/portfolioXYZ).data.userId == 'user456'
+     * @principle Enforces document ownership for writes. Relies on path-based authorization.
+     */
+    match /users/{userId}/portfolios/{portfolioId}/riskAssessments/{riskAssessmentId} {
+      function isOwner(userId) {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+          return isOwner(userId) && resource != null;
+      }
+
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId);
+        allow update: if isExistingOwner(userId);
+        allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Allows public read access to market data, but restricts writes.
+     * @path /marketData/{marketDataId}
+     * @allow (get, list) Any user (or anonymous user) can read market data.
+     * @deny (create, update, delete) No one can create, update, or delete market data.
+     * @principle Allows public reads with restricted writes.
+     */
+    match /marketData/{marketDataId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}
