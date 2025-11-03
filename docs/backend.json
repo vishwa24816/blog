@@ -189,8 +189,7 @@
   },
   "auth": {
     "providers": [
-      "google",
-      "anonymous"
+      "google"
     ]
   },
   "firestore": {

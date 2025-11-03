@@ -26,7 +26,6 @@ import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
 import { doc } from 'firebase/firestore';
 import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
-import { signInAnonymously } from 'firebase/auth';
 import Confetti from 'react-confetti';
 
 export default function LoginPage() {
@@ -99,25 +98,6 @@ export default function LoginPage() {
     setIsLoading(false);
   };
 
-  const handleAnonymousLogin = async () => {
-    setIsLoading(true);
-    try {
-      await signInAnonymously(auth);
-      toast({
-        title: 'Logged in as Guest',
-        description: 'You are now browsing as a guest.',
-      });
-      showSuccessDialog();
-    } catch (error: any) {
-      toast({
-        variant: 'destructive',
-        title: 'Anonymous Login Failed',
-        description: error.message || 'An error occurred. Please try again.',
-      });
-    }
-    setIsLoading(false);
-  };
-
   return (
     <>
       {isCongratsDialogOpen && (
@@ -165,25 +145,6 @@ export default function LoginPage() {
                   </svg>
                 )}
                 Sign in with Google
-              </Button>
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t" />
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">
-                    Or
-                  </span>
-                </div>
-              </div>
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={handleAnonymousLogin}
-                disabled={isLoading}
-              >
-                {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                Sign in as Guest
               </Button>
             </CardContent>
           </Card>
