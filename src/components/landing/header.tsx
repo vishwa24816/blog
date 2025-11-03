@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -70,7 +69,7 @@ export function Header() {
                 Sign In
               </Link>
             </Button>
-            <div className="absolute top-full right-0 mt-2 px-3 py-1.5 bg-primary text-primary-foreground text-sm font-semibold rounded-md shadow-lg whitespace-nowrap z-10">
+            <div className="absolute top-full right-0 mt-2 px-4 py-2 bg-primary/90 text-primary-foreground text-base font-semibold rounded-lg shadow-lg whitespace-nowrap z-10">
               Sign In for the Lucky Draw
             </div>
           </div>
