@@ -126,6 +126,7 @@ export default function LoginPage() {
           width={windowSize.width}
           height={windowSize.height}
           recycle={true}
+          style={{ zIndex: 100 }}
         />
       )}
       <div className="flex flex-col min-h-screen bg-background">
