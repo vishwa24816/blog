@@ -43,7 +43,7 @@ const features = [
   },
   {
     icon: <ScanSearch className="h-10 w-10" />,
-    title: 'Prompt based Screening and Backtesting',
+    title: 'Prompt based Trading, Screening and Backtesting',
     description:
       'Our AI-powered screener cuts through market noise, analyzing technicals, fundamentals, and social sentiment to help you find actionable opportunities',
   },
