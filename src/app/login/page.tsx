@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -127,6 +126,7 @@ export default function LoginPage() {
           height={windowSize.height}
           recycle={true}
           style={{ zIndex: 100 }}
+          gravity={0.3}
         />
       )}
       <div className="flex flex-col min-h-screen bg-background">
