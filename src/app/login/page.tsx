@@ -168,7 +168,7 @@ export default function LoginPage() {
 
       <Dialog open={isCongratsDialogOpen} onOpenChange={setIsCongratsDialogOpen}>
         <DialogContent className="sm:max-w-md text-center">
-          {isCongratsDialogOpen && <Confetti recycle={false} numberOfPieces={200} />}
+          {isCongratsDialogOpen && <Confetti recycle={true} />}
           <DialogHeader className="space-y-4">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50">
               <PartyPopper className="h-6 w-6 text-green-600 dark:text-green-400" />
