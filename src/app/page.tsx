@@ -424,11 +424,11 @@ export default function LandingPage() {
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link
-                  href="https://forms.gle/NVpMwxqqgXU1ZjRi6"
+                  href="https://simulationexchange.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Share Your Experience
+                  Experience The Future of Trading and Investing
                 </Link>
               </Button>
             </div>
