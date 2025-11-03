@@ -189,7 +189,7 @@
   },
   "auth": {
     "providers": [
-      "password",
+      "google",
       "anonymous"
     ]
   },

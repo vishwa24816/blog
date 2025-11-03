@@ -1,15 +1,8 @@
-
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  signInWithEmailAndPassword,
-  signInAnonymously,
-} from 'firebase/auth';
-import { useAuth } from '@/firebase';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { useAuth, useFirestore } from '@/firebase';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -19,65 +12,65 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
-
-const loginSchema = z.object({
-  email: z.string().email({ message: 'Invalid email address.' }),
-  password: z
-    .string()
-    .min(6, { message: 'Password must be at least 6 characters.' }),
-});
-
-type LoginFormValues = z.infer<typeof loginSchema>;
+import { doc } from 'firebase/firestore';
+import { setDocumentNonBlocking } from '@/firebase/non-blocking-updates';
+import { signInAnonymously } from 'firebase/auth';
 
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const auth = useAuth();
+  const firestore = useFirestore();
   const { toast } = useToast();
   const router = useRouter();
 
-  const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-  });
-
-  const handleLogin = async (data: LoginFormValues) => {
+  const handleGoogleLogin = async () => {
     setIsLoading(true);
+    const provider = new GoogleAuthProvider();
     try {
-      await signInWithEmailAndPassword(auth, data.email, data.password);
-      toast({
-        title: 'Login Successful',
-        description: "You've been successfully logged in.",
-      });
-      router.push('/dashboard');
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+
+      if (user) {
+        const userRef = doc(firestore, 'users', user.uid);
+        const [firstName, ...lastNameParts] = (user.displayName || ' ').split(' ');
+        const lastName = lastNameParts.join(' ');
+
+        const userData = {
+          id: user.uid,
+          email: user.email,
+          firstName: firstName,
+          lastName: lastName,
+          createdAt: new Date().toISOString(),
+        };
+        
+        // Use non-blocking write
+        setDocumentNonBlocking(userRef, userData, { merge: true });
+        
+        toast({
+          title: 'Login Successful',
+          description: "You've been successfully logged in.",
+        });
+        router.push('/dashboard');
+      }
     } catch (error: any) {
       toast({
         variant: 'destructive',
         title: 'Login Failed',
         description:
-          error.message || 'An error occurred. Please try again.',
+          error.code === 'auth/popup-closed-by-user'
+            ? 'The sign-in window was closed. Please try again.'
+            : error.message || 'An error occurred. Please try again.',
       });
     }
     setIsLoading(false);
   };
-
-  const handleAnonymousLogin = async () => {
+  
+    const handleAnonymousLogin = async () => {
     setIsLoading(true);
     try {
       await signInAnonymously(auth);
@@ -103,70 +96,50 @@ export default function LoginPage() {
       <main className="flex-grow flex items-center justify-center">
         <Card className="mx-auto max-w-sm w-full">
           <CardHeader>
-            <CardTitle className="text-2xl">Login</CardTitle>
+            <CardTitle className="text-2xl">Sign In</CardTitle>
             <CardDescription>
-              Enter your email below to login to your account
+              Sign in with your Google account to continue
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(handleLogin)}
-                className="grid gap-4"
-              >
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="m@example.com"
-                          {...field}
-                          disabled={isLoading}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="password"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Password</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="password"
-                          {...field}
-                          disabled={isLoading}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading && (
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  )}
-                  Login
-                </Button>
-              </form>
-            </Form>
-            <div className="relative my-4">
+          <CardContent className="grid gap-4">
+            <Button
+              onClick={handleGoogleLogin}
+              className="w-full"
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              ) : (
+                // You can add a Google Icon here if you want
+                <svg
+                  className="mr-2 h-4 w-4"
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fab"
+                  data-icon="google"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 488 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M488 261.8C488 403.3 381.5 512 244 512 109.8 512 0 402.2 0 261.8S109.8 11.8 244 11.8c70.3 0 129.5 28.2 174.9 73.1l-63.1 61.9C324.7 112.5 288.2 96.5 244 96.5c-88.6 0-160.1 71.8-160.1 160.1s71.4 160.1 160.1 160.1c98.2 0 135-70.2 140.8-106.9H244V261.8h244z"
+                  ></path>
+                </svg>
+              )}
+              Sign in with Google
+            </Button>
+             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-background px-2 text-muted-foreground">
-                  Or continue with
+                  Or
                 </span>
               </div>
             </div>
-            <Button
+             <Button
               variant="outline"
               className="w-full"
               onClick={handleAnonymousLogin}
@@ -175,12 +148,6 @@ export default function LoginPage() {
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Sign in as Guest
             </Button>
-            <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{' '}
-              <Link href="/signup" className="underline">
-                Sign up
-              </Link>
-            </div>
           </CardContent>
         </Card>
       </main>

@@ -98,11 +98,6 @@ const storyImages = [
     hint: 'visual programming',
   },
   {
-    src: 'https://lh3.googleusercontent.com/d/1HLi03bYCOFVBZWbG7N_1D_CUdzUyp93r',
-    alt: 'A vibrant community of investors discussing trades.',
-    hint: 'investor community',
-  },
-  {
     src: 'https://lh3.googleusercontent.com/d/1WlApkDM4xGJKGwy7AHLyMx9H0z7g0sJf',
     alt: 'A person looking at a screen with lots of data.',
     hint: 'data analysis',
@@ -424,7 +419,7 @@ export default function LandingPage() {
                 <Link
                   href="/login"
                 >
-                  Sign Up Now
+                  Get Started
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
