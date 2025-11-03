@@ -16,7 +16,7 @@ import { ThemeSwitcher } from '../theme/theme-switcher';
 
 const Logo = () => (
   <Image
-    src="https://lh3.googleusercontent.com/d/1XPv_QuEnRv-jys8kkLjAfs3VXn7n_SpK"
+    src="https://lh3.googleusercontent.com/d/1kNohQtEjQUqeezcw18bwiR-OXrCP1zzy"
     alt="SIM Logo"
     width={32}
     height={32}
