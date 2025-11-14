@@ -117,8 +117,10 @@ export function Header() {
           )}
         </AnimatePresence>
       </motion.header>
-      <div className="sticky top-16 z-40 flex justify-center py-2 bg-primary/90 text-primary-foreground text-sm font-semibold shadow-lg">
-        Sign In for the Lucky Draw
+      <div className="sticky top-16 z-40 flex justify-end">
+        <div className="mr-6 bg-primary/90 text-primary-foreground text-sm font-semibold shadow-lg py-2 px-4 rounded-b-lg">
+            Sign In for the Lucky Draw
+        </div>
       </div>
     </>
   );
