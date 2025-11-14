@@ -2,7 +2,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { useUser } from '@/firebase'; // Using the one from provider
 import { SidebarProvider, Sidebar, SidebarInset } from '@/components/ui/sidebar';
 import AppSidebar from '@/components/layout/app-sidebar';
@@ -14,13 +13,12 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const { user, isUserLoading } = useUser();
-  const router = useRouter();
 
   useEffect(() => {
     if (!isUserLoading && !user) {
-      router.push('/login');
+      window.location.href = 'https://simulationexchange.vercel.app/login';
     }
-  }, [user, isUserLoading, router]);
+  }, [user, isUserLoading]);
 
   if (isUserLoading || !user) {
     return (

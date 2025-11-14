@@ -213,7 +213,9 @@ export default function LandingPage() {
             <div className="mt-8 flex gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
-                  href="/login"
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Sign In
                 </Link>
@@ -417,7 +419,9 @@ export default function LandingPage() {
             <div className="mt-8 flex gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
-                  href="/login"
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Get Started
                 </Link>
