@@ -66,7 +66,9 @@ export function Header() {
             <div className="relative">
               <Button variant="outline" size="sm" asChild>
                 <Link
-                  href="/login"
+                  href="https://simulationexchange.vercel.app/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Sign In
                 </Link>
@@ -118,9 +120,15 @@ export function Header() {
         </AnimatePresence>
       </motion.header>
       <div className="fixed top-20 right-4 z-50">
-        <div className="bg-primary/90 text-primary-foreground text-sm font-semibold shadow-lg py-2 px-4 rounded-lg">
+        <Link
+          href="https://simulationexchange.vercel.app/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="bg-primary/90 text-primary-foreground text-sm font-semibold shadow-lg py-2 px-4 rounded-lg">
             Sign In for the Lucky Draw
-        </div>
+          </div>
+        </Link>
       </div>
     </>
   );
