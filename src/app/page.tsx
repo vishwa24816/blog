@@ -1,7 +1,7 @@
 
 import { Footer } from '@/components/landing/footer';
 import { Header } from '@/components/landing/header';
-import { AnimatedSection } from '@/components/landing/animated-section';
+import { ScrollBackground } from '@/components/landing/scroll-background';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -14,7 +14,6 @@ import {
 } from '@/components/ui/card';
 import { Coins, Ellipsis, ScanSearch, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
-import { cn } from '@/lib/utils';
 import {
   Carousel,
   CarouselContent,
@@ -53,16 +52,6 @@ const features = [
     description:
       'And more solutions which are great, but you don’t need to waste your time reading them. You can experience them from the launch.',
   },
-];
-
-const cyclingSentences = [
-  'A massive opportunity to unify the chaos.',
-  'We built SIM — the first truly intelligent, all-in-one AI based trading platform',
-  'That brings stocks, crypto, no-code algorithmic trading, and a vibrant investor community',
-  'Together in one seamless experience.',
-  'No more app-hopping.',
-  'No more guesswork.',
-  'No more gatekeeping.',
 ];
 
 const competitiveEdgeSentences = [
@@ -181,246 +170,307 @@ const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
   </Card>
 );
 
+const sections = [
+  { id: 'hero', color: '#3498db' },
+  { id: 'story1', color: '#27ae60' },
+  { id: 'story2', color: '#e74c3c' },
+  { id: 'intro', color: '#e67e22' },
+  { id: 'features', color: '#9b59b6' },
+  { id: 'why-now', color: '#34495e' },
+  { id: 'competitive-edge', color: '#1abc9c' },
+  { id: 'waitlist', color: '#f1c40f' },
+];
+
 export default function LandingPage() {
   return (
-    <div className="bg-background text-foreground">
-      <Header />
-      <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
-        <AnimatedSection>
-          <section className="text-center">
-            {heroImage && (
-              <div className="relative w-full h-auto mb-8">
+    <ScrollBackground sections={sections}>
+      <div className="bg-transparent text-foreground">
+        <Header />
+        <main className="container mx-auto px-4 md:px-6">
+          <section
+            id="hero"
+            className="py-12 md:py-24 min-h-screen flex items-center text-center"
+          >
+            <div>
+              {heroImage && (
+                <div className="relative w-full h-auto mb-8">
+                  <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    width={1200}
+                    height={675}
+                    style={{ objectFit: 'cover' }}
+                    className="mx-auto rounded-lg"
+                    data-ai-hint={heroImage.imageHint}
+                    priority
+                  />
+                </div>
+              )}
+
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+                The Future of Intelligent Investing is Here
+              </h1>
+              <p className="text-muted-foreground mt-4">
+                SIM is an AI-powered, all-in-one trading platform that makes
+                sophisticated investing simple, efficient, and profitable.
+              </p>
+              <div className="mt-8 flex gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link
+                    href="https://simulationexchange.vercel.app/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sign In
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="story1"
+            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+          >
+            <div className="w-full">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Scrolling is boring, but wait , listen to this story.
+                <br />
+                Once upon a time, there was a Gen Z scrolling social media just
+                like how you are doing usually and found this
+              </h2>
+              <Carousel
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+              >
+                <CarouselContent>
+                  {storyImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative w-full aspect-video">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="rounded-lg object-contain"
+                          data-ai-hint={image.hint}
+                          unoptimized={image.src.includes('googleusercontent')}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
+          </section>
+
+          <section
+            id="story2"
+            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+          >
+            <div className="w-full">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+                Want to know one more thing? Another story for you
+              </h2>
+              <Carousel
+                opts={{
+                  align: 'start',
+                  loop: true,
+                }}
+                className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+              >
+                <CarouselContent>
+                  {secondStoryImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative w-full aspect-video">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="rounded-lg object-contain"
+                          data-ai-hint={image.hint}
+                          unoptimized={image.src.includes('googleusercontent')}
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
+            </div>
+          </section>
+
+          <section
+            id="intro"
+            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+          >
+            <div className="w-full">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Introducing SIM: The Intelligent Trading Terminal
+              </h2>
+              <p className="text-muted-foreground mt-4">
+                That's where <strong>SIM (Simulation Exchange)</strong> comes
+                in. We're an <strong>AI-powered, all-in-one trading platform</strong>{' '}
+                designed to democratize sophisticated investing for everyone. Our
+                mission is simple: to make trading simple, efficient, and even
+                profitable, without that usual headaches.
+              </p>
+            </div>
+          </section>
+
+          <section
+            id="features"
+            className="py-24 md:py-32 min-h-screen flex items-center"
+          >
+            <div className="w-full">
+              <div className="text-center">
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  But How SIM Makes Trading Simple (and Smart)
+                </h2>
+                <p className="text-muted-foreground mt-4">
+                  Today’s trading landscape is fragmented. SIM unifies your
+                  entire trading journey, from stocks and crypto to automated
+                  strategies, and community insights, all powered by AI.
+                </p>
+              </div>
+              <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+                {features.map((feature, index) => (
+                  <FeatureCard key={index} feature={feature} />
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="why-now"
+            className="py-24 md:py-32 min-h-screen flex items-center"
+          >
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Why Now is the Perfect Time for SIM
+                </h2>
+                <p className="text-muted-foreground mt-4">
+                  The world is changing, and so is finance. We're perfectly
+                  positioned to thrive thanks to two major shifts:
+                </p>
+                <ul className="list-disc list-inside mt-6 space-y-4 text-muted-foreground">
+                  <li>
+                    <strong>The AI Revolution:</strong> Recent advancements in
+                    conversational AI and natural language processing have made
+                    tools like SIMBOT a reality. We can now build a truly
+                    intuitive and powerful platform that was previously
+                    unimaginable.
+                  </li>
+                  <li>
+                    <strong>The Democratization of Finance:</strong> A new
+                    generation of retail investors is demanding seamless,
+                    unified, and intelligent tools to navigate increasingly
+                    complex financial markets. Traditional platforms simply
+                    aren't meeting this demand, leaving a massive opportunity for
+                    innovation.
+                  </li>
+                </ul>
+              </div>
+              <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0">
                 <Image
-                  src={heroImage.imageUrl}
-                  alt={heroImage.description}
-                  width={1200}
-                  height={675}
-                  style={{ objectFit: 'cover' }}
-                  className="mx-auto rounded-lg"
-                  data-ai-hint={heroImage.imageHint}
-                  priority
+                  src="https://lh3.googleusercontent.com/d/1VNAwNdBxAoVA-ceq159mR5cN9m-C8lEy"
+                  alt="AI in finance"
+                  width={860}
+                  height={484}
+                  unoptimized
+                  className="w-full h-auto object-cover"
+                  data-ai-hint="AI finance"
                 />
               </div>
-            )}
+            </div>
+          </section>
 
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              The Future of Intelligent Investing is Here
-            </h1>
-            <p className="text-muted-foreground mt-4">
-              SIM is an AI-powered, all-in-one trading platform that makes
-              sophisticated investing simple, efficient, and profitable.
-            </p>
-            <div className="mt-8 flex gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link
-                  href="https://simulationexchange.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Sign In
-                </Link>
-              </Button>
-            </div>
-          </section>
-        </AnimatedSection>
-        
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Scrolling is boring, but wait , listen to this story.
-              <br />
-              Once upon a time, there was a Gen Z scrolling social media just like how you are doing usually and found this
-            </h2>
-            <Carousel
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
-            >
-              <CarouselContent>
-                {storyImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative w-full aspect-video">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="rounded-lg object-contain"
-                        data-ai-hint={image.hint}
-                        unoptimized={image.src.includes('googleusercontent')}
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Want to know one more thing? Another story for you
-            </h2>
-            <Carousel
-              opts={{
-                align: 'start',
-                loop: true,
-              }}
-              className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
-            >
-              <CarouselContent>
-                {secondStoryImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative w-full aspect-video">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="rounded-lg object-contain"
-                        data-ai-hint={image.hint}
-                        unoptimized={image.src.includes('googleusercontent')}
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Introducing SIM: The Intelligent Trading Terminal
-            </h2>
-            <p className="text-muted-foreground mt-4">
-              That's where <strong>SIM (Simulation Exchange)</strong> comes in. We're an <strong>AI-powered, all-in-one trading platform</strong> designed to democratize sophisticated investing for everyone. Our mission is simple: to make trading simple, efficient, and even profitable, without that usual headaches.
-            </p>
-          </section>
-        </AnimatedSection>
-        
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                But How SIM Makes Trading Simple (and Smart)
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                Today’s trading landscape is fragmented. SIM unifies your entire
-                trading journey, from stocks and crypto to automated
-                strategies, and community insights, all powered by AI.
-              </p>
-            </div>
-            <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
-              {features.map((feature, index) => (
-                  <FeatureCard key={index} feature={feature} />
-              ))}
-            </div>
-          </section>
-        </AnimatedSection>
-        
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Why Now is the Perfect Time for SIM
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                The world is changing, and so is finance. We're perfectly positioned to thrive thanks to two major shifts:
-              </p>
-              <ul className="list-disc list-inside mt-6 space-y-4 text-muted-foreground">
-                <li>
-                  <strong>The AI Revolution:</strong> Recent advancements in conversational AI and natural language processing have made tools like SIMBOT a reality. We can now build a truly intuitive and powerful platform that was previously unimaginable.
-                </li>
-                <li>
-                  <strong>The Democratization of Finance:</strong> A new generation of retail investors is demanding seamless, unified, and intelligent tools to navigate increasingly complex financial markets. Traditional platforms simply aren't meeting this demand, leaving a massive opportunity for innovation.
-                </li>
-              </ul>
-            </div>
-            <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0">
-                <Image 
-                    src="https://lh3.googleusercontent.com/d/1VNAwNdBxAoVA-ceq159mR5cN9m-C8lEy" 
-                    alt="AI in finance" 
-                    width={860} 
-                    height={484}
-                    unoptimized
-                    className="w-full h-auto object-cover" 
-                    data-ai-hint="AI finance" 
-                />
-            </div>
-          </section>
-        </AnimatedSection>
-
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div className="text-left md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Our Competitive Edge: Unifying AI and Accessibility
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                While many trading platforms exist, none offer the unified, AI-driven experience that SIM provides. We're not just another trading app; we're building a truly intelligent ecosystem.
-              </p>
-              <p className="text-muted-foreground mt-4">
+          <section
+            id="competitive-edge"
+            className="py-24 md:py-32 min-h-screen flex items-center"
+          >
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="text-left md:order-2">
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Our Competitive Edge: Unifying AI and Accessibility
+                </h2>
+                <p className="text-muted-foreground mt-4">
+                  While many trading platforms exist, none offer the unified,
+                  AI-driven experience that SIM provides. We're not just another
+                  trading app; we're building a truly intelligent ecosystem.
+                </p>
+                <p className="text-muted-foreground mt-4">
                   Our defensible moat lies in:
-              </p>
-              <CyclingText sentences={competitiveEdgeSentences} className="mt-8 !text-left !w-auto" />
-              <p className="text-muted-foreground mt-8">
-                  SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
-              </p>
-            </div>
-            <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0 md:order-1">
-              <Image 
-                src="https://lh3.googleusercontent.com/d/1jw5TmqKRiNRfcVNM-lOxKXzC6YYYvN30"
-                alt="Competitive edge diagram"
-                width={960}
-                height={540}
-                unoptimized
-                className="w-full h-auto object-cover"
-                data-ai-hint="competitive advantage"
-              />
+                </p>
+                <CyclingText
+                  sentences={competitiveEdgeSentences}
+                  className="mt-8 !text-left !w-auto"
+                />
+                <p className="text-muted-foreground mt-8">
+                  SIM is poised to revolutionize how individuals interact with
+                  financial markets. By combining intuitive design with powerful
+                  AI, we are not just building a trading platform; we are
+                  building the future of intelligent investing.
+                </p>
+              </div>
+              <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0 md:order-1">
+                <Image
+                  src="https://lh3.googleusercontent.com/d/1jw5TmqKRiNRfcVNM-lOxKXzC6YYYvN30"
+                  alt="Competitive edge diagram"
+                  width={960}
+                  height={540}
+                  unoptimized
+                  className="w-full h-auto object-cover"
+                  data-ai-hint="competitive advantage"
+                />
+              </div>
             </div>
           </section>
-        </AnimatedSection>
 
-        <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Join the Waitlist
-            </h2>
-            <p className="text-muted-foreground mt-4">
-              Ready to take the guesswork out of investing? Our private beta is
-              launching soon. Sign up to be among the first to experience the future of trading.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link
-                  href="https://simulationexchange.vercel.app/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Started
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link
-                  href="https://simulationexchange.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Experience The Future of Trading and Investing
-                </Link>
-              </Button>
+          <section
+            id="waitlist"
+            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+          >
+            <div className="w-full">
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Join the Waitlist
+              </h2>
+              <p className="text-muted-foreground mt-4">
+                Ready to take the guesswork out of investing? Our private beta
+                is launching soon. Sign up to be among the first to experience
+                the future of trading.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" asChild>
+                  <Link
+                    href="https://simulationexchange.vercel.app/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Started
+                  </Link>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <Link
+                    href="https://simulationexchange.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Experience The Future of Trading and Investing
+                  </Link>
+                </Button>
+              </div>
             </div>
           </section>
-        </AnimatedSection>
-      </main>
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </ScrollBackground>
   );
 }
