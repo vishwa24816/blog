@@ -20,9 +20,9 @@ const ThemeContext = createContext<Theme | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeMode>('dark');
-  const [hue, setHue] = useState(45);
-  const [saturation, setSaturation] = useState(90);
-  const [lightness, setLightness] = useState(55);
+  const [hue, setHue] = useState(221);
+  const [saturation, setSaturation] = useState(83);
+  const [lightness, setLightness] = useState(53);
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');

@@ -6,6 +6,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { FirebaseClientProvider } from '@/firebase';
+import { ThemeProvider } from '@/components/theme/theme-provider';
+import { ThemeBody } from '@/components/theme/theme-body';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 const spaceGrotesk = Space_Grotesk({
@@ -25,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
+    <ThemeProvider>
+      <ThemeBody
         className={cn(
           'min-h-screen font-body antialiased',
           inter.variable,
@@ -37,7 +39,7 @@ export default function RootLayout({
           {children}
         </FirebaseClientProvider>
         <Toaster />
-      </body>
-    </html>
+      </ThemeBody>
+    </ThemeProvider>
   );
 }

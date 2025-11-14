@@ -12,6 +12,7 @@ import {
 } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { ThemeSwitcher } from '@/components/theme/theme-switcher';
 
 const Logo = () => (
   <Image
@@ -61,7 +62,7 @@ export function Header() {
           </button>
 
           <div className="flex items-center gap-4">
-            
+            <ThemeSwitcher />
             <div className="relative">
               <Button variant="outline" size="sm" asChild>
                 <Link
