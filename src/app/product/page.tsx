@@ -64,8 +64,8 @@ export default function ProductPage() {
     <div className="bg-background text-foreground">
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
-        <AnimatedSection id="product-features">
-          <section className="flex flex-col items-center">
+        <AnimatedSection>
+          <section id="product-features" className="flex flex-col items-center">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
                 Review The Product
