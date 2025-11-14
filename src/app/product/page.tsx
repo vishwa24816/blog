@@ -8,6 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { Coins, Ellipsis, ScanSearch, Wallet } from 'lucide-react';
 import { AnimatedSection } from '@/components/landing/animated-section';
 
@@ -69,10 +76,28 @@ export default function ProductPage() {
                 and community insights, all powered by AI.
               </p>
             </div>
-            <div className="mt-12 space-y-8 max-w-4xl mx-auto">
-              {features.map((feature, index) => (
-                <FeatureCard key={index} feature={feature} />
-              ))}
+            <div className="mt-12 max-w-4xl mx-auto">
+              <Carousel
+                opts={{
+                  align: 'start',
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {features.map((feature, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="md:basis-1/2 lg:basis-1/2"
+                    >
+                      <div className="p-1 h-full">
+                        <FeatureCard feature={feature} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </section>
         </AnimatedSection>
