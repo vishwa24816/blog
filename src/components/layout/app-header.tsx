@@ -15,7 +15,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { SidebarTrigger } from '../ui/sidebar';
-import { ThemeSwitcher } from '../theme/theme-switcher';
 import { useAuth } from '@/firebase';
 import { useRouter } from 'next/navigation';
 
@@ -44,7 +43,7 @@ export default function AppHeader({
           {title}
         </h1>
       </div>
-      <ThemeSwitcher />
+      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="secondary" size="icon" className="rounded-full">

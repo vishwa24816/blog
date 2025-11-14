@@ -4,51 +4,51 @@
 
 @layer base {
   :root {
-    --background: var(--primary-hue) 20% 98%;
-    --foreground: 240 10% 3.9%;
-    --card: var(--primary-hue) 15% 95%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: var(--primary-hue) 15% 95%;
-    --popover-foreground: 240 10% 3.9%;
+    --background: 220 20% 98%;
+    --foreground: 220 10% 10%;
+    --card: 220 15% 95%;
+    --card-foreground: 220 10% 10%;
+    --popover: 220 15% 95%;
+    --popover-foreground: 220 10% 10%;
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 240 5% 10%;
-    --secondary: var(--primary-hue) 10% 90%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: var(--primary-hue) 10% 90%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: var(--primary-hue) 15% 85%;
-    --accent-foreground: 240 5.9% 10%;
+    --primary-foreground: 220 5% 100%;
+    --secondary: 220 20% 90%;
+    --secondary-foreground: 220 5.9% 10%;
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 5% 45%;
+    --accent: 220 25% 85%;
+    --accent-foreground: 220 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: var(--primary-hue) 10% 80%;
-    --input: var(--primary-hue) 10% 80%;
-    --ring: var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + 5%);
+    --border: 220 15% 80%;
+    --input: 220 15% 80%;
+    --ring: 220 var(--primary-saturation) calc(var(--primary-lightness) + 5%);
     --radius: 0.75rem;
 
-    --primary-hue: 231;
+    --primary-hue: 220;
     --primary-saturation: 80%;
     --primary-lightness: 55%;
   }
 
   .dark {
-    --background: var(--primary-hue) 10% 10%;
-    --foreground: 0 0% 98%;
-    --card: var(--primary-hue) 10% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: var(--primary-hue) 10% 10%;
-    --popover-foreground: 0 0% 98%;
+    --background: 220 15% 10%;
+    --foreground: 220 5% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 220 5% 98%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 5% 98%;
     --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
-    --primary-foreground: 0 0% 95%;
-    --secondary: var(--primary-hue) 10% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: var(--primary-hue) 10% 20%;
-    --muted-foreground: var(--primary-hue) 10% 65%;
-    --accent: var(--primary-hue) 10% 25%;
-    --accent-foreground: 0 0% 98%;
+    --primary-foreground: 220 5% 100%;
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 220 5% 98%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 220 20% 25%;
+    --accent-foreground: 220 5% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: var(--primary-hue) 10% 20%;
-    --input: var(--primary-hue) 10% 20%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
     --ring: var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + 5%);
   }
 }
