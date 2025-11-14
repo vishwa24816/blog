@@ -12,8 +12,7 @@ import {
 } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Sun, Moon, Menu } from 'lucide-react';
-import { useTheme } from '../theme/theme-provider';
+import { Menu } from 'lucide-react';
 
 const Logo = () => (
   <Image
@@ -30,7 +29,6 @@ export function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -51,7 +49,7 @@ export function Header() {
         animate={hidden ? 'hidden' : 'visible'}
         transition={{ duration: 0.35, ease: 'easeInOut' }}
         className={cn(
-          'sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-sm'
+          'sticky top-0 z-50 border-b border-white/20 bg-background/50 backdrop-blur-lg'
         )}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
@@ -91,17 +89,6 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              aria-label={`Switch to ${
-                theme === 'dark' ? 'light' : 'dark'
-              } mode`}
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
             <div className="relative hidden md:block">
               <Button variant="outline" size="sm" asChild>
                 <Link

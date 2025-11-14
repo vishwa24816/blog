@@ -72,6 +72,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* The transition property is moved to a new component for this effect */
+    transition: background-color 1s ease;
   }
 }
