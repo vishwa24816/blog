@@ -12,7 +12,7 @@ import {
 } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu } from 'lucide-react';
 import { useTheme } from '../theme/theme-provider';
 
 const Logo = () => (
@@ -55,16 +55,43 @@ export function Header() {
         )}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
+          <Link
+            href="/"
             className="flex items-center gap-2 focus:outline-none"
           >
             <Logo />
-            <span className="text-xl font-bold font-headline">SIM</span>
-          </button>
+            <span className="text-xl font-bold font-headline hidden sm:inline">SIM</span>
+          </Link>
 
-          <div className="flex items-center gap-4">
-          <Button
+          <nav className="hidden md:flex items-center gap-6">
+            <Link
+              href="/"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About
+            </Link>
+            <Link
+              href="/business"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Business
+            </Link>
+            <Link
+              href="/product"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Product
+            </Link>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -75,7 +102,7 @@ export function Header() {
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             </Button>
-            <div className="relative">
+            <div className="relative hidden md:block">
               <Button variant="outline" size="sm" asChild>
                 <Link
                   href="https://simulationexchange.vercel.app/login"
@@ -86,6 +113,15 @@ export function Header() {
                 </Link>
               </Button>
             </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
           </div>
         </div>
         <AnimatePresence>
@@ -95,7 +131,7 @@ export function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="overflow-hidden border-t border-border/50"
+              className="overflow-hidden border-t border-border/50 md:hidden"
             >
               <nav className="container mx-auto flex flex-col items-start gap-4 px-4 py-4 md:px-6">
                 <Link
@@ -126,6 +162,15 @@ export function Header() {
                 >
                   Product
                 </Link>
+                 <Button variant="outline" size="sm" asChild className="w-full">
+                  <Link
+                    href="https://simulationexchange.vercel.app/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Sign In
+                  </Link>
+                </Button>
               </nav>
             </motion.div>
           )}

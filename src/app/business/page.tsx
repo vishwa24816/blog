@@ -90,7 +90,7 @@ export default function BusinessPage() {
         <AnimatedSection>
           <section className="text-center">
             <p className="font-headline text-primary font-semibold">For Business and Investors</p>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mt-2">
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mt-2">
               AI-Powered Solutions for You
             </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
@@ -156,7 +156,7 @@ export default function BusinessPage() {
                     </ul>
                   </div>
                   <div
-                    className={`relative rounded-lg overflow-hidden ${
+                    className={`relative rounded-lg overflow-hidden mt-8 md:mt-0 ${
                       index % 2 !== 0 ? 'md:col-start-1' : ''
                     }`}
                   >
@@ -216,14 +216,14 @@ export default function BusinessPage() {
         </AnimatedSection>
 
         <AnimatedSection>
-          <section className="mt-24 md:mt-32 text-center bg-card p-8 rounded-lg">
+          <section className="mt-24 md:mt-32 text-center bg-card p-6 md:p-8 rounded-lg">
             <h2 className="text-3xl font-bold font-headline">Join Us</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Be part of a community that’s shaping the future of finance.
               Whether you’re a seasoned trader or just starting out, SIM has the
               tools you need to succeed.
             </p>
-            <div className="mt-8 flex gap-4 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
                   href="https://simulationexchange.vercel.app/login"

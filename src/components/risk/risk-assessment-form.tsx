@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -91,7 +92,7 @@ export default function RiskAssessmentForm() {
   };
 
   return (
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-8 lg:grid-cols-2">
       <Card>
         <CardContent className="p-6">
           <Form {...form}>
@@ -183,7 +184,7 @@ export default function RiskAssessmentForm() {
         </CardContent>
       </Card>
 
-      <Card className="flex flex-col">
+      <Card className="flex flex-col min-h-[300px] lg:min-h-0">
         <CardContent className="flex flex-1 flex-col items-center justify-center p-6 text-center">
           {isLoading ? (
             <div className="flex flex-col items-center gap-4">

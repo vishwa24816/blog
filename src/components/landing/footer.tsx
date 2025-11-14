@@ -1,17 +1,18 @@
+
 import Link from 'next/link';
 
 export function Footer() {
   return (
     <footer className="border-t">
       <div className="container mx-auto px-4 md:px-6 py-8">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="mb-4 sm:mb-0">
             <h3 className="font-bold text-lg">SIM</h3>
             <p className="text-muted-foreground mt-2">
               AI-Powered Investing.
             </p>
           </div>
-          <div>
+          <div className="mb-4 sm:mb-0">
             <h3 className="font-semibold">Quick Links</h3>
             <ul className="mt-2 space-y-2">
               <li>

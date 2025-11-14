@@ -27,8 +27,9 @@ export default function Dashboard() {
           <div className="xl:col-span-2">
              <PortfolioChart data={portfolioPerformance} />
           </div>
-          <div className="space-y-4">
+          <div className="grid gap-4">
              <MarketNews articles={marketNews} />
+             <AiAnalystTool holdings={holdings} />
           </div>
         </div>
          <HoldingsTable holdings={holdings} />

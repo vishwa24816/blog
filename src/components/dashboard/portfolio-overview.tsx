@@ -1,6 +1,8 @@
+
 import { DollarSign, TrendingDown, TrendingUp } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import type { Holding } from '@/types';
+import { Button } from '../ui/button';
 
 type PortfolioOverviewProps = {
   holdings: Holding[];
@@ -80,13 +82,9 @@ export default function PortfolioOverview({ holdings }: PortfolioOverviewProps) 
           </p>
         </CardContent>
       </Card>
-      <Card className="flex items-center justify-center bg-primary text-primary-foreground">
-        <CardContent className="p-4 text-center">
-            <button className="text-sm font-semibold">
-                Simulate New Strategy
-            </button>
-        </CardContent>
-      </Card>
+      <Button className="lg:h-full text-base font-semibold">
+        Simulate New Strategy
+      </Button>
     </div>
   );
 }

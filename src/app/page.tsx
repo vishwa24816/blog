@@ -317,29 +317,10 @@ export default function LandingPage() {
                 strategies, and community insights, all powered by AI.
               </p>
             </div>
-            <div className="relative mt-12">
-              <Carousel
-                opts={{
-                  align: 'start',
-                  loop: true,
-                }}
-                className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
-              >
-                <CarouselContent>
-                  {features.map((feature, index) => (
-                    <CarouselItem
-                      key={index}
-                      className="sm:basis-1/2 lg:basis-1/3 p-4"
-                    >
-                      <div className="h-full">
-                        <FeatureCard feature={feature} />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
-              </Carousel>
+            <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map((feature, index) => (
+                  <FeatureCard key={index} feature={feature} />
+              ))}
             </div>
           </section>
         </AnimatedSection>
@@ -362,7 +343,7 @@ export default function LandingPage() {
                 </li>
               </ul>
             </div>
-            <div className="relative rounded-lg overflow-hidden">
+            <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0">
                 <Image 
                     src="https://lh3.googleusercontent.com/d/1VNAwNdBxAoVA-ceq159mR5cN9m-C8lEy" 
                     alt="AI in finance" 
@@ -378,7 +359,7 @@ export default function LandingPage() {
 
         <AnimatedSection>
           <section className="mt-24 md:mt-32 grid md:grid-cols-2 gap-16 items-center">
-            <div className="text-left">
+            <div className="text-left md:order-2">
               <h2 className="text-3xl md:text-4xl font-bold">
                 Our Competitive Edge: Unifying AI and Accessibility
               </h2>
@@ -393,7 +374,7 @@ export default function LandingPage() {
                   SIM is poised to revolutionize how individuals interact with financial markets. By combining intuitive design with powerful AI, we are not just building a trading platform; we are building the future of intelligent investing.
               </p>
             </div>
-            <div className="relative rounded-lg overflow-hidden">
+            <div className="relative rounded-lg overflow-hidden mt-8 md:mt-0 md:order-1">
               <Image 
                 src="https://lh3.googleusercontent.com/d/1jw5TmqKRiNRfcVNM-lOxKXzC6YYYvN30"
                 alt="Competitive edge diagram"
@@ -416,7 +397,7 @@ export default function LandingPage() {
               Ready to take the guesswork out of investing? Our private beta is
               launching soon. Sign up to be among the first to experience the future of trading.
             </p>
-            <div className="mt-8 flex gap-4 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link
                   href="https://simulationexchange.vercel.app/login"
