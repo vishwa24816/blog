@@ -44,7 +44,7 @@ const features = [
     icon: <ScanSearch className="h-10 w-10" />,
     title: 'Prompt based Trading, Screening and Backtesting',
     description:
-      'Our AI-powered screener cuts through market noise, analyzing technicals, fundamentals, and social sentiment to help you find actionable opportunities. Trading must be as easy as using Whatsapp, ChatGPT, or even a smart band. That\'s why we brought MCP and AI integration for Trading',
+      "Our AI-powered screener cuts through market noise, analyzing technicals, fundamentals, and social sentiment to help you find actionable opportunities. Trading must be as easy as using Whatsapp, ChatGPT, or even a smart band. That's why we brought MCP and AI integration for Trading",
   },
   {
     icon: <Ellipsis className="h-10 w-10" />,
