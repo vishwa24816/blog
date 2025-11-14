@@ -12,7 +12,8 @@ import {
 } from 'framer-motion';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { ThemeSwitcher } from '@/components/theme/theme-switcher';
+import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../theme/theme-provider';
 
 const Logo = () => (
   <Image
@@ -29,6 +30,7 @@ export function Header() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -62,7 +64,17 @@ export function Header() {
           </button>
 
           <div className="flex items-center gap-4">
-            <ThemeSwitcher />
+          <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              aria-label={`Switch to ${
+                theme === 'dark' ? 'light' : 'dark'
+              } mode`}
+            >
+              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
             <div className="relative">
               <Button variant="outline" size="sm" asChild>
                 <Link

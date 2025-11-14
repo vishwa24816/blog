@@ -8,21 +8,12 @@ type ThemeMode = 'light' | 'dark';
 type Theme = {
   theme: ThemeMode;
   setTheme: (theme: ThemeMode) => void;
-  hue: number;
-  setHue: (hue: number) => void;
-  saturation: number;
-  setSaturation: (saturation: number) => void;
-  lightness: number;
-  setLightness: (lightness: number) => void;
 };
 
 const ThemeContext = createContext<Theme | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeMode>('dark');
-  const [hue, setHue] = useState(221);
-  const [saturation, setSaturation] = useState(83);
-  const [lightness, setLightness] = useState(53);
 
   useEffect(() => {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -38,14 +29,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  useEffect(() => {
-    document.documentElement.style.setProperty('--primary-hue', hue.toString());
-    document.documentElement.style.setProperty('--primary-saturation', `${saturation}%`);
-    document.documentElement.style.setProperty('--primary-lightness', `${lightness}%`);
-  }, [hue, saturation, lightness]);
-
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, hue, setHue, saturation, setSaturation, lightness, setLightness }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
