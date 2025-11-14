@@ -32,7 +32,7 @@ export function Header() {
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
-    if (latest > previous && latest > 150) {
+    if (latest > 150) {
       setHidden(true);
     } else {
       setHidden(false);
