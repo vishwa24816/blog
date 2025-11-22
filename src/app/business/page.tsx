@@ -103,17 +103,6 @@ export default function BusinessPage() {
               sophisticated investing, making it simple, intuitive, and
               ultimately, more profitable for our users.
             </p>
-            <div className="relative w-full h-auto my-8">
-              <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800"
-                alt="Modern office building"
-                width={1200}
-                height={400}
-                className="mx-auto rounded-lg w-full h-auto object-cover"
-                data-ai-hint="office building"
-                priority
-              />
-            </div>
           </section>
         </AnimatedSection>
 
