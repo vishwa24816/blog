@@ -22,7 +22,6 @@ import {
 } from '@/components/ui/carousel';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/landing/animated-section';
-import { JoinWaitlistForm } from '@/components/landing/join-waitlist-form';
 import { FloatingElements } from '@/components/landing/FloatingElements';
 
 const heroImage = PlaceHolderImages.find(
@@ -208,7 +207,6 @@ export default function LandingPage() {
                 sophisticated investing simple, efficient, and profitable.
               </p>
               <div className="mt-8">
-                <JoinWaitlistForm />
               </div>
             </div>
           </section>
