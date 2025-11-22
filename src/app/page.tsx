@@ -212,15 +212,18 @@ export default function LandingPage() {
 
         <AnimatedSection id="story1">
           <section
-            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+            className="py-24 md:py-32 min-h-screen flex items-center"
           >
-            <div className="w-full">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Scrolling is boring, but wait , listen to this story.
-                <br />
-                Once upon a time, there was a Gen Z scrolling social media just
-                like how you are doing usually and found this
-              </h2>
+            <div className="w-full grid md:grid-cols-2 gap-16 items-center">
+               <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8 text-left">
+                  Scrolling is boring, but wait , listen to this story.
+                  <br />
+                  <br />
+                  Once upon a time, there was a Gen Z scrolling social media just
+                  like how you are doing usually and found this
+                </h3>
+              </div>
               <Carousel
                 opts={{
                   align: 'start',
@@ -474,4 +477,5 @@ export default function LandingPage() {
   );
 
     
+
 
