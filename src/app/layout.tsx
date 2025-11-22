@@ -6,7 +6,6 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { FirebaseClientProvider } from '@/firebase';
-import { FloatingElements } from '@/components/landing/FloatingElements';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
@@ -43,8 +42,7 @@ export default function RootLayout({
         >
           <FirebaseClientProvider>
             <div className="relative isolate">
-              <FloatingElements />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
+              <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[-100px_-100px]"></div>
               <div className="relative z-10">{children}</div>
             </div>
           </FirebaseClientProvider>
