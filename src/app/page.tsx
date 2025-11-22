@@ -193,21 +193,6 @@ export default function LandingPage() {
               className="py-12 md:py-24 min-h-screen flex items-center text-center"
             >
               <div>
-                {heroImage && (
-                  <div className="relative w-full h-auto mb-8">
-                    <Image
-                      src={heroImage.imageUrl}
-                      alt={heroImage.description}
-                      width={1200}
-                      height={675}
-                      style={{ objectFit: 'cover' }}
-                      className="mx-auto rounded-lg"
-                      data-ai-hint={heroImage.imageHint}
-                      priority
-                    />
-                  </div>
-                )}
-
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
                   The Future of Intelligent Investing is Here
                 </h1>
