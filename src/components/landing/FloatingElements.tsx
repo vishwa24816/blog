@@ -36,7 +36,7 @@ const coins = [
     { symbol: "UNI", color: "bg-pink-400" },
 ];
 
-const memes = ["🚀", "💎", "🌙", "🐕", "🐸"];
+const memes = ["🚀", "💎", "🌙", "🐕", "🐸", "📈", "💰", "🔥", "😂", "🤯", "😎", "🤑", "💡", "🎯", "🤖"];
 
 export function FloatingElements() {
     const [elements, setElements] = useState<any[]>([]);
