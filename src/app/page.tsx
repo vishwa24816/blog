@@ -27,6 +27,10 @@ const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
 );
 
+const introImage = PlaceHolderImages.find(
+  (image) => image.id === 'trading-terminal-intro'
+);
+
 const features = [
   {
     icon: <Coins className="h-10 w-10" />,
@@ -312,14 +316,16 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="relative w-full aspect-video">
-                <Image
-                  src="https://lh3.googleusercontent.com/file/d/1_PGjJ02G7cDQiEqP0vgEC6MBxwybe8Ov/view?usp=sharing"
-                  alt="SIM Intelligent Trading Terminal"
-                  fill
-                  className="rounded-lg object-contain"
-                  data-ai-hint="trading terminal"
-                  unoptimized
-                />
+                {introImage && (
+                  <Image
+                    src={introImage.imageUrl}
+                    alt={introImage.description}
+                    fill
+                    className="rounded-lg object-contain"
+                    data-ai-hint={introImage.imageHint}
+                    unoptimized
+                  />
+                )}
               </div>
             </div>
           </section>
