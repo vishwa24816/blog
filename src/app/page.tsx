@@ -296,19 +296,31 @@ export default function LandingPage() {
 
         <AnimatedSection id="intro">
           <section
-            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+            className="py-24 md:py-32 min-h-screen flex items-center"
           >
-            <div className="w-full">
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Introducing SIM: The Intelligent Trading Terminal
-              </h2>
-              <p className="text-muted-foreground mt-4">
-                That's where <strong>SIM (Simulation Exchange)</strong> comes
-                in. We're an <strong>AI-powered, all-in-one trading platform</strong>{' '}
-                designed to democratize sophisticated investing for everyone. Our
-                mission is simple: to make trading simple, efficient, and even
-                profitable, without that usual headaches.
-              </p>
+            <div className="w-full grid md:grid-cols-2 gap-16 items-center">
+              <div className="text-left">
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Introducing SIM: The Intelligent Trading Terminal
+                </h2>
+                <p className="text-muted-foreground mt-4">
+                  That's where <strong>SIM (Simulation Exchange)</strong> comes
+                  in. We're an <strong>AI-powered, all-in-one trading platform</strong>{' '}
+                  designed to democratize sophisticated investing for everyone. Our
+                  mission is simple: to make trading simple, efficient, and even
+                  profitable, without that usual headaches.
+                </p>
+              </div>
+              <div className="relative w-full aspect-video">
+                <Image
+                  src="https://lh3.googleusercontent.com/file/d/1_PGjJ02G7cDQiEqP0vgEC6MBxwybe8Ov/view?usp=sharing"
+                  alt="SIM Intelligent Trading Terminal"
+                  fill
+                  className="rounded-lg object-contain"
+                  data-ai-hint="trading terminal"
+                  unoptimized
+                />
+              </div>
             </div>
           </section>
         </AnimatedSection>
