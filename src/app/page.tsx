@@ -22,7 +22,6 @@ import {
 } from '@/components/ui/carousel';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/landing/animated-section';
-import { FloatingElements } from '@/components/landing/FloatingElements';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -185,7 +184,6 @@ const sections = [
 export default function LandingPage() {
   return (
     <div className="bg-transparent text-foreground">
-      <FloatingElements />
       <Header />
       <main className="container mx-auto px-4 md:px-6">
         <AnimatedSection id="hero">
