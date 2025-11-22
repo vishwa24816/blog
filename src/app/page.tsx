@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Coins, Ellipsis, ScanSearch, Wallet } from 'lucide-react';
+import { Coins, Ellipsis, Rocket, ScanSearch, Wallet } from 'lucide-react';
 import { CyclingText } from '@/components/landing/cycling-text';
 import {
   Carousel,
@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/carousel';
 import Link from 'next/link';
 import { AnimatedSection } from '@/components/landing/animated-section';
+import { JoinWaitlistForm } from '@/components/landing/join-waitlist-form';
 
 const heroImage = PlaceHolderImages.find(
   (image) => image.id === 'landing-hero'
@@ -189,27 +190,25 @@ export default function LandingPage() {
         <Header />
         <main className="container mx-auto px-4 md:px-6">
           <AnimatedSection id="hero">
-            <section
-              className="py-12 md:py-24 min-h-screen flex items-center text-center"
-            >
-              <div>
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-                  The Future of Intelligent Investing is Here
+            <section className="py-12 md:py-24 min-h-screen flex items-center text-center">
+              <div className="w-full max-w-4xl mx-auto">
+                <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-6">
+                  <Rocket className="w-4 h-4" />
+                  The Simulation is Loading...
+                </div>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+                  The Future of
+                  <br />
+                  <span className="bg-gradient-to-r from-chart-2 via-chart-3 to-chart-4 bg-clip-text text-transparent">
+                    Intelligent Investing
+                  </span>
                 </h1>
-                <p className="text-muted-foreground mt-4">
-                  SIM is an AI-powered, all-in-one trading platform that makes
+                <p className="text-muted-foreground mt-6 text-lg md:text-xl max-w-2xl mx-auto">
+                  SIM is an AI-powered trading platform that makes
                   sophisticated investing simple, efficient, and profitable.
                 </p>
-                <div className="mt-8 flex gap-4 justify-center">
-                  <Button size="lg" asChild>
-                    <Link
-                      href="https://simulationexchange.vercel.app/login"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Sign In
-                    </Link>
-                  </Button>
+                <div className="mt-8">
+                  <JoinWaitlistForm />
                 </div>
               </div>
             </section>
