@@ -191,8 +191,8 @@ export default function LandingPage() {
         <AnimatedSection id="hero">
           <section className="py-12 md:py-24 min-h-screen flex items-center text-center">
             <div className="w-full max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium mb-6">
-                <Rocket className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-base font-medium mb-8">
+                <Rocket className="w-5 h-5" />
                 The Simulation is Loading...
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
@@ -474,4 +474,5 @@ export default function LandingPage() {
       <Footer />
     </div>
   );
-}
+
+    
