@@ -13,6 +13,7 @@ import {
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
+import { ThemeToggle } from '../theme/theme-toggle';
 
 const Logo = () => (
   <Image
@@ -100,6 +101,7 @@ export function Header() {
                 </Link>
               </Button>
             </div>
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"

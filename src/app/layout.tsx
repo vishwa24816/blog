@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { FirebaseClientProvider } from '@/firebase';
 import { FloatingElements } from '@/components/landing/FloatingElements';
+import { ThemeProvider } from '@/components/theme/theme-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 const spaceGrotesk = Space_Grotesk({
@@ -34,14 +35,21 @@ export default function RootLayout({
           spaceGrotesk.variable
         )}
       >
-        <FirebaseClientProvider>
-          <div className="relative isolate">
-            <FloatingElements />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
-            <div className="relative z-10">{children}</div>
-          </div>
-        </FirebaseClientProvider>
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <FirebaseClientProvider>
+            <div className="relative isolate">
+              <FloatingElements />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/80 to-background"></div>
+              <div className="relative z-10">{children}</div>
+            </div>
+          </FirebaseClientProvider>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );
