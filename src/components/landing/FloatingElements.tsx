@@ -59,7 +59,7 @@ export function FloatingElements() {
                 <motion.div
                     key={el.id}
                     className={`absolute flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm -z-10
-            ${el.type === "coin" ? `${el.color} text-white font-bold w-12 h-12 md:w-16 md:h-16 opacity-30` : "text-2xl md:text-4xl opacity-40"}
+            ${el.type === "coin" ? `${el.color} text-white font-bold w-12 h-12 md:w-16 md:h-16 opacity-70` : "text-2xl md:text-4xl opacity-70"}
           `}
                     initial={{ x: `${el.x}vw`, y: `${el.y}vh` }}
                     animate={{
