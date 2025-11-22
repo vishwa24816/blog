@@ -144,21 +144,6 @@ export default function BusinessPage() {
                       ))}
                     </ul>
                   </div>
-                  <div
-                    className={`relative rounded-lg overflow-hidden mt-8 md:mt-0 ${
-                      index % 2 !== 0 ? 'md:col-start-1' : ''
-                    }`}
-                  >
-                    <Image
-                      src={offering.image.src}
-                      alt={offering.image.alt}
-                      width={800}
-                      height={600}
-                      unoptimized={offering.image.src.includes('googleusercontent') || offering.image.src.includes('notionusercontent')}
-                      className="w-full h-auto object-cover"
-                      data-ai-hint={offering.image.hint}
-                    />
-                  </div>
                 </div>
               ))}
             </div>
@@ -177,7 +162,7 @@ export default function BusinessPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {businessModel.map((item) => (
-                <Card key={item.title} className="bg-card/50 backdrop-blur-sm border-border/50">
+                <Card key={item.title} className="bg-white/80 dark:bg-black/80 backdrop-blur-sm border-border/50">
                   <CardHeader>
                     <div className="bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
                       {item.icon}
@@ -190,7 +175,7 @@ export default function BusinessPage() {
                 </Card>
               ))}
             </div>
-            <Card className="mt-8 bg-card/50 backdrop-blur-sm border-border/50">
+            <Card className="mt-8 bg-white/80 dark:bg-black/80 backdrop-blur-sm border-border/50">
               <CardContent className="p-6 text-center">
                 <p className="text-muted-foreground max-w-4xl mx-auto">
                   We project a healthy LTV/CAC (Customer Lifetime Value to Customer
