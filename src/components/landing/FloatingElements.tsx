@@ -54,11 +54,11 @@ export function FloatingElements() {
     }
 
     return (
-        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
             {elements.map((el) => (
                 <motion.div
                     key={el.id}
-                    className={`absolute flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm
+                    className={`absolute flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm -z-10
             ${el.type === "coin" ? `${el.color} text-white font-bold w-12 h-12 md:w-16 md:h-16 opacity-30` : "text-2xl md:text-4xl opacity-40"}
           `}
                     initial={{ x: `${el.x}vw`, y: `${el.y}vh` }}
