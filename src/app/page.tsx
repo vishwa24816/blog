@@ -256,12 +256,9 @@ export default function LandingPage() {
         
         <AnimatedSection id="story2">
           <section
-            className="py-24 md:py-32 min-h-screen flex items-center text-center"
+            className="py-24 md:py-32 min-h-screen flex items-center"
           >
-            <div className="w-full">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Want to know one more thing? Another story for you
-              </h2>
+            <div className="w-full grid md:grid-cols-2 gap-16 items-center">
               <Carousel
                 opts={{
                   align: 'start',
@@ -288,6 +285,11 @@ export default function LandingPage() {
                 <CarouselPrevious className="hidden md:flex" />
                 <CarouselNext className="hidden md:flex" />
               </Carousel>
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-8 text-right">
+                  Want to know one more thing? Another story for you
+                </h3>
+              </div>
             </div>
           </section>
         </AnimatedSection>
@@ -477,5 +479,6 @@ export default function LandingPage() {
   );
 
     
+
 
 
