@@ -9,11 +9,6 @@ const coins = [
     { symbol: "USDT", color: "bg-green-500" },
     { symbol: "BNB", color: "bg-yellow-500" },
     { symbol: "SOL", color: "bg-purple-500" },
-    { symbol: "XRP", color: "bg-blue-500" },
-    { symbol: "USDC", color: "bg-blue-400" },
-    { symbol: "ADA", color: "bg-blue-800" },
-    { symbol: "DOGE", color: "bg-yellow-400" },
-    { symbol: "TRX", color: "bg-red-600" },
 ];
 
 const memes = ["🚀", "💎", "🌙", "🐕", "🐸", "📈", "💰", "🔥", "😎", "🤑", "💡", "🎯", "🤖", "🐂", "🐻", '📉', '💸', '₿', '🏦', '₿', '🧑‍💻', '👨‍🏫', '🤯', '🤔', '👨‍🚀', '💥', '🎉', '🥂', '🍿', '🥤', '🍔', '🍕'];
@@ -64,7 +59,7 @@ export function FloatingElements() {
                 <motion.div
                     key={el.id}
                     className={`absolute flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm -z-10
-            ${el.type === "coin" ? `${el.color} text-white font-bold w-14 h-14 md:w-20 md:h-20 opacity-50` : "text-4xl md:text-6xl opacity-50"}
+            ${el.type === "coin" ? `${el.color} text-white font-bold w-16 h-16 md:w-24 md:h-24 opacity-25` : "text-4xl md:text-6xl opacity-25"}
           `}
                     initial={{ x: `${el.x}vw`, y: `${el.y}vh` }}
                     animate={{
