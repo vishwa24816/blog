@@ -24,7 +24,7 @@ const teamMembers = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="text-foreground">
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <AnimatedSection>

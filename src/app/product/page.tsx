@@ -63,7 +63,7 @@ const FeatureCard = ({ feature }: { feature: (typeof features)[0] }) => (
 
 export default function ProductPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="text-foreground">
       <Header />
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <AnimatedSection>
