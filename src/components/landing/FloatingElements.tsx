@@ -10,18 +10,9 @@ const coins = [
     { symbol: "USDT", color: "bg-green-500" },
     { symbol: "BNB", color: "bg-yellow-500" },
     { symbol: "SOL", color: "bg-purple-500" },
-    { symbol: "DOGE", color: "bg-yellow-400" },
-    { symbol: "ADA", color: "bg-blue-700" },
-    { symbol: "WBTC", color: "bg-orange-400" },
-    { symbol: "LINK", color: "bg-blue-800" },
-    { symbol: "LTC", color: "bg-gray-400" },
-    { symbol: "AVAX", color: "bg-red-500" },
-    { symbol: "SUI", color: "bg-blue-400" },
-    { symbol: "SHIB", color: "bg-orange-300" },
-    { symbol: "UNI", color: "bg-pink-400" },
 ];
 
-const memes = ["🚀", "💎", "🌙", "🐕", "🐸", "📈", "💰", "🔥", "😎", "🤑", "💡", "🎯", "🤖", " bull", "bear"];
+const memes = ["🚀", "💎", "🌙", "🐕", "🐸", "📈", "💰", "🔥", "😎", "🤑", "💡", "🎯", "🤖", "🐂", "🐻", '📉', '💸', '₿', '🏦', '₿', '🧑‍💻', '👨‍🏫', '🤯', '🤔', '👨‍🚀', '💥', '🎉', '🥂', '🍿', '🥤', '🍔', '🍕'];
 
 export function FloatingElements() {
     const [elements, setElements] = useState<any[]>([]);
