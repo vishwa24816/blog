@@ -477,8 +477,4 @@ export default function LandingPage() {
       <Footer />
     </div>
   );
-
-    
-
-
-
+}
