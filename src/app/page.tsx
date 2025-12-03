@@ -112,22 +112,22 @@ const storyImages = [
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1fVpGTKhqEcvR7OcuTmqdB0N7IVVMWUmB',
-    alt: 'A diagram showing the various features of the SIM platform.',
+    alt: 'A diagram showing the various features of the Coin Veda platform.',
     hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1gnSi8BmgimjhU683OWzIhYmfKbDdNTfs',
-    alt: 'A diagram showing the various features of the SIM platform.',
+    alt: 'A diagram showing the various features of the Coin Veda platform.',
     hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/11c-sLIFDo3UF4c3LJTWYw4Lilv-sq5OY',
-    alt: 'A diagram showing the various features of the SIM platform.',
+    alt: 'A diagram showing the various features of the Coin Veda platform.',
     hint: 'features diagram',
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1XKDde3qXnijPXkblUc_XULJU5hGJOrOn',
-    alt: 'A diagram showing the various features of the SIM platform.',
+    alt: 'A diagram showing the various features of the Coin Veda platform.',
     hint: 'features diagram'
   },
 ];
@@ -155,7 +155,7 @@ const secondStoryImages = [
   },
   {
     src: 'https://lh3.googleusercontent.com/d/1XKDde3qXnijPXkblUc_XULJU5hGJOrOn',
-    alt: 'A diagram showing the various features of the SIM platform.',
+    alt: 'A diagram showing the various features of the Coin Veda platform.',
     hint: 'features diagram'
   }
 ];
@@ -205,7 +205,7 @@ export default function LandingPage() {
                 </span>
               </h1>
               <p className="text-muted-foreground mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-                SIM is an AI-powered trading platform that makes
+                Coin Veda is an AI-powered trading platform that makes
                 sophisticated investing simple, efficient, and profitable.
               </p>
               <div className="mt-8">
@@ -305,10 +305,10 @@ export default function LandingPage() {
             <div className="w-full grid md:grid-cols-2 gap-16 items-center">
               <div className="text-left">
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  Introducing SIM: The Intelligent Trading Terminal
+                  Introducing Coin Veda: The Intelligent Trading Terminal
                 </h2>
                 <p className="text-muted-foreground mt-4">
-                  That's where <strong>SIM (Simulation Exchange)</strong> comes
+                  That's where <strong>Coin Veda</strong> comes
                   in. We're an <strong>AI-powered, all-in-one trading platform</strong>{' '}
                   designed to democratize sophisticated investing for everyone. Our
                   mission is simple: to make trading simple, efficient, and even
@@ -338,10 +338,10 @@ export default function LandingPage() {
             <div className="w-full">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  But How SIM Makes Trading Simple (and Smart)
+                  But How Coin Veda Makes Trading Simple (and Smart)
                 </h2>
                 <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-                  Today’s trading landscape is fragmented. SIM unifies your
+                  Today’s trading landscape is fragmented. Coin Veda unifies your
                   entire trading journey, from stocks and crypto to automated
                   strategies, and community insights, all powered by AI.
                 </p>
@@ -373,7 +373,7 @@ export default function LandingPage() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold">
-                  Why Now is the Perfect Time for SIM
+                  Why Now is the Perfect Time for Coin Veda
                 </h2>
                 <p className="text-muted-foreground mt-4">
                   The world is changing, and so is finance. We're perfectly
@@ -423,7 +423,7 @@ export default function LandingPage() {
                 </h2>
                 <p className="text-muted-foreground mt-4">
                   While many trading platforms exist, none offer the unified,
-                  AI-driven experience that SIM provides. We're not just another
+                  AI-driven experience that Coin Veda provides. We're not just another
                   trading app; we're building a truly intelligent ecosystem.
                 </p>
                 <p className="text-muted-foreground mt-4">
@@ -434,7 +434,7 @@ export default function LandingPage() {
                   className="mt-8 !text-left !w-auto"
                 />
                 <p className="text-muted-foreground mt-8">
-                  SIM is poised to revolutionize how individuals interact with
+                  Coin Veda is poised to revolutionize how individuals interact with
                   financial markets. By combining intuitive design with powerful
                   AI, we are not just building a trading platform; we are
                   building the future of intelligent investing.

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -39,7 +40,7 @@ export default function AppSidebar() {
         <div className="flex items-center gap-2">
           <Bot className="h-8 w-8 text-primary-foreground" />
           <h1 className="font-headline text-2xl font-bold text-primary-foreground">
-            SIM Blog
+            Coin Veda
           </h1>
         </div>
       </SidebarHeader>
@@ -63,7 +64,7 @@ export default function AppSidebar() {
       <SidebarFooter>
         <Separator className="my-2 bg-sidebar-border" />
         <p className="p-2 text-xs text-sidebar-foreground/60">
-          © 2024 SIM Blog Inc.
+          © 2024 Coin Veda Inc.
         </p>
       </SidebarFooter>
     </Sidebar>

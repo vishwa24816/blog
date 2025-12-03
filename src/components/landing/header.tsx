@@ -18,7 +18,7 @@ import { ThemeToggle } from '../theme/theme-toggle';
 const Logo = () => (
   <Image
     src="https://lh3.googleusercontent.com/d/1kNohQtEjQUqeezcw18bwiR-OXrCP1zzy"
-    alt="SIM Logo"
+    alt="Coin Veda Logo"
     width={32}
     height={32}
     unoptimized
@@ -59,7 +59,7 @@ export function Header() {
             className="flex items-center gap-2 focus:outline-none"
           >
             <Logo />
-            <span className="text-xl font-bold font-headline hidden sm:inline">SIM</span>
+            <span className="text-xl font-bold font-headline hidden sm:inline">Coin Veda</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">

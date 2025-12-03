@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-8">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div className="mb-4 sm:mb-0">
-            <h3 className="font-bold text-lg">SIM</h3>
+            <h3 className="font-bold text-lg">Coin Veda</h3>
             <p className="text-muted-foreground mt-2">
               AI-Powered Investing.
             </p>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; 2024 SIM, Inc. All rights reserved.</p>
+          <p>&copy; 2024 Coin Veda, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

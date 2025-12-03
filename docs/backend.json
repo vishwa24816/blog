@@ -4,7 +4,7 @@
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "User",
       "type": "object",
-      "description": "Represents a user of the SIM Blog application.",
+      "description": "Represents a user of the Coin Veda application.",
       "properties": {
         "id": {
           "type": "string",
@@ -295,6 +295,6 @@
         }
       }
     ],
-    "reasoning": "The Firestore data structure is designed to support the SIM Blog application's core features: Investment Simulation, Risk Assessment, Portfolio Tracking, Market News Integration, and an AI Analyst Tool.  The design prioritizes Authorization Independence and QAPs (Rules are not Filters). This is achieved through path-based ownership and structural segregation. User-owned data (Portfolios, Transactions, RiskAssessments) is nested under the `/users/{userId}` collection.  This structure eliminates the need for `get()` calls in security rules, enabling atomic operations (transactions/batches).  For QAPs, data segregation is used.  All documents within a collection share the same security posture.  This ensures efficient and secure list operations, as filtering occurs on the client-side after authorization is confirmed."
+    "reasoning": "The Firestore data structure is designed to support the Coin Veda application's core features: Investment Simulation, Risk Assessment, Portfolio Tracking, Market News Integration, and an AI Analyst Tool.  The design prioritizes Authorization Independence and QAPs (Rules are not Filters). This is achieved through path-based ownership and structural segregation. User-owned data (Portfolios, Transactions, RiskAssessments) is nested under the `/users/{userId}` collection.  This structure eliminates the need for `get()` calls in security rules, enabling atomic operations (transactions/batches).  For QAPs, data segregation is used.  All documents within a collection share the same security posture.  This ensures efficient and secure list operations, as filtering occurs on the client-side after authorization is confirmed."
   }
 }

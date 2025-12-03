@@ -17,7 +17,7 @@ const offerings = [
   {
     title: 'Total Adressable Market (TAM)',
     description:
-      'The total value of retail-accessible crypto investment assets in India, as SIM targets Indian users.',
+      'The total value of retail-accessible crypto investment assets in India, as Coin Veda targets Indian users.',
     features: [
       'India crypto trading volume: ~$300B annualized (Chainalysis 2025 Index; India is no. 1 in adoption, i.e ~13% of APAC $2.36T).',
       'Retail share: 80% (high retail dominance in India crypto per CoinSwitch Q2 2025).',
@@ -34,7 +34,7 @@ const offerings = [
     description:
       "The combined market of retail stocks and crypto traders i.e 100M+ users and the projected $2.6B algorithmic trading market as per Data from Graphlinq and following.",
     features: [
-      "India-specific retail algo/AI trading subset (SIM's core differentiator).",
+      "India-specific retail algo/AI trading subset (Coin Veda's core differentiator).",
       'Algo market: $1.15B (2025 est.; interpolated from IMARC $562M 2024 + 9.5% CAGR).',
       'Retail penetration: 70% (SEBI; 70% platforms lack AI)',
     ],
@@ -94,11 +94,11 @@ export default function BusinessPage() {
               AI-Powered Solutions for You
             </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              At SIM (Simulation Exchange), we believe that sophisticated
+              At Coin Veda, we believe that sophisticated
               investing should be accessible to everyone. In today's fast-paced
               financial landscape, traders face a myriad of challenges:
               fragmented platforms, complex interfaces, and the daunting task of
-              mastering algorithmic strategies. We're here to change that. SIM is
+              mastering algorithmic strategies. We're here to change that. Coin Veda is
               an AI-powered, all-in-one trading platform designed to democratize
               sophisticated investing, making it simple, intuitive, and
               ultimately, more profitable for our users.
@@ -157,7 +157,7 @@ export default function BusinessPage() {
                 Our Business Model
               </h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-                SIM operates on a diversified and scalable revenue model designed for sustainable growth:
+                Coin Veda operates on a diversified and scalable revenue model designed for sustainable growth:
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -194,7 +194,7 @@ export default function BusinessPage() {
             <h2 className="text-3xl font-bold font-headline">Join Us</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Be part of a community that’s shaping the future of finance.
-              Whether you’re a seasoned trader or just starting out, SIM has the
+              Whether you’re a seasoned trader or just starting out, Coin Veda has the
               tools you need to succeed.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

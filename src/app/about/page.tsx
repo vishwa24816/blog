@@ -35,7 +35,7 @@ export default function AboutPage() {
               future of intelligent investing.
             </h1>
             <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-              SIM is an AI-powered crypto trading platform designed to democratize sophisticated investing for everyone.
+              Coin Veda is an AI-powered crypto trading platform designed to democratize sophisticated investing for everyone.
             </p>
           </section>
         </AnimatedSection>
@@ -81,7 +81,7 @@ export default function AboutPage() {
             </div>
             <div className="max-w-4xl mx-auto space-y-6 text-muted-foreground text-left">
               <p>
-                SIM (Simulation Exchange) was born from a simple but powerful
+                Coin Veda was born from a simple but powerful
                 observation: the trading world was a mess. As passionate traders
                 ourselves, we were frustrated by the fragmented landscape of tools
                 and platforms. We were juggling multiple apps for stocks, crypto,
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 investing. And we saw a massive opportunity to unify the chaos.
               </p>
               <p>
-                So, we built SIM. We started with a clear goal: to create the
+                So, we built Coin Veda. We started with a clear goal: to create the
                 first truly intelligent, all-in-one platform that brings stocks,
                 crypto, no-code algorithmic trading, and a vibrant investor
                 community together in one seamless experience. No more
@@ -148,7 +148,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold font-headline">Join Us</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Be part of a community that’s shaping the future of finance.
-              Whether you’re a seasoned trader or just starting out, SIM has the
+              Whether you’re a seasoned trader or just starting out, Coin Veda has the
               tools you need to succeed.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'SIM - Your AI-Powered Path to Smarter Investing',
+  title: 'Coin Veda - Your AI-Powered Path to Smarter Investing',
   description:
     'Simulate investment strategies, track portfolios, and get AI-powered insights.',
 };
