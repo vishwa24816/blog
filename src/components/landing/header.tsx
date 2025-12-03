@@ -17,7 +17,7 @@ import { ThemeToggle } from '../theme/theme-toggle';
 
 const Logo = () => (
   <Image
-    src="https://lh3.googleusercontent.com/d/1kNohQtEjQUqeezcw18bwiR-OXrCP1zzy"
+    src="https://lh3.googleusercontent.com/d/1gj8YdNVg59HEvsF9_2qZ7OXPIL4ayTNi"
     alt="Coin Veda Logo"
     width={32}
     height={32}
